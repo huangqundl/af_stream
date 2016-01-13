@@ -1,0 +1,2512 @@
+Version:01.0002.0590.01.20130402.22:44:17
+[CLASS BEGIN]
+Number:17
+1 | P2P |  
+2 | IM |  
+3 | VoIP |  
+4 | Web Browsing |  
+5 | Game |  
+6 | Streaming |  
+8 | Database |  
+9 | Email |  
+10 | File Access |  
+11 | Network Admin |  
+12 | Network Storage |  
+13 | News Group |  
+14 | Remote Connectivity |  
+15 | Stock |  
+16 | Tunnelling |  
+17 | Other |  
+18 | Wireless |  
+[CLASS END]
+[APPLICATION BEGIN]
+Number:727
+1 | Other_IP | 所有未定义的非TCP/UDP协议
+2 | Other_TCP | 所有未定义的TCP协议
+3 | Other_UDP | 所有未定义的UDP协议
+4 | Skype | Skype 是一家全球性互联网电话, 它通过在全世界范围内向客户提供免费的高质量通话服务.Skype作为网络即时语音沟通工具.
+5 | Bittorrent | BitTorrent协议（简称BT, 俗称比特洪流, BT下载）是一个网络文件传输协议, 它能够实现点对点文件分享的技术.比起其他点对点的协议, 它具有多点对多点的特性,
+6 | eDonkey_eDonkey2000 | eDonkey2000网络是一种分布式的, 主要基于服务器的P2P文件分享网络.它通常用于共享电影视频文件, 音乐专辑和计算机程序软件等.
+7 | Gnutella | Gnutella是一种文件共享网络协议.其在本领域内占有超过40%的市场份额, 是Internet上最流行的一种文件共享网络.
+8 | DirectConnect | Direct Connect是一种常用于小的网络和大学内部网络中的协议, 它尤其适用于小网络环境中.DC++是其最常见的客户端程序.
+9 | GoogleTalk | Google Talk是Google公司于2005年8月24日推出的一款IP电话及即时通讯的服务.
+10 | MSN | MSN全称Microsoft Service Network（微软网络服务）, 是微软公司推出的即时消息软件, 可以与亲人, 朋友, 工作伙伴进行文字聊天, 语音对话, 视频会议等即时交流.
+11 | Yahoo_Messenger | 雅虎通是由雅虎公司开发r 一个流行的免费即时通讯软件.用户使用Yahoo ID登录, 使用同一个ID也可以访问Yahoo提供的其他服务, 例如电子信箱, 相册, 存储空间和个人主页.
+12 | RTSP | 即时串流协议（RTSP）是用来控制声音或影像的多媒体串流协议.
+13 | SMTP | 简单邮件传输协议 (SMTP) 是在Internet传输email的标准.
+14 | IMAP | Internet Message Access Protocol（IMAP, 以前称作交互邮件访问协议）是一个应用层协议, 用来从本地邮件客户端访问远程服务器上的邮件.
+15 | POP3 | 邮局协议（Post Office Protocol, 简称POP）第3版本, 主要用于支持使用客户端远程管理在服务器上的电子邮件.
+16 | FTP | 文件传输协议（FTP）是用于在网络上进行文件传输的一套标准协议.它属于网络传输协议的应用层.
+17 | HTTP | 超文本传送协议,详细规定了浏览器和万维网服务器之间互相通信的规则, 通过因特网传送万维网文档的数据传送协议.
+18 | DNS | 是因特网的一项核心服务, 它作为可以将域名和IP地址相互映射的一个分布式数据库, 能够使人更方便的访问互联网, 而不用去记住能够被机器直接读取的IP数串.
+19 | Microsoft_Media_Server | MMS（Microsoft Media Server）是一种串流媒体传送协议, 用来访问并流式接收Windows Media服务器中.asf文件的一种协议.
+20 | RDP | 远程桌面协定（RDP, Remote Desktop Protocol）是一个多通道（multi-channel）的协定, 让用户（客户端或称“本地电脑”）连上提供微软终端机服务的电脑（服务器端或称“远程电脑”）.
+21 | BaiDuXiaBa | 百度下吧是基于互联网最先进的点对点技术的文件传输软件.通过百度下吧软件用户可以方便, 快捷, 安全地与互联网中的其他用户相互传输下载大容量的电影, 游戏, 音乐, 软件, 图片.
+22 | BearShare | Bearshare是一个文件共享程序,让世界上的每一个人分享档案.建立在Gnutella技术,提供了一种简单,易于使用的界面,她结合了的强大联系和搜索引擎, 能够让几千种不同的文件快捷的操作.　
+23 | DoPool | Dopool是一款全新的p2p流媒体绿色播放软件, 体积小, 运行时不读写硬盘, 不伤硬盘.基于自行设计全自主版权的p2p即时流媒体传输协议.
+24 | Funshion | 风行 Funshion 是全球首款集在线观看和下载于一身的影视点播软件, 也是全球最大的影视点播平台.
+25 | Fs2You | RayFile网盘, 原域名Fs2you.
+26 | WAP1 | 无线应用协议的第一个版本
+27 | WAP2 | 无线应用协议的第二个版本
+28 | TFTP | 简单文件传输协议或称小型文件传输协议
+29 | PPLive | PPTV（旧称PPlive）是一款采用点对点技术的网络电视软件
+30 | PPLive_Video_Accelerator | 视频网站加速器, 使用P2P技术为基于HTTP的视频网站加速
+31 | Thunder | 迅雷是由深圳市迅雷网络技术有限公司开发的一款下载软件, 可进行HTTP, FTP, BitTorrent协议, eDonkey2000网络的下载.
+32 | QQLive | 腾讯视频是腾讯推出的在线影音播放服务, 有多种平台, 包括使用 Flash 的网上版.
+33 | PPStream | PPStream是一个基于P2P视频点播和直播的软件
+34 | KuGoo | 酷狗音乐（KuGoo）是一款P2P音乐共享软件及音频媒体播放软件,
+35 | PPGou | 屁屁狗是一款集成HTTP和P2P下载为一体的高速P2SP下载软件.
+36 | POCO | POCO提供好友消息的即时互通，在线聊天、图片自动压缩批量上传和一键式加工调色、p2p无限影音多媒体分享下载等多种功能
+37 | Maze | 天网Maze集个性化搜索, 大学精品课程, 网络课堂, 教育商城, 即时通讯等诸多功能, 是一个全新的个人桌面信息平台
+38 | TVAnts | 电视蚂蚁是采用P2P技术的网络电视, 作为新一代的P2P技术的程序, TVants提供了接收电视节目和对外广播电视节目的双向传播功能.
+39 | UUSEE | UUSee网络电视是悠视网打造的网络电视收看软件, 可以免费收看多个频道的精彩节目
+40 | Vagaa | 哇嘎（Vagaa）是一套由中国大陆公司开发, 基于eDonkey网络及BitTorrent协议的点对点（P2P）软件
+41 | QQDownLoad | QQ旋风是腾讯公司开发的一款下载工具, 原名“超级旋风”, 功能与迅雷, 快车等类似.支持HTTP, FTP, BitTorrent协议, eDonkey网络的下载, 同时提供资源搜索, 离线下载等增值功能.
+42 | SoulSeek | SoulSeek是一个P2P网络共享软件
+43 | SopCast | SopCast是一套基于P2P通讯协定的网络电视软件.它可以在许多平台上执行, 包括微软Windows平台以及Linux平台.
+44 | KooWo | 酷我音乐盒是一款融歌曲和MV搜索, 在线播放, 同步歌词为一体的音乐聚合播放器.
+45 | PPFilm | PPfilm播放器是全球互联网上最清晰流畅的在线影视播放平台
+46 | PP365_Download | PP365 下载
+47 | FlashGet | p2p文件下载软件
+48 | QingYL | 娱乐软件,视频, 游戏, FLASH, 组图, 音乐, 电子书, 娱乐内容一站式
+49 | SSH | SSH为创建在应用层和传输层基础上的安全协议.
+50 | Multimedia_Messaging_Service | 标准协议,Multi-Media Messaging Service(MMMS or MMS),多媒体短信业务, 是按照3GPP的标准（ 3GPP TS 23.140）和WAP论坛的标准（WAP-206和WAP-209）有关多媒体信息的标准开发的最新业务.a telecommunications standard fo
+51 | Telnet | Telnet协议是TCP/IP协议族中的一员, 是Internet远端登录服务的标准协议和主要方式.
+52 | FileTopia | 为用户提供了一种安全的, 个性化的, 有趣的交换信息的方式, 你可以拥有你自己的文件服务器, 可以找寻其他的聊天对象,   互相发送信息和共享文件, 而且一切都是安全和保密的
+53 | SpeedyTudou | 飞速土豆
+54 | SinaTV | Sina网出品的网络电视软件, 分软件版和插件版.可以点播和直播
+55 | Qvod | 快播（QvodPlayer）是一款基于准视频点播内核的, 多功能, 个性化的播放器软件,支持多种协议(BT,RTSP,MMS等等)
+56 | Hotline | 热线（也被称为自动信号服务）是一个点对点通信链路.
+57 | GBPhone | e动城市全新推出的新一代网络电话
+58 | UUCall | UUCall是“中华电信（香港）国际有限公司”（原悠优）推出的即时语音通讯软件.
+59 | SIP | 会话发起协议
+60 | MGCP | 媒体网关控制协议
+61 | ICQ | ICQ是一款网络即时讯息传呼软件, 支持透过互联网聊天, 以及发送消息, 网址及文件等功能
+62 | QQ | 腾讯QQ, 原称腾讯OICQ, 是腾讯公司推出的一款免费的多平台即时通信软件, 支持文字, 语音和视频聊天, 还附带有邮箱, 游戏等服务.
+63 | SinaUC | 新浪聊天工具
+64 | TelTel | 网络电话
+65 | Fetion | 中国移动飞信, 是中国移动开发的即时通讯软件, 软件利用移动GSM网络, 在一定前提下, 可以从不同的飞信客户端向普通手机免费发送短信息, 或者进行多人通话服务.
+66 | AliCall | 阿里通网络电话  H.323协议
+67 | DoShow | 聊天软件, 有聊天室功能
+68 | Lava_Lava | 一种聊天工具, 里面集成了MSN和Yahoo
+69 | XiaoNeiTong | 校内网的即时聊天软件
+70 | Jabber_SSL | XMPP（Extensible Messaging and Presence Protocol, 前称Jabber[1]）是一种以XML为基础的开放式实时通信协定, 是经由互联网工程工作小组（IETF）通过的互联网标准.
+71 | Sina_VChat | 新浪聊天工具, 依赖于SinaUC
+72 | 9158_VChat | 聊天软件
+73 | AIM | AIM是AOL公司推出的一种即时聊天工具, 主要是办公使用.包括文字聊天, 图片共享, 文件传输, 文件夹传输等功能.
+74 | IRC | IRC是英文“Internet Relay Chat”的缩写, 是一种在世界上, 尤其是在国外非常流行的聊天标准.需求软件：mIRC
+75 | Baidu_hi | 百度Hi, 是百度公司开发的一款即时通讯软件.百度Hi具备文字消息, 音视频通话, 文件传输等功能.
+76 | BlackBerry | 黑莓手机通信
+77 | Warcraft | 魔兽争霸
+78 | Counter_Strike | 角色扮演类游戏,反恐精英,第一人称射击游戏
+79 | Diablo_II | 《暗黑破坏神II》（英语：Diablo II）是由暴雪娱乐于2000年6月29日发行的一款PC及Mac OS平台的动作角色扮演游戏.
+80 | RealPlayer | real公司的视频播放器
+81 | Web_QQ | Web版QQ.
+82 | CCIPTV | CCIPTV网络电视是中国最大的新一代网络电视门户软件, 其拥有众多的国内外网络电台, 网络电视频道.
+83 | Sipgate | sipgate是语音IP服务提供商
+84 | Kondge_NetPhone | 中桥网络电话
+85 | MS_Exchange_Mailing_Protocols | 微软的Exchange邮件协议
+86 | IAX | Asterisk 内部交换协议
+87 | Quake | 韩国游戏雷神之锤
+88 | Baibao | 百宝是功能强大的P2P软件, 新增播客功能, 独一无二的P2P播客技术, 让用户交流自己喜欢的内容.
+89 | H323 | H.323协议是ITU-T提出的关于视频电话及多媒体会议传输协议H.32x系列中的一部分.
+90 | Aliww | 阿里旺旺是淘宝网和阿里巴巴为商人度身定做的免费网上商务沟通软件
+91 | Web_MSN | 网页版的MSN
+92 | STUN | STUN（Session Traversal Utilities for NAT, NAT会话传输应用程序）是一种网络协议
+93 | RTP/RTCP | 实时传输协议,实时传输控制协议
+94 | Socks | SOCKS（防火墙安全会话转换协议）是一种网络传输协议, 主要用于客户端与外网服务器之间通讯的中间传递.
+95 | Sina_Common | 新浪存在一系列软件, 每种软件都使用了一些新浪的公共消息, 因此提出这些公共协议以应用到每种软件之中, 以免软件对应协议存在相互嵌套的关系.
+96 | RDT | 实时数据传输（RDT）是一个专有的的实际音频/视频数据传输协议, 在20世纪90年代由RealNetworks开发
+97 | QeShow | QeShow聊天室
+98 | MDNS | Multicast DNS
+99 | Zoiper | Zoiper2.0 IAX和SIP软电话（以前称为Idefisk）支持T.38传真IP. Zoiper是VoIP软客户端, 这意味着与Asterisk的SIP功能的IP为基础的通讯系统和基础设施.
+100 | EPM | EPM （Endpoint Mapper）用于注册所用动态端口, 而客户端可以向EPM接口查询服务端注册过的信息.如果客户端有其它手段提前知道服务端所用动态端口, 就可以省去向EPM接口查询的操作.
+101 | DCERPC | DCE / RPC, 简称为分布式计算环境/远程过程调用, 是远程过程调用系统开发的分布式计算环境（DCE）
+102 | SOAP_HTTP | 基于HTTP的简单对象访问协议（SOAP）
+103 | RADIUS | 远端用户拨入验证服务（RADIUS）是一个AAA协议, 意思就是同时兼顾验证, 授权及计费三种服务的协议, 通常用于网络存取, 或流动IP服务, 适用于局域网及漫游服务.
+104 | NTP | 网络时间协议（英语：Network Time Protocol, NTP）是以封包交换把两台电脑的时钟同步化的网络协议.NTP使用UDP端口123作为传输层.
+105 | Tencent_Common | 腾讯软件系列公共协议
+106 | GoGoBox | 下载工具
+107 | Kubao | 网络电话
+108 | ICUII | ICUII(I See You Too)是一款非常优秀的视频/音频/文字聊天工具.你可以通过它的服务器和世界上的各种地方的人进行交流, 包括图像, 声音.
+109 | PoPo | 网易泡泡  POPO （泡泡）是由网易开发的一款免费的多媒体即时通讯软件.
+110 | Xfire | Xfire（发音为X火）是一个免费的即时通讯服务, 针对游戏玩家, 也可作为一个游戏服务器浏览器
+111 | KC | 网络电话, 网络短信, 支持QQ\MSN聊天, 邮件管理等, 网络传真
+112 | VZOchat | VZOchat（发音为viziochat）是一个免费的软件, 用于视频通话和即时消息.不同于著名的Skype和其他软件.
+113 | Wuala | Wuala中是一个社会的分布式文件系统, 如在线存储, 它允许Windows, Linux和Mac用户将文件保存在网上.
+114 | IMAP_SSL | 安全加密的交互邮件存储协议
+115 | POP3_SSL | 安全加密的邮局协议
+116 | SMTP_SSL | 标准协议
+117 | WebMail_Hotmail | Hotmail, 全名Microsoft Hotmail, 前称Windows Live Hotmail, 是微软的一项免费互联网收发电子邮件服务, 也是第一个在Web接口上实现实时拼写检查的邮件系统.
+118 | Ares | p2p文件共享软件.
+119 | OpenFT | OpenFT是一个网络协议的P2P文件共享, 有一个结构, 在该结构中, 节点被分成'求职者'和超级节点的索引'在除了公共节点.
+120 | Kceasy | KCeasy是一个开源的GPL授权的软件.
+121 | TongDaXin | 通达信股票软件
+122 | WebMail_139 | 139邮箱是中国移动提供的电子邮件服务
+123 | LimeWire | LimeWire软件使用Gnutella协议, 并对该协议做了很多扩展
+124 | Xnap | XNap是一个免费的GNU通用公共许可证授权下的对等客户端
+125 | WOW | 魔兽世界
+126 | FrostWire | FrostWire（简称FW）是一个基于Gnutella的开源, 免费的P2P文件共享软件.
+127 | Qianlong | 钱龙股票软件
+128 | Globe7 | Globe7网络电话是一款世界级的网络电话, 基于SIP协议.
+129 | StockStar | 证券之星（收费）
+130 | 263_Chat_Car | 网易出品的跑车游戏.
+131 | Compass | 指南针股票行情分析软件
+132 | PeerAware | PeerAware让您与朋友和同事连接创建一个工作区.
+133 | MeteorNetTV | 流星网络电视 ,1000套全球卫视电视+5000集热播电视剧和电影=终身免费收看,不需要安装其它任何硬件设备
+134 | WebMail_Aol | 美国在线服务(AOL)公司提供的电子邮箱
+135 | WebMail_EYou | 北京亿中邮信息技术有限公司www.eyou.com提供的电子邮箱
+136 | WebMail_DongFangYouJu | 东方网电子邮局
+137 | WebMail_OperaMail | www.operamail.com 提供的电子邮箱
+138 | WebMail_Sohu | 搜狐邮箱
+139 | WebMail_QQ | QQ邮箱
+140 | WebMail_Tom | tom邮箱为tom在线旗下经营的一个项目, 包括免费版和vip收费版和企业版
+141 | WebMail_Fastmail | FastMail一项由电子邮件供应商Messaging Engine（今已被Opera软件公司收购）提供的电子邮件服务, 因最早提供免费IMAP邮件服务而出名.
+142 | Shareaza | Shareaza是一个对等文件共享软件.
+143 | WebMail_Myway | www.myway.com提供的免费电子邮箱
+144 | WebMail_Hexun | 中国财经类网站www.hexun.com提供的电子邮箱
+145 | Gimme_P2P | .net下开发的P2P软件, 可以实现文件的下载功能
+146 | WebMail_Yahoo | 雅虎邮箱
+147 | WebMail_163 | 网易提供的163网页邮箱
+148 | WebMail_21CN | 中国电信子公司提供的21CN网页邮箱
+149 | WebMail_Yeah | 网易Yeah邮箱
+150 | Shutter | 快门Shutter免费网络电话  基于SIP协议.
+151 | Retroshare | Retroshare是一个私人和安全的的分散commmunication平台.它可以让你安全地共享您的朋友, 使用网络的信任验证同行和OpenSSL加密所有的通信. RetroShare提供文件共享, 聊天, 邮件
+152 | WebMail_Sina | 新浪邮箱
+153 | Octoshape | 是一个网格铸流媒体服务器和客户端, 使用对等技术, 以尽量减少任何广播的带宽, CDN, ISP或流材料供应商最后一公里的增强和安全的版本.
+154 | SilkroadOnline | 丝路传说, 多人线上游戏
+155 | DNF | 地下城与勇士,格斗过关式网络游戏
+156 | Lineage2 | 网游天堂2网络游戏
+157 | Trillian | Trillian 是一个由美国软件公司 Cerulean Studios 所创造即时通讯软件.它兼容ICQ, MSN等各大即时通讯软件, 使得用户可以在使用一个软件同时与不同即时通讯服务通讯.
+158 | PaoPaoTang | 泡泡堂,英文简写BNB, 全名Crazy Arcade,是韩国Nexon公司制作的一款家庭休闲网游, 中国由盛大网络代理.
+159 | RagnarokOnline | 仙境传说, 一款由韩国开发的多人在线游戏.
+160 | CrossFire | 穿越火线是韩国Smile Gate公司在2008年推出的次时代网络枪战游戏大作（2007年内测）, 在中国大陆由腾讯公司运营.
+161 | Pichat | Pichat是一个对等网络聊天软件和信息共享的协议. Pichat是一个应用程序客户端和服务器在同一时间, 提供了一系列的协议和格式（例如, 文本和XML）.
+162 | JinWuTuan | 《劲舞团》是一款舞蹈类休闲音乐网游
+163 | WebMail_263 | 北京二六三企业通信有限公司提供的263网页邮箱
+164 | WebMail_Gawab | www.gawab.com 提供的电子服务
+165 | SeeTV | 24小时实时直播凤凰卫视, 集目前国内最优秀的P2P网络电视于一身
+166 | WebMail_GMX | GMX- (Global Mail Exchange)是德国全球著名免费邮箱网站
+167 | HTTPS | 超文本传输安全协议,是超文本传输协议和SSL/TLS的组合, 用以提供加密通讯及对网络服务器身份的鉴定
+168 | SQL_Server | Microsoft SQL Server是由美国微软公司所推出的关系数据库解决方案.
+169 | Diameter | RADIUS的升级协议, 用于计费及认证
+170 | RapidShare | 德国的一个在线存储网站, 用户上传文件后, 网站会返回一个URL, 以后就可以通过这个URL来下载文件了.目前没有中文版.
+171 | TeamSpeak | TeamSpeak是一套专有的VoIP软件, 使用者可以经由它与其他使用者进行语音对话, 很像电话会议.
+172 | SMB | 服务器消息区块(SMB)是由微软开发的一种软件程序级的网络传输协议, 主要用来使得一个网络上的机器共享计算机文件, 打印机, 串行端口和通讯等资源.
+173 | DHCP | 动态主机设置协定（DHCP）是一个局域网的网络协议, 使用UDP协议工作
+174 | Dofus | Dofus 这是首款整个采用 Flash 的大规模地多人在线角色扮演游戏.在永久和变换的世界, 寻找贵重的 Dofus 并且恢复 Amakna 的和平.
+175 | WebMail_Excite | 美国www.excite.com电子邮箱
+176 | SSDP | 简单服务发现协议（SSDP, Simple Service Discovery Protocol）是一种应用层协议, 是构成通用即插即用(UPnP)技术的核心协议之一.
+177 | WebMail_Pojaa | 普加网pojaa.com提供的电子邮箱
+178 | WebMail_Syvip | www.syvip.com联合微软提供的免费邮箱
+179 | WebMail_3Dup | 3Dup.com提供的电子邮箱
+180 | WebMail_Aussiemail | www.aussiemail.com.au邮箱
+181 | WebMail_Asean | 东南亚国家联盟（东盟）的邮箱
+182 | WebMail_Empereur | www.empereur.com电子邮箱
+183 | WebMail_Chinaren | 搜狐旗下chinaren邮箱
+184 | WebMail_Sogou | 搜狗邮箱
+185 | DC++ | DC++, 使用DirectConnect协议和ADC协议的P2P共享开源软件.
+186 | WebMail_FreeThinker | www.freethinker.nl 电子邮箱
+187 | WebMail_DC | www.dcmail.com的邮箱
+188 | WebMail_Freequote | www.freequote.com提供的电子邮箱
+189 | Phex | Phex利用Gnutella网络下载各种资源.协议类型为P2P.
+190 | Tabular_Data_Stream | TDS协议是一个应用层的请求/响应协议, 便于与数据库服务器交互, 并提供：身份验证和渠道的加密
+191 | SightSpeed | 被罗技收购. SightSpeed公司与2001年成立, 到2008年仅有25名员工.其SightSpeed服务基于SIP协议, 可以相当方便的与其他网络服务相结合
+192 | StealthNet | StealthNet是一个匿名的点对点技术文件共享软件, 以 RShare 用户端为基础, 并且进行强化.
+193 | Gizmo5 | Gizmo5的（原名小发明项目和SIPphone）是一个基于互联网协议的语音通信网络和专有的免费软电话, 网络.
+194 | 7Liao_VChat | 网页聊天室
+195 | iSpQ_VideoChat | iSpQ Videochat是一个实时影像聊天软件, 它能通过你计算机中所安装的摄像头, 将你和你朋友之间的计算机连接起来, 并让彼此看到影像, 就像亲自见面一样.
+196 | Mail_ru_Agent | 由Mail.ru创建的一个免费即时通讯软件, 是俄国最大的门户网站之一.
+197 | PaltalkScene | PaltalkScene实时通讯软件, 除了一般的文字和语音或视讯聊天功能, 在PaltalkScene中, 你还能同时使用AIM, Yahoo及ICQ的账号, 同时与多个平台的朋友聊天.
+198 | Eyeball | Eyeball Chat是一款较高质量的视频聊天软件.如果对方使用的是AIM, MSN, Yahoo等聊天工具, 他们会收到一个链接, 通过这一链接, 就可以观赏到你.
+199 | Esnips | eSnips是一款来自美国的网盘, 服务器在华盛顿.提供5G空间存储, 支持100MB单文件上传, 支持除exe格式外的所有格式上传, 可灵活设置共享权限.
+200 | RuneScape | RuneScape是由英国Jagex采用Java开发的基于网页的大型多人在线角色扮演游戏 (MMORPG), 在世界上很受欢迎, 尤其是英国及美国.
+201 | ClubPenguin | 《企鹅俱乐部》是由迪士尼开发的免费游玩的在线网络游戏.
+202 | WinPopupX | WinpopupX 是一款在本地局域网内即时传送消息和文件的小工具, 没有服务端, 可取得在线用户列表和操作系统网上邻居, 以在线用户或网上邻居中的计算机为对象进行通信.
+203 | Veetle | 安装插件在浏览器上播放高清视频
+204 | Archlord | 《霸王》Archlord网络游戏
+205 | Tibia | 一个免费的大型多人线上角色扮演游戏（游戏）.加入这个有趣的游戏, 有成千上万的来自世界各地的玩家.
+206 | MengHuanXiYou | 《梦幻西游》是一款由中国网易公司自行开发并营运的网络游戏.
+207 | CamFrog | Camfrog Video Chat是一套国外视频聊天室软件.你可以跟很多拥有摄像头的在线 用户在闲聊房间一起聊天, 支持一对一和群体聊天室的交谈, 也很容易找到聊天对象.
+208 | SSL | 安全套接层协议(SSL)
+209 | RXJH | 热血江湖是一款以中国武侠为背景的卡通风格网络游戏, 在画面以及系统上都比以往的网络游戏有所突破.
+210 | MetaTrader | MetaTrader股票交易软件
+211 | QNext | Qnext 这套安全的点对点通讯软件提供通用即时信息, 视频会议, 因特网语音协议(VoIP), 文件传输, 文件共享, 集体文本聊天, 在线游戏和远程计算机访问功能.
+212 | DaHuaXiYou | 大型角色扮演类游戏
+213 | WenDao | 问道网络游戏
+214 | DaFuWeng | 大型角色扮演类游戏
+215 | Zultrax | 文件共享软件, 支持ZEPP and Gnutella网络
+216 | H248 | H248(MEGACO)标准协议
+217 | ADC_Protocol | ADC是一个文本协议, 服务器网络类似Neo-Modus Direct Connect（nmdc）.我们的目标是创建一个简单的协议, 不需要很大的尝试也在集线器或客户端上, 并可扩展.
+218 | Jabber | Jabber是一个由开源社区发起并领导开发的即时消息和在线状态的系统.Jabber系统和其它即时消息（IM）服务的一个功能上的差别在于Jabber拥有开放的XML协议.
+219 | IKE | 网络密钥交换协议
+220 | WanMeiGuoJi | 《完美世界国际版》是由完美世界（北京）网络技术有限公司开发的一款大型多人在线全三维网络游戏.
+221 | WanMeiShiJie | 完美世界（完美时空的一款3D网游）
+222 | ZhuXian2 | 诛仙2, 网络游戏, 完美时空公司
+223 | ChiBi | 赤壁, 网络游戏, 完美时空公司
+224 | WuLinWaiZhuan | 武林外传, 网络游戏, 完美时空公司
+225 | ReWuPaiDui | 热舞派对, 网络游戏, 完美时空公司
+226 | KouDaiXiYou | 口袋西游, 网络游戏, 完美时空公司
+227 | ShaiYa | 神泣, 一个3D网络游戏
+228 | XiaYiDao2 | 梦工厂开发的一款武侠网络游戏.
+229 | Ventrilo | 是下一代通过IP（VoIP）的群聊沟通软件, Ventrilo也为所有其他效仿者提供了行业标准
+230 | ZhengTu | 一款由上海征途网络科技有限公司（下称征途网络, 即现在的上海巨人网络科技有限公司）开发的二维写实类大型多人在线角色扮演游戏（MMORPG）.
+231 | Mysql | Mysql是一个开放源代码的关系数据库管理系统, 原开发者为瑞典的MySQL AB公司.
+232 | CBS_Streaming | 美国哥伦比亚广播公司(Columbia Broadcasting System)的一个在线视频网站
+233 | KuaiLeXiYou | 大型角色扮演类游戏
+234 | Woool | 由盛大网络开发的大型角色扮演类2D游戏 --传奇世界
+235 | NetBios | NetBIOS, 为网络基本输入输出系统的缩写, 它提供了OSI模型中的会话层服务, 让在不同电脑上运行的不同程式, 可以在局域网路中, 互相连线, 以及分享资料.
+236 | ShengDa_Common | 盛大网络软件公共协议
+237 | Vuze | Vuze一个基于JAVA的优秀BT下载程序
+238 | JinShanGamePlatform | 大型游戏平台
+239 | HeadCall | 一款VOIP软件, PCtoPC是 免费的, PHONEtoPC是收费的.
+240 | JuRen | 大型角色扮演类游戏
+241 | WebDisk_Namipan | 免费网络硬盘
+242 | Come2Play | flash游戏平台
+243 | DaFuXing | 大福星股票软件
+244 | WebMail_Mail | www.mail.com提供的电子邮箱
+245 | Last_fm | 是一个基于CS模式的, 使用http协议的网络电台软件
+246 | KingSoft_ChunQiu_Common | 金山春秋系列公用游戏协议
+247 | ShenGuiChuanQi | 完美时空的一款2.5D网络游戏
+248 | FengShen | 金山的一款游戏
+249 | JuRen_Common | 上海巨人网络有限公司生产的游戏软件的公共协议.
+251 | XianLvQiYuan2 | 一款在线角色扮演的游戏.
+252 | Lineage1 | 网游天堂I
+253 | GOM_TV | GOM Player是一个免费的多媒体播放器, 内置流行的视频和音频编解码器
+254 | Morpheus | Morpheus是一个文件共享和搜索点对点适用于Microsoft Windows的客户端, 发展和分布的流传播公司, 最初使用的OpenNAP协议的支持, 但后来许多不同的对等协议.
+255 | RTMP | RTMP协议是被Flash用于对象,视频,音频的传输. 实时消息协议（RTMP）是由Adobe Systems开发的专用协议, 在互联网上, Flash播放器和服务器之间的流式音频, 视频和数据.
+256 | SpeedKu6 | 极速酷6(SpeedKu6)：一款集视频点播, 直播, 高清, 搜索下载与一身的网络电视
+257 | AOL_Video | 美国时代华纳公司的一个视频分享服务, 节目内容一般是电视台的节目
+258 | OSCAR | AOL公司的通讯协议,  ICQ和AIM目前都采用此协议.
+259 | MySpaceIM | Myspace 推出自己的即时通讯工具MySpaceIM, 用于Myspace会员间的沟通, 具有一键登陆邮箱, 公告板, 查看朋友文档的功能
+260 | iMesh | 媒体和文件共享客户端与在线社交网络功能, 提供9种语言.它使用一个专有的, 集中的, P2P网络（IM2Net）
+261 | ITunes | iTunes是苹果公司最热门音乐软件, iTunes用于播放以及管理数字音乐与视频.iTunes能连线到iTunes Store下载购买数字音乐, 视频, 电视及游戏等等
+262 | Mig33 | 手机聊天软件
+263 | WinMX | 一个免费的点对点的对等文件共享程序撰写的Frontcode技术, 运行在Microsoft Windows操作系统
+264 | HaoFang | 大型游戏网络对战平台
+265 | MUTE | The MUTE网（或MUTE网的）是一个对等文件共享网络的发达不愿透露姓名的心态. MUTE客户端是公共领域下发布的开源软件, 其中包括支持在Linux, Mac的OS X和微软Windows
+266 | KoalaDC | 一款使用DirectConnect协议和ADC协议的P2P共享的开源软件.
+267 | Brightcove | 一个融合媒体的内容发布平台, 媒体内容生产商, 网络出版商和广告主可以通过订阅Brightcove相关技术服务平台, 来传播自己的内容
+268 | Joost | 一个网络电视服务
+269 | ebuddy | eBuddy网是一个网络和移动信使, 它支持各种即时通讯服务, 包括Windows Live Messenger, 雅虎, AIM,
+270 | PPTP | 点对点隧道协议,是在PPP协议的基础上开发的一种新的增强型安全协议.
+271 | pando | Pando是一个免费的网络文件发送软件, 它可以将最大容量为1GB的文件或文件夹突破邮箱的文件发送限制发送给你的朋友.
+272 | Citrix | Citrix基于移动工作环境的解决方案, 可以帮助用户随时访问所需的应用程序, 且安全, 自由地实现实时业务处理.
+273 | Icecast | 一个流媒体MP3, OGG, WMA电台. IceCast是一个GNU GPL / Shoutcast的开源版本,
+274 | Shoutcast | Nullsofts免费Winamp的基于分布式流式音频系统.成千上万的世界各地的广播都在等着你来调整, 并听取.
+275 | OpenNAP | 中止点对点服务
+276 | HTTP_Ext | URI以MP3, FLV, ZIP, RAR结尾的HTTP协议
+277 | GoogleAnalytics | Google Analytics是著名互联网公司Google为网站提供的数据统计服务.可以对目标网站进行访问数据统计和分析, 并提供多种参数供网站拥有者使用
+278 | X400 | X.400是指国际电报与电话咨询委员会（CCITT）制定的一组建议.这组建议定义了用于信报处理服务（MHS）的基本标准
+279 | IPv6_Over_IPv4 | 一种IPv4过渡IPv6的协议
+280 | GoogleEarth | 谷歌卫星地图软件
+281 | Jajah | JAJAH是一款能够进行免费的语音和视频聊天的全新IM软件
+283 | aMSN | 一个类似于MSN的软件
+284 | AOL_Uncut_Video | http://uncutvideo.aol.com/, 美国时代华纳公司的一个视频分享服务
+285 | Babelgum | Babelgum 是在互联网上投放分布录制的电视节目, 它是靠广告来支持的.
+286 | BBSee | 高清MV分享平台
+287 | BianFengGame | 一款RPG游戏
+288 | BiXueQingTian | 大型角色扮演类游戏
+289 | CaiHuaGuWang | 财华终端股票软件
+290 | Carbonite | 是美国一个提供网络备份服务器的网站, 没有容量限制, 可以备份整个硬盘, 不过是付费的.目前还没有中文版的.
+291 | Cosmic_Rift | sony对战平台的一款网络游戏
+292 | DaTangHaoXia | 大型角色扮演类游戏
+293 | DaZhiHui | 大智慧股票软件
+294 | EVE | 大型3D角色扮演类游戏,星战前夜
+295 | Fasttrack | FastTrack是一个对等P2P网络协议
+296 | FeiDian | 沸点网络视频.
+297 | FengYinChuanShuo | 大型角色扮演类游戏
+298 | FengYun_VChat | 网页聊天室
+299 | FSJoy | 大型角色扮演类篮球游戏
+300 | Gaim | 集成了多种流行的聊天软件
+301 | GizmoProject | 集成了多种流行的聊天软件
+302 | HTTP_Browsing | 未识别的http协议, 如google, 百度等首页流量
+303 | Iqonn | Iqonn 网站
+304 | HuangJinDao | 一款角色扮演游戏
+305 | ILiao_VChat | 网页聊天室
+306 | Infantry | 多人在线战斗游戏：步兵
+308 | JingTian | 大型角色扮演类游戏
+309 | KangZhan | 大型角色扮演类游戏
+310 | Legend_Of_Mir2 | 由盛大网络开发的大型角色扮演类2D游戏
+311 | Legend_Of_Mir3 | 由盛大网络开发的大型角色扮演类2D游戏
+312 | MaoXianDao | 韩国开发的2D角色扮演类游戏
+313 | Metacafe | Metacafe是一个在线视频网站, 网站上可以在线观看视频, 也可以上传视频.
+314 | Microsoft_Net_Send | 微软DOS下send聊天服务
+315 | MoJie | 大型角色扮演类游戏
+316 | MoYu | 角色扮演类游戏
+317 | MySpace | http://www.myspace.com/, 美国新闻集团旗下的一个社交网站, 也是全球最大的社交网站.类似于校友录.
+318 | Nate_IM | Nate是个韩国的门户网站, 由SK电信开发的.在2003年, 内特 - 收购了在线社区服务的Cyworld,
+319 | Net2Phone | 一个软件/服务的公司, 其主要业务是基于SIP和PacketCable的VoIP业务.
+320 | P5P | 国内通话质量最好的网络电话！国内自主研发的商务娱乐平台！加入即时通讯功能, 短信, 网络游戏, 休闲游戏, 影视, 音乐等内容
+321 | PandoraTV | http://www.pandora.tv/, 韩国一个视频分享网站, 它有一个客户端PandoraTV mini2, 通过该客户端能更方便访问网站.目前有中文版
+322 | PCast | PCast是由千橡互动自主开发的一款技术领先的基于对等网络技术(P2P)的宽频流媒体解决方案.
+324 | Xvideos | X视频网站
+325 | TVB | 香港电视台TVB
+326 | QQCar | QQ赛车 3D游戏
+327 | QQFantacy | QQ幻想 3D角色扮演类游戏
+328 | QQGame | 腾讯的游戏平台
+329 | QQHuaXia | QQ华夏 游戏
+330 | RealDaTing | Real游戏大厅
+331 | Second_Life | 第二人生
+332 | ShanDongYiDong_PICA | 山东移动——PICA
+333 | ShuiHuQZhuan | 水浒Q传
+334 | STongHuaShun | 同花顺炒股软件
+335 | TeZhongBuDui | 特种部队一款射击游戏
+336 | Tor | 是第二代洋葱路由（onion routing）的一种实现, 用户通过Tor可以在因特网上进行匿名交流
+337 | TouMingZhuang | 投名状游戏
+338 | WaiHuiTong | 外汇通
+339 | WuLin | 游戏的所有流量
+340 | XiaYiDao1 | 一款中国地区流行的RPG网游
+341 | XingYe | 兴业证券股票软件
+342 | YouTube | Google旗下的一个视频分享网站, 也是目前全球最大的视频网站.目前有中文版.
+343 | ZhongXin | 中信证券
+344 | FLV | 一种视频封装格式
+345 | BOOTP | bootstrap(BOOTP)引导协议, 允许一个无盘客户端发现自己的IP地址, 服务器主机的地址, 以及装入一个指定名称的文件到内存并且运行.
+346 | NNTP | 标准协议(Net News Transfer Protocol-新闻组协议)
+347 | Windows_Update | Windows系列操作系统的自动升级服务.
+348 | Winny | Winny软件（也被称为Winny软件）是日本的对等（P2P）文件共享程序
+349 | Meebo | Meebo的是一个基于Ajax的浏览器, 支持多种IM服务, 包括雅虎通即时消息程序
+350 | Vtalk | 一款VoIP软件
+351 | FTPS | FTPS是在安全套接层使用标准的FTP协议和指令的一种增强型FTP协议, 为FTP协议和数据通道增加了SSL安全功能.
+352 | ApexDC++ | ApexDC++是一款使用DirectConnect协议和ADC协议的P2P共享的开源软件.
+353 | BCDC++ | 一款使用DirectConnect协议和ADC协议的P2P共享的开源软件.
+354 | StrongDC++ | 一款使用DirectConnect协议和ADC协议的P2P共享的开源软件.
+355 | iDC++ | 一款使用DirectConnect协议和ADC协议的P2P共享的开源软件.
+356 | Adobe | Adobe公司发行的浏览器插件, 用于显示和播放多媒体资源
+360 | EChat | EChat是一个专业的聊天软件
+361 | Nimbuzz | 一款免费的VOIP网络通讯软件.
+362 | Vbuzzer | Vbuzzer是由Softroute公司开发的一款可以结合Windows Live Messenger, Yahoo Messenger, AIM等IM软件一起使用的网络通讯软件.
+363 | JustVoip | betamax公司的一款VOIP类软件
+364 | LowRateVoip | lowrate网络电话
+365 | BetaMax_Voip | 德国BetaMax公司VOIP类软件的公共协议
+366 | 360 | 360卫士
+367 | KillOnline | 在线杀人游戏, 也叫杀手Online, 网页版.
+368 | SNMP | 简单网管协议
+369 | Aimini | 用于文字语音视频聊天, 交友, 资料共享, P2P搜索上传下载, 物品交换等用途的P2P免费共享软件.
+370 | Fring | fring是一个免费的移动VoIP软件
+371 | FriendCaller | FriendCaller是美国C2Call  GmbH公司开发的一款VOIP软件.目前有网页版和手机版.
+372 | YouKu | 优酷视频网站
+373 | Loudtalks | Loudtalks是一个免费的PTT（push-to-talk） 软件.PTT业务指的是利用VOIP技术实现点到点和点到多点的语音通信业务.
+374 | Truphone | Truphone是一款通过互联网能够与其它电话通信, 发送邮件, 与Gtalk MSN SKype AIM文字聊天的即时通讯软件
+375 | IsKoot | iSkoot是Skype的一个独立插件, 用于在手机上实现Skype的功能, 可以让手机实现网络电话和文本聊天的功能
+376 | Tunnelling_Data | 使用隧道传输的数据
+377 | YY | YY软件是现在流行的一款语聊软件, 可以用来文字聊天, K歌, 语音聊天, 及玩YY游戏等.
+378 | QQ_Music | QQ音乐播放器是由腾讯开发的一款带有精彩音乐推荐功能的播放器.同时支持在线音乐和本地音乐的播放, 是国内内容最丰富的音乐平台.
+379 | TuDou | 土豆网(www.Tudou.com)是中国最早和最具影响力的视频分享网站, 是中国网络视频行业的领军品牌, 也是全球最早上线的视频分享网站之一.
+380 | LDAP | 轻量目录访问协议, 英文全称是Lightweight Directory Access Protocol
+381 | QuickTime | QuickTime 是一款拥有强大的多媒体技术的内置媒体播放器, 可让你以各式各样的文件格式观看互联网视频, 高清电影预告片和个人媒体作品.
+382 | WebDisk_QuPan | 免费网络硬盘
+383 | OMA | OMA是一种与系统无关的, 开放的, 使各种应用和业务能够在全球范围内的各种终端上实现互联互通的标准.通过让客户在不同的市场, 运营商, 移动终端之间使用可互用的移动业务.
+384 | KJava | KJava技术由SUN公司联合18家手机终端厂商和无线通讯运营商共同定义了KJava标准, 即J2ME MIDP标准, 具有跨平台性, 可用于任何通讯制式的手机, 包括GPRS手机和CDMA手机.着眼于移动应用程序的无线
+385 | OnLineLive | 观看免费的3645+互联网电视, 视频点播和收听在线广播电台
+386 | WebMail_FindBulgaria | www.findbulgaria.com的电子邮箱
+387 | NetMeeting | Netmeeting是Windows系统自带的网上聊天软件, 意为“网上会面”.Netmeeting除了能够发送文字信息聊天之外, 还可以配置麦克风, 摄像头等仪器, 进行语音, 视频聊天
+388 | VS_Game | 网络竞技游戏对战平台,官网www.vsa.com.cn
+389 | QQBattleZone | QQ对战平台.
+390 | Rodi | The Rodi program 是一个很小的P2P客户端/主机（在300K的二进制代码）纯Java实现.该计划是一个开放的源aletrnative针对企业网络的商业搜索引擎
+391 | FoxNews | FoxNews是美国的一家新闻媒体网站www.foxnews.com
+392 | QIYI | 百度旗下视频网站, 爱奇艺.
+394 | Doom | 毁灭战士游戏
+395 | ExoSee | ExoSee是私人社区为导向的文件共享程序, 其允许同时在社区内和私人信任的成员分享唯一的公共共享, 支持它自己的XOC协议, 允许用户下载后关闭.
+396 | DeltaForce | 三角洲部队由NovaLogic以单兵战斗模拟为主的游戏, 其真彩地形无与伦比由目前最为强大的VoxelSpace 3图形引擎构建起来的32位（6亿5千万色）.
+397 | FileGuri | 一个韩国的P2P软件
+398 | Badongo | 网络硬盘服务, 分非注册, 注册免费和收费用户三种
+399 | CCTV | 中国网络电视台
+401 | MS_PushMail | 微软的邮件推送服务, 及时推送新邮件.
+402 | Granadoespada | 卓越之剑（ GE ）, 是由韩光软件（ HanbiSoft ）开发的3D网游.卓越之剑（ GE ）是以 15 世纪发现美洲新大陆的欧洲世界为原型来设定游戏背景, 在虚构的 Granada Espada 这片新大陆上, 为所有人营造
+403 | pcAnywhere | 远程控制软件
+404 | CDDB | 网络上的CD数据库, 可以在线识别CD碟片信息, 并将结果反馈
+405 | UltimaOnline | 创世纪网络游戏, 一款角色扮演类网络游戏, 号称“网络游戏之父”, 于1997年开始运行, 目前已发行第8部.名称为High seas
+407 | TantraOnline | TantraOnline是由亚太电信集团旗下开发一款角色扮演类网络游戏.于2004年发布.
+408 | Battlefield1942 | 战地1942（Battlefield 1942）是一款背景在第二次世界大战的第一人称射击游戏.
+409 | Kohan2 | 可汗2：战争之王.是TimeGate Studios开发的一款策略类游戏, 最多允许八人同时连线作战, 线上对战需要GameSpy游戏平台的ID帐号.版本：1.1.5.官网：www.tiemgate.com.
+410 | Crysis | 《孤岛危机》（Crysis）是一款科幻题材的第一人称射击游戏, 此游戏由德国游戏开发商Crytek制作开发, 并由美国艺电(EA)发行, 是孤岛危机三部曲的第一部.
+411 | Battlefield2 | Battlefield 2, 背景首次由真实的历史战役转移到了虚构的现代军事战争, 而玩家在游戏中使用的武器, 载具等装备则来源于现实.相比前作, 游戏使用了高度修改的引擎, 画面, 声音效果上有了很
+412 | Day_of_Defeat | Valve公司2003年开发的一款第一人称射击游戏,  自从CS大获成功后, Valve便着手MOD的推广和开发,《胜利之日》（英文简称DoD)是至今为止唯一能和CS媲美的MOD.
+413 | Team_Fortress_Classic | 这是Valve公司2000年开发的第一人称射击游戏,其中与CS,DOD等游戏类似,.《军团要塞》不过在原有的《半条命》游戏版本上增加了团队作战模式.
+414 | Half_Life_DeathMatch | 半条命是一个科幻类型的第一人称射击电子游戏, 由Valve软件开发, 雪乐山公司在1998年出版.
+415 | Netfolder | Netfolder是德国Netfold公司提供的400MB免费网盘, 其netload.in提供功能400MB的免费存储空间, 90天无人下载即删除, 主机放置在德国.
+416 | Tony_Hawk_ProSkater_3 | 《托尼·霍克极限滑板III》是由Gearbox Software公司开发一款划雪方面的游戏.
+417 | Valve_Steam | Steam是一个方便迅捷的综合性下载平台, 让用户随时随地保持与已购买游戏的联系, 购买的游戏与用户的帐号关联, 而不是用户的计算机.无论到哪, 都可以通过Steam使用数字下载方式来获得游戏
+418 | Rediff_BOL | Rediff Bol是一款IM软件, 开发商是印度的Rediff.  具有视频聊天, 语音聊天等功能.  支持多人聊天, 及印度语言聊天.  支持向手机发送信息, 仅限于印度手机号.  目前己有多种语言的客户端
+419 | LETV | 乐视网是中国领先的网络视频领域跨平台服务提供商, 通过互联网为电脑, 电视机, 手机及其他移动终端用户提供优质的网络视频节目服务, 是中国第一影视剧视频网站和中国领先的3G手机电视
+420 | GameSpyArcade | 游戏对战平台,交换游戏心得,线上聊天.
+421 | Habbo | 哈宝旅馆是一个虚拟的旅馆, 玩家可以在这里闲逛, 交友, 聊天等等.
+422 | MLB_TV | 一个美国棒球视频网站
+428 | Storm | 暴风影音(影音风暴)
+429 | SID | Sonic Interaction Design(SID) 是剥削的声音传递信息, 意义和美学/情感素质在互动环境中的主要渠道之一.
+430 | Soapbox | Microsoft SoapBox又叫MSN Vedio, 一个类似于Youtube基于Web的视频网站.
+431 | Teredo | 微软IPV4到IPV6的过渡解决方案
+432 | PeerCast | 一款P2P流媒体软件, 目前仅支持广播, 暂不支持VOD形式的点播.支持的流媒体格式：MP3, WMA,  AVS, WMV 和NSV等.
+433 | GigaTribe | 一款点对点的网络文件共享软件, 其所有的数据传输都经过强力加密,中断的数据传输可以自动地无损续传.
+434 | Symantec_live_update | LiveUpdate是Symantec公司更新服务的品牌标识, 从杀毒软件到备份工具, 甚至是硬件防火墙, 一切可以进行更新的产品, 都使用统一的LiveUpdate进行更新.
+435 | Behavior_TransferFile | 文件传输类行为识别
+436 | Behavior_P2P | P2P类行为识别
+510 | directplay | DirectPlay提供的是一种便利的网络通信机制, 其对象有Direct Play对象, Player对象和Group对象等.DirectPlay对象可以实现会话管理, Player管理, Group管理及消息管理等.
+586 | kerberos | Kerberos 是一种网络认证协议, 其设计目标是通过密钥系统为客户机 / 服务器应用程序提供强大的认证服务.
+699 | rsync | rsync文件同步传输服务, 使用873专属端口.
+700 | rtelnet | 远程Telnet服务（Remote Telnet Service）, 使用107专属端口.
+718 | Shockwave | Shockwave 是一个小游戏网站,有在线游戏,下载游戏,购买游戏,聊天等功能.
+798 | Star_Wars_Galactic_Battlegrounds | Star_Wars_Galactic_Battlegrounds(星球大站之银河战舰)是由LucasArts于2001年开发的网络游戏,可以单机玩,也可以连网玩.连网功能是用DirectPlay技术实现的.
+799 | Identd | 标准协议, RFC1413.规则特殊用户的TCP连接
+800 | Syslog | Syslog是一个日志管理协议, 具体情况见RFC 3164.Syslog常被称为系统日志或系统记录, 是一种用来在互联网协定（TCP/IP）的网络中传递记录档讯息的标准.
+801 | Flash_Yahoo | 美国雅虎公司的Flash视频
+802 | Windows_Media_Center | 微软通过一系列的全新娱乐软件, 硬件, 为用户提供了从视频, 音频欣赏到通信交流等全方位的应用.
+803 | Sony_Online_Games | 索尼在线娱乐Sony Online Entertainment简称SOE创立于1995年夏天, 作为索尼旗下的一家分公司, 索尼在线娱乐（SOE）主要负责开发以及代理网络游戏.（注：分析的只是SOE这个网页）
+804 | Opera_Mini | 由挪威Opera Software ASA公司开发的手机浏览器
+805 | JumpTV | JumpTV公司是一家加拿大公司, 全国最大的互联网电视载体. JumpTV在路口的两个增长领域：互联网协议电视（IPTV）和少数族裔媒体服务
+806 | TVUPlayer | RTVUPlayer是免费的应用软件, 用于Windows和Mac OSX, 它提供了在互联网上收看几十个电视频道.
+807 | ABC_Streaming | 是美国广播公司（American Broadcasting Company,  ABC）建立的美国商业广播电视网络.
+808 | Gadu_Gadu | Gadu-Gadu是波兰最流行的IM即时通讯软件.
+809 | MegaUpload | Megaupload是美国著名在线网络硬盘服务商, 总部设于中国香港.
+810 | SageTV | SageTV是英国Sage公司开发的一款功能强大的媒体软件, 可以用来看在线视频, 也可以搭建媒体服务器, 客户端可以直接连过来看服务器中视频, 图片, 音乐等.
+811 | PacketiX | PacketiX.NET PacketiX VPN的VPN技术的SoftEther公司开发的是一个学术性, 非营利性的网络环境.
+812 | DivxWebPlayer | DivX Web Player是一款集成于浏览器的DivX浏览器插件, 能使浏览器直接播放在线DivX视频, 非常实用的工具.该插件可用于Windows平台下的IE,  Firefox,  Netscape等多种浏览器.
+813 | BGP | 边界网关协议（ 英文：BGP, Border Gateway Protocol）是互联网上一个核心的去中心化自治路由协议.它通过维护IP路由表或‘前缀’表来实现自治系统（AS）之间的可达性, 属于矢量路由协议.
+814 | Oovoo | ooVoo一款提供高品质网络视频聊天和音频通信服务的VOIP软件.
+815 | Mxit | Mxit是一个即时通信软件, 能够在各种手机, 电脑上运行.
+816 | Matacafe | Matacafe是一个视频搜索网站, 可以在线搜索视频,   主页为：www.matacafe.com
+817 | Vuze_HTTP | Vuze本身没有WEB版本, 但是支持以WEB的方式控制远端的Vuze客户端.
+818 | BBC_iPlayer | iPlayer是英国广播公司（BBC）推出的一项播客服务, 可以让用户点播过去七天里播出的电台电视台节目.基于网页的, 看TV只能在英国才行, 国内只能听video .
+819 | QQ_VChat | QQ聊天室
+820 | Vshare | VShare(Video Share System)是一个强大和可靠的视频点播/个人播客/视频分享与托管平台, 网站管理员可以轻松创建高性能的视频网站
+821 | Poivy | 随着poivY, 你可以拨打网络电话的免费联系您的网上朋友, 以及各种流行的旅游目的地.
+822 | CinemaNow | CinemaNow网络视频在线网站.其拥有一流的好莱坞院线（迪斯尼, 福克斯, 索尼, 环球, 华纳兄弟等）的电影资源.
+823 | Crackle | Crackle是索尼旗下的视频网站, 2007年7月索尼旗下的视频网站Grouper改头换面为Crackle网站.
+824 | Zattoo | Zattoo是一个专有的对等互联网协议电视系统（P2PTV）目前的工作重点在欧洲的渠道
+825 | XDCC_Catcher | XDCC Catcher是一个音源下载工具
+826 | NicoVideo | NicoVideo是一家日本视频共享网站.
+828 | Other_VOIP | 疑似VoIP的流量而提的协议, 后续会划分到具体的协议下.
+829 | Facebook | 美国的一个社交网站.特点是开放API, 允许其他网站的内容作为一个“插件”一样嵌入进来.
+830 | Yahoo_Games | 官方网站：http://games.yahoo.com/；描述：在线休闲游戏及下载
+831 | KaZaA | KaZaA是一款世界著名的P2P软件, 采用FastTrack协议.可以收听音乐也可以下载音乐, 下载音乐提供的软件是Kazaa Music Plugin
+832 | Soribada | 韩国音乐网站, 提供在线试听音乐.
+833 | Veoh | 网络电视, vpn美国IP可登陆, 分http插件和独立软件版,
+835 | Dailymotion | Dailymotion是一家视频分享网站, 用户可以在该网站上传, 分享和观看视频
+836 | Ants_P2P | 提供资源下载和聊天功能
+837 | DarkReign | 黑暗王朝
+839 | MegaShares | 在Megashares.com我们的使命是为我们的客户和用户提供云计算, 档案托管服务.
+840 | Ifilm | 是美国知名的电影网站, 提供非常丰富的电影资源, 除了有最新影片的预览片, 剪辑以外, 还分类收集有许多其他的视频 ...
+841 | BBBroadcast | 光芒国际与软银集团的TVBank开发的可以同时向众多人转播动画的“BB Broadcast”系统, 让用户享受高质量的现场视频直播服务.
+842 | BlipTV | 在线视频播放网站, 可以免费观看各种各样的戏剧, 喜剧, 文艺, 体育等节目
+843 | JibJab | Jibjab软件是美国Jibjab公司开发的一家恶搞网站.特点是提供收看, 制作, 下载, 转发恶搞图片或视频.
+844 | LotusNotes | Lotus Notes 邮件系统
+845 | appleJuice | Applejuice是一个半集中式对等文件共享网络到原来的电驴网络.
+846 | Nintendo_Wii | Wii是日本任天堂公司于2005年11月19日推出的家用型游戏机主机.Wii属于第七代家用型游戏机, 前所未有的控制使用方法, 怀旧主机游戏的贩卖下载, 无关游戏的生活资讯内容, 运用网络的功能以
+847 | Outlaws | 《执法悍将》（英语：Outlaws）是电子游戏公司卢卡斯（LucasArts）于1997年发布的第一人称射击游戏, 游戏运行于Windows平台.
+848 | F16 | 飞行模拟游戏
+849 | PlayStation | PlayStation（简称PS）是日本索尼（SONY）旗下的新力电脑娱乐SCEI（全名为 Sony Computer Entertainment Inc.）于1994年12月3日推出的家用游戏主机.当时与PlayStation竞争的还有世嘉公司的土星（SEGA Saturn）,
+850 | MegaShare | MegaShare.com(注意和megashares的区别)
+851 | NBC | 全国广播公司（英语：National Broadcasting Company, 台湾译国家广播公司）是美国一家主流广播电视网络公司.
+852 | Boxee | Boxee的（如Boxee的正式注册商标）是一个跨平台的免费软件HTPC（家庭影院PC）的软件应用程序
+853 | Xbox | Xbox是世界最大的电脑软件公司之一微软所开发, 销售的家用游戏主机.
+855 | Motorhead | 一款赛车游戏软件
+856 | CuSeeMe | CU-新美（也写成取决于源的CUseeMe或CUSeeMe）是一个互联网视频会议客户端.
+857 | Viber | Viber是Viber Media Inc公司开发的一款通话辅助应用程序, 这款应用程序可以让你拨打免费的电, 通话就是免费的, 而且音质也比普通电话好.
+858 | Facetime | FaceTime （iPhone的可视电话功能）只能通过 Wi-Fi 运行, 不能使用蜂窝网络.Facetime仅限于iPhone 4, iPod Touch 4和Mac苹果电脑之间使用.
+859 | WhatsApp | WhatsApp Messenger 是一个能替代SMS的跨平台手机IM软件, 可以同联系人发短信消息, 音视频, 共享位置等.
+860 | HTTP_CMCC_CMWAP_PROXY | 中国移动网关HTTP协议
+861 | PingChat | 一款iphone上的即时聊天通信软件.
+862 | 4oD | 英国广播公司第四频道提供的定制视频点播服务4oD
+863 | Kaspersky | Kaspersky是国际著名的信息安全领导厂商, 为个人用户, 企业网络提供反病毒, 防黑客和反垃圾邮件的产品
+864 | NBA | NBA是美国第一大职业篮球赛事.NBA.COM是NBA组织的官方网站, 发布日常比赛视频, 图片, 新闻和球员球队资料等等相关信.
+865 | SapoVideo | SAPO是葡萄牙最大的门户网站, 主要提供邮箱, 游戏, 视频, 新闻, 商业服务等.
+866 | Songsari | Songsari是韩国一个比较流行的, 提供MP3音频, MP4视频类歌曲的Musci网站, 并且具有独立的Songsari音乐播放器软件, 类似国内的酷狗等音乐软件
+867 | SpareBackup | pareBackup是一款方便和安全的在线数据备份系统.使用SpareBackup客户端, 用户可以方便地对选定类型或指定路径的文件进行备份
+868 | CBC | CBC主要是加拿大的一个广播网站, 它可以查看新闻, 听广播, 播放视频
+869 | StupidVideos | stupidvideos是美国一家致力于收集幽默, 搞笑, 疯狂的视频为主的视频网站.
+870 | TomatoPang | TomatoPang是韩国的一个P2P文件共享软件, 通过TomatoPang可以直接进行点对点的文件共享.
+871 | Vimeo | 是一个外国的视频网站, 提供高清视频存放服务.
+872 | GoBoogy | GoBoogy是一款韩国著名的P2P类型的共享软件.
+873 | ClubBox | Clubbox是一韩国很流行的100G网络硬盘免费空间.
+874 | Anarchy | 挪威游戏《混乱在线》
+875 | EliteForce | 英文全名为Star Trek Elite Force II, 一款在线多人角色扮演游戏.
+876 | SmartVoip | Smartvoip是一个由Betamax推出的网络电话, 它提供了低廉的费用和免费时间,  提供了直接从电脑上拨打普通座机和移动电话的功能,  提供了将两个电话串在一起的回拨功能, 支持SIP话机和网关, 可
+877 | CNN | CNN是美国有线电视新闻网——Cable News Network的英文缩写, 通过卫星向有线电视网和卫星电视用户提供全天候的新闻节目.
+878 | Jango | 美国的一个音乐电台社区
+879 | Livestation | Livestation是采用P2P技术的广播, 电视网络平台, 可在不同的操作系统上运行.
+880 | RuTube | RuTube是俄罗斯的一个免费视频网站, 界面为俄语的.它拥有新闻, 体育, 电视, 电影等分类的视频
+881 | Opera | 由挪威欧普拉软件公司开发的浏览器.
+883 | ActionVoip | ActionVoip是一个由Betamax推出的网络电话
+884 | Deezer | Deezer是法国在线音乐网站
+885 | ezPeerPlus | 史上功能最强音乐播放器 ezPeer+,百万首合法授权音乐供您线上随选随听, 喜爱的歌曲还能下载至手机.
+886 | Gobby | Gobby, 多人协作方面文本编辑器
+887 | HTTPTunnel | HTTP-Tunnel Client是一个实现HTTP Tunnel技术
+888 | LadbrokesPoker | 扑克赌博网站
+889 | Legends | 网络游戏, 是一款免费的快节奏第一人称视角的多人在线游戏.
+890 | SuddenAttack | 《突击风暴》（英文名称：Sudden Attack）是由韩国GAMEHI公司制作, 盛大游戏运营的第一人称射击类网络游戏.
+891 | Valor | 一款在线手机游戏.可以建立城堡, 建立一支军队, 然后加入一个公会, 去征服大陆.
+892 | MATOnline | 金山开发的一款第一人称射击游戏
+893 | Hopster | 代理服务器
+894 | Espn | 一个点播点播体育视频和收听在线Radio的网站.
+895 | JustinTV | Justin TV是一个专业的个人生活视频分享网站.
+896 | NateOn | NateOn是韩国的sk通讯公司推出的一款IM软件
+897 | X224 | X224是连接模式传输服务协议.
+898 | Rozzlobenimuzi | Rozzlobenimuzi是捷克的一个视频网站.
+899 | Rynga | Rynga是一个由Betamax推出的网络电话
+900 | Hulu | “葫芦”, 一个免费观看正版影视节目的视频网站, 它和全美许多著名电视台以及电影公司达成协议, 通过授权点播模式向用户提供视频资源.
+901 | Graboid | Graboid是一个视频网站, 其提供视频下载和在线播放, 可以用很少的等待时间浏览最热门的影片.
+902 | Smotri | Smotri是俄罗斯的一个专业视频分享网站（类似国内的土豆, 优酷）
+904 | Kik | KIK Messenger是一个即时消息应用程序的移动设备.
+905 | EliminatePro | Ngmoco公司推出的基于iPhone手机的第一人称的射击游戏
+907 | QuickShare | 是一种简便体验分享工具.
+909 | SaveShare | 网盘网站,是一个可以上传或是下载文件共享网站.
+910 | SimpleUpload | 德国的一个网络硬盘.
+911 | TongCheng | 杭州畅唐科技有限公司旗下开发的特色游戏平台.
+912 | TTPlayer | 音乐播放器, 集成网上下载功能
+913 | Uloz | Uloz是国外的一个免费网络硬盘, 同时也可以在线观看上传的视频文件.
+914 | XunXian | 《寻仙》由腾讯游戏代理运营, 国内著名开发商北京像素软件耗时三年开发的首款中国风美术片3D网游.
+915 | Daum | 是韩国最大的门户网站之一, 于1995年2月成立, 是韩国第一个电子邮件服务网站Hanmail的前身.
+916 | Nova | NOVA网络电视, 包含科学, 纪录片等视频资源.
+917 | 4shared | 免费的网络硬盘.
+918 | depositfiles | 俄国的一家网盘网站.提供没有时间限制的免费文件存储功能到服务.
+920 | MediaFire | MediaFire是来自美国华盛顿的老牌免费网络硬盘.
+921 | SaveFile | Savefile美国免费的网络存储网站
+922 | FileUpYours | fileupyours网盘网站.
+923 | GigaSize | GigaSize网盘网站.
+924 | FileHost | FileHost网盘网站
+925 | FileSend | fileSend是一个文件发送器.
+926 | EasyShare | EasyShare是一款完全免费的家庭宽带拨号和共享上网软件, 它集成了ADSL拨号功能和宽带共享功能.
+927 | YourFiles | 趣盘, 一个网盘网站, 提供在线存储和下载服务.
+928 | MOFile | 网盘网站, 是一个为用户提供视频分享及所有数字内容的存储和传输的网站传媒.
+929 | WebMail_Gmail | Gmail是Google公司的免费电子邮件服务.
+930 | UStreamTV | UstreamTV是一个个人互联网在线音视频广播平台.
+931 | Revver | 个人视频分享网站.
+932 | TBS | 株式会社TBS电视, 通称“TBS电视台”, 简称“TBS”, 是日本五大民营无线电视台之一.
+933 | IFolder | iFolder 是一个由Novell, Inc.开发的开源程序, 目的是让不同的不同的操作系统在网络上 分享文件.
+934 | OpenVPN | OpenVPN是一个开放源码的软件应用程序, 其使用虚拟专用通道VPN协议, 为企业之间或者个人与公司之间提供安全的数据传输的隧道, 通信时使用SSL/ TLS密钥交换.
+935 | Swat4 | 《霹雳小组4》（SWAT 4）是一款第一人称的战术射击游戏, 为霹雳小组系列的第3款游戏, 由Irrational Games开发, 维旺迪游戏发行.
+937 | Foxy | foxy是一款完全免费的繁体中文P2P下载软件.
+938 | Miro | Miro是一个免费开源的软件, 包含了一个媒体播放器, 视频库, 内容向导, 视频搜索引擎, 综合了podcast和BitTorrent客户端.
+939 | NeedForSpeed3 | 极品飞车3（英语：Need for Speed, 简称NFS）, 是美国艺电（EA）推出的一系列赛车游戏.
+940 | OperationFlashPoint | 闪点行动,CodeMasters SoftWare公司发行的一款团体军事战术第一人称射击游戏.
+941 | SoldierOfFortune | 《命运战士》（Soldier of Fortune）是一款由Raven Software开发, 由Activision在2000年3月27日发行的第一人称射击游戏.
+942 | Zkouknito | 一个多媒体, 娱乐视频网站, 是访问量最大的捷克媒体服务器.
+943 | DaCeLve | 大策略股票信息快车
+944 | TianLongBaBu | 《天龙八部》是一款采用全3D人物和场景制作的纯国产网络游戏.
+945 | FileFactory | FileFactory网盘网站.
+946 | Megavideo | Megavideo是著名在线网络硬盘Megaupload推出的影片分享网站.
+947 | Terra | 美国新闻门户网站, 包含生活方式, 娱乐, 体育等内容.
+948 | LinkedIn | LinkedIn是一家面向商业客户的社交网络（SNS）服务网站.
+949 | Uploading | 是一个安全的远程存储容量重要数据备份工具.
+950 | OFF | P2P文件分享系统.
+951 | OperaMobile | Opera Mobile是由OperaSoftware ASA开发的, 用于智能手机和个人数字助理上的网络浏览器
+952 | COTP | 面向连接的传输协议
+953 | AoWei/ShiJiWangTong/ShangYang | 傲威，世纪网通，尚阳网关 协议
+954 | Azureus | Vuze(旧名Azureus毒蛙)是一个基于JAVA的多torrent下载程序, 支持P2P和Tor匿名网络协议,是全球最强大的比特流应用程序.
+955 | L2TP | 第二层隧道协议（L2TP, Layer Two Tunneling Protocol)是一种数据链路层隧道协议, 通常用于虚拟专用网.
+956 | SyncML | SyncML(Synchronization Markup Language)是与平台无关的信息同步标准协议集, 分为SyncML数据传输协议（SyncML-DS）和SyncML设备管理协议(SyncML-DM)
+957 | IMAP2 | 交互邮件访问协议 - 第2版的意图交互邮件访问协议版本2
+959 | QQDouDiZhu | QQ斗地主是腾讯公司开发的一款休闲的棋牌类游戏.
+960 | ScreenPlay | 网络视频网站, 包括电影预告片, 音乐视频和视频游戏预告片之一.
+961 | Abacast | Abacast是一个在线广播和在线视频服务供应商.
+962 | ZhongFang | 众方语音
+963 | IMAP3 | Internet Mail Access Protocol（IMAP）, 即交互式邮件存取协议, IMAP3是它的一个变种
+964 | T125 | 多点通信服务协议
+965 | AnxinStock | 安信证券股票行情软件
+966 | FreeCiv | 文明帝国, 是一款在线策略游戏.
+967 | Hyves | Hyves是在荷兰最受欢迎的社交网站.
+968 | PoBo | 一款网上期货行情软件.
+969 | MengHuanZhuXian | 《梦幻诛仙》是完美世界旗下首款2D飞仙回合网游大作
+970 | QQ_YinSu | QQ音速,英文名QQR2
+971 | PP365_VOD | PP365影视点播
+972 | IM+ | 全能即时通讯软件, 支持Skype, GTalk,  Yahoo,  MSN/Live Messenger,  AIM/iChat,  ICQ,  MySpace,  Twitter,  Facebook,  Jabber 等即时软件.
+973 | Twitter | 美国的一个移动社交网络服务, 微博客.
+974 | OWA | Outlook Web Access, 是基于微软Hosted Exchange托管邮件技术的一项Web访问功能.邮箱用户通过访问Outlook Web Access页面, 可以直接使用Web浏览器读取, 管理或发送电子邮件
+975 | Waste | Waste是一个P2P的文件共享和IM系统.在Waste覆盖网内部数据流都是加密过的以防外部的监听.
+976 | PP365 | PP点点通（PP365）为互联网用户提供以网络点对点即时通讯, 好友查找, 信息搜索, 资源共享, 下载管理, 广告发布等服务
+977 | Vonage | Vonage是在美国纽约证券交易所上市的IP电话和会话发起协议的网络公司,  主要提供基于宽带的电话（VOIP）服务.
+978 | Tribes | Tribes II, 一款射击游戏
+979 | DIGStream | 即DIGStream Cache Manager 或Playhouse Disney Download Manager的附属软件.
+980 | 5oD | 英国独立电视台第5频道
+981 | Stream | 捷克一个网络电视, 电影, 音乐等视频网站
+982 | Finger | Finger是UNIX系统中用于查询用户情况的实用程序(dos系统也包含此命令)
+983 | SkyDrive | Windows Live 上的免費儲存空間.有了SkyDrive, 即可輕鬆儲存檔案與相片, 並且與所有人分享.
+984 | TNT | 特纳电视网（TNT）是时代华纳旗下付费电视网.
+985 | AppStore | 苹果IOS系统的软件商店
+986 | RSH | RSH是允许一个用户在一个远程系统执行命令而不需要登录到这个系统上的一个协议.
+987 | 1LegCall | 识别能力与PS8.1补齐, 一个移动的VOIP拨号器应用程序
+988 | VGOLive | 空协议, PS需求, 保持PS8.1一致.Vgo网络电视是21CN推出的一款免费, 高速网络在线看视频软件.Vgo网络电视采用了最先进的视频P2P技术, 在线用户越多, 播放越流畅, 越稳定的特性.
+989 | TOnline | T-Online为企业和个人提供网络接入服务.T-Online还是网络门户, 使得用户享受个性化服务.
+990 | Allods | 《巫师之怒》（英文名：Allods Online）是《英雄无敌5》开发团队Astrum Nival开发的一款大型多人在线角色扮演类游戏.
+991 | Kuro | （酷乐）是第一款全中文界面的MP3分享软件, 具有超强的MP3搜寻, 下载, 播放, 刻录功能.
+992 | Blubster | Blubster是一个具有新的私有协议的点对点的网络
+993 | DayDay_VChat | 天天聊天室, 免费语音视频聊天室服务, 提供可嵌入自己的网站, 社区, 博客中的功能强大, 界面清新漂亮的flash聊天.在网上找“天天聊天室”, 点开主页后是“闪聊”, 现在似乎改名叫闪聊了
+994 | FurthurNet | 非商业的, 开源的, 支持P2P的在线音乐网站
+995 | Kontiki | Kontiki公司数据安全传输相关产品Kontiki Delivery Manager
+996 | Manolito | 一种完全免费, 安全, 快速的P2P文件共享软件.可下载音乐, 与你的朋友聊天, 创建播放列表, 收听您最喜爱的MP3和更多！
+997 | Mysee | MySee是一家具有大量合法版权的视频音频资源网络平台,运用网络流媒体技术,给广大受众提供流畅清晰的的影音文件的视音频娱乐综合网站.
+998 | SaynSay_VChat | sayNsay视频聊天是一种使用最前卫, 最实用聊天方式的IM软件, 具有最新的, 最完全的聊天功能.
+999 | Share | 日本的P2P软件, 类似Winny, 加密的
+1000 | Skinny | Skinny呼叫控制协议是一个专有的网络终端控制协议.是Cisco的专有VoIP协议, 用于连接Cisco VoIP电话到Cisco呼叫管理服务器.
+1001 | SlingBox | Slingbox是一个通过家庭网络来传输信号连接电视机（或任何其他视频输出设备）的机顶盒, 其无需进行录制就可以将信号实时传输到另一台设备中.
+1002 | TVKoo | TVKoo!是一款全新的p2p流媒体绿色播放软件.播放时延时小, 全自动穿透内网, 支持内网间互联.
+1003 | Epicea | Epicea可以让你在互联网上与数以百万计的其他人共享文件.
+1004 | Nodezilla | Nodezilla是一个安全, 分散和容错的路由系统（或网格网络）, 支持分布式服务, 如文件共享, 聊天, 高效率的视频多播流, 并能进行文件存储.
+1005 | AsheronsCall | 《阿斯龙的召唤》(Asheron's Call)是由微软发行, Turbine开发的网游游戏
+1006 | Black and White | 一款来电信息拦截手机软件
+1007 | F22 Simulator | F22战斗机 完美硬盘版
+1008 | KALI | 卡莉是一个IPX网络仿真器, 适用于DOS和Windows, 在一个TCP / IP网络, 如互联网, 可以适用于多人游戏系统.
+1009 | NEOnet | is a consortium of school districts, primarily in Summit County, formed in order to provide for the common needs.
+1010 | Dijjer | P2P 软件.对于流媒体的发布者来说, 使用 Dijjer 可以为他们节省网站的带宽；同样地, 流媒体的分享者则可以利用 Dijjer 提高下载速度.
+1011 | Fox | fox浏览器（火狐浏览器）, 开放源码的浏览器, 适用于Windows,  Linux和 MacOS X平台
+1012 | HotSpot | 即无线热点.用户可以在公共场通过其提供无线局域网（WiFi）接入Internet服务.
+1013 | JAP | Java Anon Proxy,也即 Java Anonymous Proxy(Java 匿名代理)的简称,是代理服务器的一种,旨在帮助用户匿名访问万维网.
+1014 | LianZhong | 一个娱乐游戏平台.联众世界(ourgame)是一家服务于全球网民, 以提供网络棋牌及其他网络游戏为主的综合网络休闲娱乐服务商.
+1015 | Netflix | Netflix是世界上最大的在线影片租赁提供商.
+1016 | RPC | RPC（Remote Procedure Call Protocol）远程过程调用协议, 它是一种通过网络从远程计算机程序上请求服务, 而不需要了解底层网络技术的协议.
+1017 | WebTV | WebTV是一种具有WorldWideWeb访问功能的高性能新型电视机, 其具有普通电视机的功能和Web访问功能.
+1018 | iTalkBB | VOIP软件,  通过其VoIP网络为用户提供语音和数据服务.
+1019 | Comcast | 是美国有线电视运营商康卡斯特公司旗下的视频分享网站.
+1020 | Fancast | 美国在线视频网 Fancast
+1021 | CitrixICA | CitrixICA技术能够通过整个企业网络来配置Windows, UNIX以及Java等应用程序访问权限, 其具有不需考虑用户的位置, 客户端硬件设备或者可用带宽限制的强大的竞争优势.
+1022 | FIX | FIX(Financial Information exchange), 金融信息交换协议协议, 适用于实时证券, 金融电子交易开发的数据通信标准. 它是由国际FIX协会组织提供的一个开放式协议.
+1023 | QIP | 支持VOIP的IM软件
+1024 | Rexec | Rexec是允许一个用户在一个远程系统执行命令而不需要登录到这个系统上的一个协议
+1025 | Sina_WeiBo | 新浪微博是一个新浪网推出, 提供微型博客服务的类twitter网站
+1026 | RLogin | RLogin是允许一个用户在一个远程系统执行命令而不需要登录到这个系统上的一个协议
+1027 | TNS | Oracle透明网络底层.监听服务是它重要的一部分
+1028 | BlockBuster | 一个影视频租赁及购买网站.
+1029 | Sohu_WeiBo | 是一款搜狐推出的类似Twitter的微型博客网站
+1030 | GooglePlay | 谷歌为Android手机系统提供的应用软件商店.
+1033 | QQ_WeiBo | 腾讯微博是一个腾讯推出, 提供微型博客服务的类似twitter网站.
+1039 | Amazon | 亚马逊公司, 一家网上书店和在线零售商, 有自己的云技术.
+1042 | MiTalk | 是一种用来聊天的手机软件(米聊）
+1044 | Vyke | 欧洲移动网络电话.通过手机上网, 只要配合WiFi或3G功能的手机, 就可以直接用手机拨打国际长途
+1045 | WeiXin | 是腾讯公司的一款手机聊天软件（微信）
+1046 | Multifon | 俄罗斯电信运营商Megafon推出的一款VOIP软件, 只有Megafon的用户才能定制这款软件的服务.
+1056 | Spotify | 在线听音乐软件
+1057 | Tango | Tango是一款跨平台的视频通话软件
+1059 | Scydo | 一款可以在android 和iphone平台上使用的免费Voip软件
+1060 | Google+ | Google推出的第三个社交网站/软件, 声称将会把所有Google的在线产品都会整合都Google+里面
+1063 | MS_Common | 微软多种软件产生相同的流量, 把这些流量归纳成MS_Common协议.
+1064 | SmartFoxServer | flash公司设计的socks服务器.
+1065 | HotFile | HotFile, 网盘
+1066 | KakaoTalk | 一款来自韩国的免费聊天软件.
+1067 | KMPlayer | 流媒体播放软件
+1068 | Vkontakte | VK（原VKontakte）是俄罗斯最大的社交网站, 发展至今已经不仅仅是大学生和高校毕业生的联系网, 它已经成长为仅次于搜索引擎Yandex的俄罗斯第二大网站.
+1069 | PandoraRadio | 潘多拉网络电台, 为美国, 澳大利亚和新西兰听众提供音乐媒体资源服务
+1070 | FeiLiao | 免费IM软件, 是中国移动推出的新一代手机即时通讯服务软件.
+1071 | Freakshare | Freakshare 是一家总部位于荷兰的国外网盘网站.
+1072 | DaumTvpot | 韩国视频网站DaumTvpot
+1073 | Mozy | 可以进行在线备份和恢复文件
+1074 | YourSearch | Search一个搜索引擎
+1075 | Armagetron | 一款3D的多人在线摩托车比赛游戏.
+1076 | Orkut | Orkut（中文非正式名：我酷, 偶酷）是Google推出的社会性网络服务,用户可以在互联网上建立一个虚拟社会关系网.
+1077 | Hi5 | hi5是美国一家社交网站.其于2011年被Tagged收购.
+1078 | NCAA | 美国大学体育总会旗下的体育资讯网站.该协会组织和承办许多美国高校, 大学的体育比赛.
+1079 | Viddler | 一个互动的网络视频平台, 可以播放, 下载, 上传视频.
+1080 | AVG_Update | AVG是由捷克的AVG TechnologiesCZ,s.r.o.公司推出的一款全球著名的杀毒软件
+1081 | iMessage | iMessage是苹果内置的即时通信功能软件, 能够在iOS5, Mac设备之间发送文字, 图片, 视频, 通信录以及位置信息等, 并支持多人聊天.
+1082 | Apple_Siri | 苹果手机的Siri语音功能
+1083 | MSRP | MSRP是Message Session Relay Protocol的简写, 是一种与SIP协议绑定使用的协议, 主要应用于即时消息, 文件传输等功能.
+1084 | Apple_TV | 苹果电视盒
+1085 | 56 | 56是一个大型的免费视频分享平台“56网”
+1086 | Vevo | Vev  VEVO的LOGO是由谷歌, 环球音乐和索尼音乐合资的音乐服务网站, 被外界誉为“音乐视频领域的Hulu”.
+1087 | 6Rooms | 六间房, 以Web2．0技术为核心的领先视频分享网站
+1088 | Baomihua | 爆米花视频分享新媒体网站, 中国最大最好玩的免费视频分享中心播客, 分为视频上传, 视频分享, 娱乐视频, 美女视频, 搞笑视频等
+1089 | Sohu_Video | 搜狐视频, 也包括MSN（sohu）视频
+1090 | RTMFP | real time media flow protocol即Adobe公司的实时媒体流协议
+1091 | Bing | Bing搜索引擎里面的视频业务
+1092 | Avast_Update | 来自捷克的杀毒软件avast, 已有数十年的历史, 它在国外市场一直处于领先地位
+1093 | WangYi_WeiBo | 中国比较流行的网易微博
+1094 | Island_TV | 半岛电视台
+1095 | Google_Common | Google HTTPS 公共证书
+1097 | Melon | 韩国音乐网站
+1098 | Age_Of_Conan | 由Funcom公司开发的一款RPG游戏
+1099 | Blizzard_Battle | 暴雪战网,是由暴雪娱乐提供的游戏对战平台
+1100 | Halo | 网游.HALO（中文：光环, 光晕, 最后一战）是一个由Bungie创造的科幻游戏系列, 而版权和发行商为微软游戏工作室.
+1101 | Itv | 英国独立电视台
+1102 | Skyrock | 法国博客应用
+1103 | Naver | Line是韩国NHN公司旗下Naver日本子公司naver.jp出品的即时通讯软件, 类似其他im类软件可以文字, 语音, 摇一摇, 传送文件等.
+1104 | Totorosa | Totorosa是韩国一个综合性门户网站.该网站提供综合性搜索服务, 视频服务, 音乐服务, 以及可在线购买六合彩等, 需要账号登录
+1105 | Flickr | Flickr为一家提供免费及付费数字照片存储, 分享方案之联机服务, 也提供网络社区平台
+1106 | GodTube | 视频分享网站, 山寨版youtube
+1107 | McAfee_Update | 迈克菲（McAfee)防毒软件, McAfee 公司的总部位于美国加州圣克拉拉市, 致力于创建最佳的计算机安全解决方案.
+1108 | Zimbra_Desktop | yahoo的桌面同步软件, 可以同步邮件, 日历, 工作计划, twitter, facebook等, 可以使用多家邮箱帐号登陆.
+1109 | PostgreSQL | 一个自由的对象-关系数据库服务器(数据库管理系统).
+1111 | GuaGua | 呱呱(17guagua.com)视频聊天室社区
+1112 | Trend_Micro_Update | 趋势科技(Trend Micro) 研制的杀毒软件
+1114 | Talkout | 手机VOIP软件
+1242 | QQZone | QQ空间（QQzone）是腾讯公司开发出来的个性空间, 具有博客(blog)的功能
+1254 | SinaNews | 新浪新闻
+1266 | TaoBao | 淘宝
+1323 | BaiDuZhangMen | 百度掌门人是一个音乐分享平台
+1332 | WebEx | WebEx Communications 为企业提供在线会议、 网络会议、音频会议、 桌面共享、 电话会议和视频会议等随需协作软件
+1333 | Hookt | hookt
+1338 | NetTalk | VoIP软件
+1340 | Palringo | Palringo 是一个介面简单、功能多、执行速度快的免费即时通讯软体，它能让使用者即时与一位朋友或一群朋友交换文字、照片、或语音录音.通常为手机自带软件
+1341 | Thunder_KanKan | 迅雷看看
+1345 | AppleDaily | 苹果日报，壹传媒旗下新闻网站
+1346 | Voxer | Voxer是一个可以进行聊天，语音对讲的软件
+1347 | Rebtel | Rebtel 主要提供廉价的国际电话呼叫服务；
+1349 | VoIP_Data | 未确定应用的VOIP数据
+1351 | GoogleMap | 谷歌地图
+1360 | IPSEC | 对IP协议（互联网协议）的分组进行加密和认证来保护IP协议的网络传输协议族
+1370 | Linphone | linphone是一款开源互联网VoIP软件，采用的是SIP协议。
+1611 | WanMeiShiKong | 北京完美时空网络技术有限公司是一个大型在线游戏开发商，旗下产品包括完美时空、武林外传、完美世界、诛仙和赤壁等。
+1851 | ICY | Icy是Ripdev公司开发和维护的数据包安装和管理软件，供iPhone和iPod Touch用户从各种渠道浏览并下载应用程序。大部分应用程序可以免费下载，但有些下载后需要购买才能使用，包括Ripdev开发的
+1878 | Yahoo_Video | 一个在线视频网站，支持上传、共享及观看视频。
+1984 | GTP | GPRS隧道协议是基于IP地址的协议，支持全球移动通信系统（GSM）和通用移动通讯系统（UMTS）网络里的通用分组无线系统（GPRS）。
+[APPLICATION END]
+[PROTOCOL BEGIN]
+Number:1758
+1 | Other_IP | 所有未定义的非TCP/UDP数据 | 1 | 17 | 0
+2 | Other_TCP | 暂时不支持识别的TCP数据 | 2 | 17 | 0
+3 | Other_UDP | 暂时不支持识别的UDP数据 | 3 | 17 | 0
+4 | Skype_IM | 聊天 | 4 | 3 | 0
+5 | Skype_PctoPhone | 客户端拨打手机 | 4 | 3 | 0
+6 | Skype_Login | 登录, 聊天 | 4 | 3 | 0
+7 | Skype_HTTP | 图片画面 | 4 | 3 | 0
+8 | Skype_HighSpeedTransfer | 接收发送离线文件出现流量 | 4 | 10 | 0
+11 | BitTorrent_Data_TCP | 通过Bittorrent工具下载软件时出现TCP流量 | 5 | 1 | 0
+12 | BitTorrent_Tracker_UDP | BT的UDP跟踪流量 | 5 | 1 | 16
+13 | BitTorrent_Tracker_HTTP | 在设置项随机配置时出现该流量 | 5 | 1 | 0
+14 | BitTorrent_DHT_Control | BT的DHT控制流量 | 5 | 1 | 16
+15 | BitTorrent_HTTP_GetSeed | BT的种子获得流量 | 5 | 1 | 0
+16 | BitTorrent_Data_UDP | 通过Bittorrent工具下载软件时出现UDP流量 | 5 | 1 | 16
+17 | BitTorrent_Data_UDP_Encrypted | BT的UDP加密流量 | 5 | 1 | 0
+18 | BitTorrent_Data_TCP_Encrypted | BT加密TCP流 | 5 | 1 | 0
+19 | BitTorrent_REG_HTTP | BT的HTTP协议REG流量 | 5 | 1 | 0
+20 | BitTorrent_Login_HTTP | 随机操作Bittorent时出现该流量 | 5 | 1 | 0
+21 | BitTorrent_Data_HTTP | BT的http流量 | 5 | 1 | 611, 612, 623, 627, 629, 1432, 1433
+22 | eDonkey_Detect_Function | 打开软件即出现此协议流量 | 6 | 1 | 0
+23 | eDonkey_Control_TCP | 下载时出现此协议流量 | 6 | 1 | 0
+24 | eDonkey_Control_UDP | 获取服务器时出现此协议流量 | 6 | 1 | 0
+25 | eDonkey_Data_TCP | 电驴的TCP流量 | 6 | 1 | 0
+26 | eDonkey_Data_UDP | 电驴的UDP流量 | 6 | 1 | 0
+27 | eDonkey_Data_TCP_Encrypted | 下载时出现此协议流量 | 6 | 1 | 0
+28 | eDonkey_Data_UDP_Encrypted | 电驴的UDP加密流量 | 6 | 1 | 0
+29 | eDonkey_HTTP | 搜索资源页面时出现此协议流量 | 6 | 1 | 611, 612, 623, 627, 629, 630, 1432, 1433
+30 | Gnutella_Control | Gnutella控制流 | 7 | 1 | 0
+31 | Gnutella_Data | 数据传输 | 7 | 1 | 0
+32 | Gnutella_UDP_Control | Gnutella的UDP控制流 | 7 | 1 | 0
+33 | Gnutella_Encrypt_Data | Gnutella的加密流量 | 7 | 1 | 513
+34 | Gnutella_Common_Connect | Gnutella节点加入网络时的连接过程 | 7 | 1 | 0
+35 | Gnutella_UDP_Ext_Control | Gnutella 节点加入网络时的连接过程  | 7 | 1 | 0
+36 | Gnutella_TCP_Control | Gnutella的TCP控制流 | 7 | 1 | 0
+37 | DirectConnect_Login | Client与Hub服务器的交互流 | 8 | 1 | 0
+38 | DirectConnect_Data_UDP | Client与Client的直接链接获取需要的资源的UDP | 8 | 1 | 0
+39 | DirectConnect_Data_TCP | Client与Client的直接链接获取需要的资源的TCP | 8 | 1 | 0
+40 | GoogleTalk_IM_Control | 登录时产生该流量 | 9 | 2 | 430, 513, 528
+41 | GoogleTalk_AudioData | 音频时产生该流量 | 9 | 2 | 430
+42 | GoogleTalk_HTTP | 登录时产生该流量 | 9 | 2 | 0
+44 | GoogleTalk_StunData | GoogleTalk中的Stun消息, 可能为数据流消息  | 9 | 2 | 0
+45 | GoogleTalk_VideoData | 视频流量 | 9 | 2 | 0
+46 | GoogleTalk_TransFile | 语音聊天出现此协议流量 | 9 | 10 | 247
+47 | MSN_Audio_Data_RTP | 语音, 视频通话时产生该流量 | 10 | 2 | 247, 248
+48 | MSN_Transfer_Data | 图片共享, 文件传输时产生该流量 | 10 | 10 | 430
+49 | MSN_Video_Data_RTP | 视频时产生该流量 | 10 | 2 | 0
+50 | MSN_Control_NS | 登陆过程中客户端与NS的交互 | 10 | 2 | 0
+51 | MSN_Control_SB | 聊天时产生该流量 | 10 | 2 | 0
+52 | MSN_Other | 登录之后之生该流量 | 10 | 2 | 247
+53 | MSN_HTTP_Browse | MSN发出的HTTP流 | 10 | 2 | 612, 613
+54 | MSN_HTTP_Game | MSN联机游戏 | 10 | 5 | 0
+55 | MSN_SIP | MSN的SIP消息 | 10 | 2 | 175
+56 | MSN_Video_RTCP | 视频数据控制信息 | 10 | 2 | 0
+57 | MSN_Audio_RTCP | 音频数据控制信息 | 10 | 2 | 0
+58 | MSN_Mobile_Login | 手机MSN登录及软件内发信息等操作时产生该流量 | 10 | 2 | 528
+59 | MSN_Mobile_SendMessage | 手机MSN聊天, 传输文件, 传输图片流 | 10 | 2 | 0
+60 | YahooMsg_Control | YahooMsg的控制信令 | 11 | 2 | 0
+61 | YahooMsg_Transfer_Data | Yahoo文件传输中的数据流 | 11 | 10 | 0
+62 | Yahoo_Video_Data | 视频数据流 | 11 | 2 | 0
+63 | Yahoo_Control_Audio | 语音控制流 | 11 | 2 | 0
+64 | Yahoo_Audio_Data | 语音数据流 | 11 | 2 | 0
+65 | Yahoo_HTTP | 登陆、文本聊天和页面加载时产生该流量 | 11 | 4 | 430
+66 | Web_Yahoo | 网页版本Yahoo, 只有简单的文本聊天等功能。 | 11 | 2 | 0
+67 | Yahoo_Control_Video | 视频控制流 | 11 | 2 | 0
+68 | Yahoo_Multi_Chat_Data | 多人聊天数据流 | 11 | 2 | 0
+69 | RTSP_Control | RTSP控制流 | 12 | 6 | 613, 616, 618, 622, 624, 626, 627, 628
+70 | RTSP_RTP | 实时传输协议 | 12 | 6 | 0
+71 | RTSP_RTCP | 实时传输控制协议 | 12 | 6 | 0
+72 | RTSP_RDT | RDT帧可以是交错控制的RTSP连接, 也可以是安装在一个单独的UDP流 | 12 | 6 | 0
+73 | SMTP | 简单邮件传输协议流量 | 13 | 9 | 0
+74 | IMAP | Internet邮件访问协议流量 | 14 | 9 | 0
+75 | POP3 | 邮局协议的第3个版本流量 | 15 | 9 | 0
+76 | FTP_Data | FTP数据流 | 16 | 10 | 0
+77 | FTP_Control | 控制流 | 16 | 10 | 513
+78 | HTTP | 浏览网页流量 | 17 | 4 | 0
+79 | DNS | 标准协议, 用于域名解析 | 18 | 11 | 0
+80 | MMSP_Control_Data | MMS的控制和数据流 | 19 | 6 | 0
+81 | MMSP_Data_TCP | MMS的TCP数据流 | 19 | 6 | 78
+82 | MMSP_Data_UDP | MMS的udp数据流 | 19 | 6 | 0
+83 | MMSP_Resent_Req_UDP | 数据重发请求流 | 19 | 6 | 0
+84 | RDP | 远程桌面协定 | 20 | 14 | 1685
+85 | BaiDuXiaBa | 下载流量 | 21 | 1 | 0
+86 | BearShare_UDP | 资源共享, 存取共享文件时产生该流量 | 22 | 1 | 0
+87 | BearShare_TCP | 登录、搜索共享资源、与好友聊天时产生该流量 | 22 | 1 | 0
+88 | DoPool | 观看视频流量 | 23 | 1 | 0
+89 | Funshion | 观看视频时出现该流量 | 24 | 1 | 0
+90 | Funshion_HTTP | 风行HTTP流量 | 24 | 6 | 78, 628, 1896
+91 | Fs2You | Fs2you的所有流量 | 25 | 1 | 611, 612, 623, 627, 629, 1432
+92 | WAP1_Conn | 连接模式 | 26 | 17 | 0
+93 | WAP1_ConnLess | 非连接模式 | 26 | 17 | 0
+94 | WAP1_WTLS_Conn | 加密连接模式 | 26 | 17 | 0
+95 | WAP1_WTLS_ConnLess | 加密非连接模式 | 26 | 17 | 0
+96 | WAP2 | 连接和数据传输流量 | 27 | 17 | 78, 2607
+97 | TFTP_Control | TFTP控制流 | 28 | 10 | 0
+98 | TFTP_Data | 简单文件传输协议 | 28 | 10 | 0
+99 | PPLive_HD_VOD_Control_Data_UDP | 高清点播udp数据 | 29 | 6 | 0
+100 | PPLive_HD_VOD_Control_Data_TCP | pplive高清点播tcp数据 | 29 | 6 | 0
+101 | PPLive_Live_Control_Data_UDP | pplive直播udp数据 | 29 | 6 | 0
+102 | PPLive_Live_Control_Data_TCP | pplive直播TCP数据 | 29 | 6 | 628
+103 | PPLive_VOD_Control_Data_HTTP | pplive点播的http数据 | 29 | 6 | 78, 613, 628, 1432, 1896
+104 | PPLive_Other_Control_Data_UDP | 启动软件界面加载, 登陆, 搜索, 观看在线视频等 | 29 | 6 | 0
+105 | PPVA_Control_Data | P2P视频控制流数据 | 30 | 6 | 0
+106 | Thunder | 登录, 下载 | 31 | 1 | 0
+108 | Thunder_Web | 迅雷HTTP流量 | 31 | 1 | 0
+110 | QQLive_Video_TCP | 观看在线视频, 软件升级 | 32 | 6 | 0
+111 | QQLive_Video_UDP | 观看视频 | 32 | 6 | 0
+112 | QQLive_UPDATE_UDP | 软件更新数据 | 32 | 6 | 0
+113 | QQLive_Login_UDP | 登录UDP流 | 32 | 6 | 0
+114 | QQLive_Login_TCP | 登录TCP流 | 32 | 6 | 0
+115 | QQLive_ProxyControl_HTTP | 代理HTTP | 32 | 6 | 0
+116 | PPStream_UDP | 启动软件界面加载, 登陆, 搜索, 观看在线视频等 | 33 | 6 | 0
+118 | PPStream_TCP | PPStream中TCP的数据流 | 33 | 6 | 612, 613, 627, 628, 1432, 1433
+119 | KuGoo | 播放酷狗音乐流量 | 34 | 1 | 0
+120 | KuGoo_HTTP | HTTP流量 | 34 | 1 | 613, 617, 627, 628, 630
+121 | PPGou | 下载流量 | 35 | 1 | 0
+122 | POCO | 登陆, 文本聊天, 添加好友 | 36 | 1 | 0
+123 | POCO_HTTP | HTTP流量 | 36 | 10 | 612
+124 | POCO_FTP | FTP流量 | 36 | 10 | 0
+125 | Maze_TCP | TCP流量 | 37 | 1 | 0
+126 | Maze_HTTP | HTTP流量 | 37 | 1 | 0
+127 | Maze_UDP | UDP流量 | 37 | 1 | 0
+128 | TVAnts | 观看视频的TCP, UDP数据流 | 38 | 6 | 0
+129 | UUSee | UUSee中播放视频产生的TCP, UDP数据 | 39 | 6 | 612
+130 | Vagaa_TCP_Encrypt | 下载加密 | 40 | 1 | 11
+131 | Vagaa_UDP | 下载 | 40 | 1 | 0
+132 | Vagaa_Update | Vagaa软件检查更新 | 40 | 1 | 0
+133 | QQDownLoad_Data | 启动软件界面加载, 检查更新, 下载 | 41 | 1 | 110, 111
+134 | QQDownload_Login_TCP | 登录TCP流 | 41 | 1 | 0
+135 | QQDownload_Login_UDP | 登录UDP流 | 41 | 1 | 0
+136 | Soulseek | 下载 | 42 | 1 | 76
+138 | SopCast | 观看视频产生的TCP, UDP数据流量 | 43 | 6 | 430, 513
+139 | KooWo | 酷我音乐流量 | 44 | 1 | 0
+140 | PPFilm | 观看在线视频的TCP, UDP流量 | 45 | 6 | 0
+141 | PPFilm_HTTP | 启动软件时, 登陆界面加载流量 | 45 | 6 | 0
+142 | PP365_Download | 下载流量 | 46 | 1 | 0
+143 | FlashGet_Data | 下载软件流量 | 47 | 1 | 0
+144 | FlashGet_HTTP | 网际快车的HTTP流量 | 47 | 1 | 0
+145 | FlashGet_Other_TCP | FlashGet相关的TCP数据, 包括控制流信息和数据流信息 | 47 | 1 | 0
+146 | FlashGet_Server_Data | 与FlashGet的服务器的交互数据 | 47 | 1 | 0
+147 | FlashGet_Other_UDP | 网际快车的其他UDP流量 | 47 | 1 | 0
+148 | QingYL_HTTP | 使用软件过程中产生的HTTP流量 | 48 | 6 | 616
+149 | QingYL_TCPControl | TCP控制流 | 48 | 6 | 0
+150 | QingYL_TCPUpload | TCP上传数据 | 48 | 6 | 0
+151 | QingYL_UDPData | UDP非视频数据 | 48 | 6 | 0
+152 | QingYL_UDPVideo | UDP视频数据 | 48 | 6 | 0
+153 | SSH | SSH安全协议 | 49 | 14 | 0
+154 | MMS | 多媒体短信服务协议，用于传送文字、图片、动画、音频和视频等多媒体信息。 | 50 | 17 | 93, 96
+155 | Telnet | 远端登录服务的标准协议 | 51 | 14 | 0
+156 | Filetopia | FileTopia的所有流量 | 52 | 1 | 0
+157 | SpeedyTudou_DownloadTCP | 视频下载产生的TCP数据流 | 53 | 6 | 0
+158 | SpeedyTudou_HTTP | 网页数据 | 53 | 1 | 0
+159 | SpeedyTudou_DownloadHTTP | 视频下载产生的HTTP数据流 | 53 | 6 | 0
+160 | SpeedyTudou_DownloadUDP | 视频下载产生的UDP数据流 | 53 | 6 | 0
+161 | SpeedyTudou_ServerNotify | 服务器通知 | 53 | 1 | 0
+162 | SpeedyTudou_HTTPShowVideo | 视频数据流 | 53 | 6 | 0
+163 | SinaTV_VOD_HTTP | 点播视频中产生的HTTP流量 | 54 | 6 | 613, 628
+164 | SinaTV_Live_UDP | 视频直播中产生的UDP流量 | 54 | 6 | 0
+165 | SinaTV_Web_HD_VOD_HTTP | 基于sinatv控件的在浏览器上播放高清点播视频 | 54 | 6 | 0
+166 | SinaTV_Web_VOD_HTTP | 浏览器上标清视频点播 | 54 | 6 | 0
+167 | QVoD_Control | Qvod的控制流 | 55 | 6 | 253
+168 | QVoD_HTTP | QVoD的Http特性 | 55 | 6 | 0
+169 | QVoD_Data | Qvod数据流 | 55 | 6 | 0
+170 | Hotline | Hotline流量 | 56 | 1 | 0
+171 | GBPhone | GBPhone所有流量 | 57 | 3 | 0
+172 | UUCall | 语音聊天数据 | 58 | 3 | 0
+173 | UUCall_Transfer | 传输文件 | 58 | 3 | 0
+174 | UUCall_PCCall | 拨打电话 | 58 | 3 | 0
+175 | SIP_Control | SIP语音控制流 | 59 | 3 | 0
+176 | MGCP | 媒体网关控制协议 | 60 | 3 | 0
+177 | ICQ_Audio | 语音流量 | 61 | 2 | 247, 2202
+178 | ICQ_Video | 视频流量 | 61 | 2 | 0
+181 | ICQ_StunData | STUN 流量 | 61 | 2 | 0
+182 | ICQ_SIP | SIP流 | 61 | 2 | 0
+183 | ICQ_HTTP | 内嵌网页 | 61 | 2 | 0
+184 | QQ_IM | 登录界面加载, 文本聊天等流量 | 62 | 2 | 253
+185 | QQ_Media | 语音, 视频聊天,收发离线文件,远程协助等流量 | 62 | 3 | 0
+186 | QQ_IM_HTTP | QQ_IM中的HTTP | 62 | 2 | 0
+187 | Sina_Transfer | 传递数据 | 63 | 2 | 247
+188 | SinaUC_IM | 登录 | 63 | 2 | 528
+190 | TelTel | 登录, 其他加载 | 64 | 3 | 0
+191 | Fetion_IM | 包括所有主要功能, PC与手机之间短信, 彩信, 话音 | 65 | 2 | 0
+192 | Fetion_IM_HTTP | 打开Fetion客户端时显示相关图片信息 | 65 | 2 | 430, 1882
+193 | Fetion_Mobile | 手机飞信, windowsmobile3.1版 | 65 | 2 | 0
+194 | Fetion_Game | 飞信游戏 | 65 | 5 | 191
+195 | AliCall_Login | 软件登录 | 66 | 3 | 0
+196 | AliCall_Control | PC登陆流量 , 手机平台未出现  | 66 | 3 | 0
+197 | DoShow_IM | 文字聊天时出现此协议流量 | 67 | 2 | 0
+198 | LavaLava_Other | 私有协议流量 | 68 | 2 | 0
+199 | LavaLava_IM | 文字聊天流量 | 68 | 2 | 0
+200 | LavaLava_Transfer | 文件传输时产生的流量 | 68 | 10 | 0
+201 | XiaoNeiTong_IM | IM聊天 | 69 | 2 | 528
+202 | Jabber_SSL | Jabber加密协议的流量 | 70 | 2 | 528
+203 | Sina_VChat | 聊天 | 71 | 2 | 0
+204 | 9158_VChat | 打开软件, 加入房间和聊天时出现该流量 | 72 | 2 | 0
+205 | 9158_VChat_HTTP | 登陆时产生该流量 | 72 | 2 | 0
+206 | AIM | 加载软件 | 73 | 2 | 430, 513
+208 | IRC | IRC协议流量 | 74 | 2 | 0
+209 | Baidu_hi_Chat | 聊天流量 | 75 | 2 | 0
+210 | Baidu_hi_Video | 视频聊天流量 | 75 | 2 | 0
+211 | Baidu_hi_Transfer | 文件传输流量 | 75 | 10 | 0
+212 | BlackBerry | 信令流量, 没有承载业务数据 | 76 | 17 | 0
+213 | Warcraft_Control | WarcraftIII是暴雪公司推出的游戏, 中文名魔兽争霸3 | 77 | 5 | 0
+214 | Warcraft_UDP_Data | WarcraftIII是暴雪公司推出的游戏, 中文名魔兽争霸3 | 77 | 5 | 0
+215 | Warcraft_TCP_Data | WarcraftIII是暴雪公司推出的游戏, 中文名魔兽争霸3 | 77 | 5 | 0
+216 | Valve_SourceEngine | 进入游戏后产生此协议流量 | 78 | 5 | 0
+217 | CS_HTTP | CS1.6版本中下载地图声音都是使用HTTP的流 | 78 | 5 | 0
+218 | Diablo_II | 进入多人游戏时产生此协议流量 | 79 | 5 | 0
+219 | RealPlayer_Stream | 播放视频 | 80 | 6 | 0
+221 | Web_QQ | 网页版QQ的流量, 如登录, 文字聊天等 | 81 | 2 | 0
+222 | CCIPTV | 播放视频产生的TCP, UDP流量 | 82 | 6 | 0
+223 | sipgate_control | 通过sip协议控制媒体流 | 83 | 3 | 175
+224 | sipgate_audio | sipgate的音频流 | 83 | 3 | 0
+225 | Kondge_NetPhone_Control_TCP | Kondge_NetPhone TCP 控制流 | 84 | 3 | 0
+226 | Kondge_NetPhone_Data_HK | 数据流 | 84 | 3 | 0
+227 | Kondge_NetPhone_Data_USA | 美国流量 | 84 | 3 | 0
+228 | Kondge_NetPhone_Data_UnknowServer | 未知服务器流量 | 84 | 3 | 0
+229 | NSPI | Exchange邮件服务器使用NSPI服务时产生的流量 | 85 | 9 | 268
+230 | MAPI | 邮件或邮件撰写应用程序接口 | 85 | 9 | 268
+231 | IAX | Asterisk内部交换协议流 | 86 | 3 | 0
+232 | Quake_live | 登录, 游戏等数据流 | 87 | 5 | 0
+233 | Quake_live_HTTP | 其他图片加载等流量 | 87 | 5 | 0
+234 | BaiBao | 点击该软件上的任何资源都会出现该流量 | 88 | 1 | 0
+235 | BaiBao_web | 加载百宝网站时出现该流量 | 88 | 1 | 0
+236 | H323_H225_Ras | H323协议基因流 | 89 | 3 | 0
+237 | H323_H225_Signal | H225呼叫信号流 | 89 | 3 | 0
+238 | H323_H245_Control | H323协议媒体控制流 | 89 | 3 | 0
+239 | H323_Media | H323协议媒体流 | 89 | 3 | 0
+240 | H323_Media_Audio | H323协议音频流 | 89 | 3 | 239
+241 | H323_Media_Video | H323协议视频流 | 89 | 3 | 239
+242 | Aliww_Login | 登陆该软件时产生此流量 | 90 | 2 | 0
+246 | Web_MSN | 网页版MSN的流量, 如登录, 文字聊天等 | 91 | 2 | 58, 430
+247 | STUN | STUN协议流量 | 92 | 16 | 0
+248 | STUNT | 通过UDP简单穿越NAT和TCP | 92 | 16 | 0
+249 | RTP | 实时传输协议 | 93 | 6 | 0
+250 | RTCP | 实时传输控制协议 | 93 | 6 | 0
+251 | Socks5_Data_TCP | Socks5代理TCP流 | 94 | 16 | 0
+252 | Socks5_UDP_Associate | SOCKS5的UDP_ASSOCIATE连接 | 94 | 16 | 0
+253 | Socks5_Data_UDP | SOCKS5 UDP转发 | 94 | 16 | 0
+254 | Socks4 | 使用socks4代理流量 | 94 | 16 | 0
+255 | Socks4A | 使用socks4扩张代理出现流量  | 94 | 16 | 0
+256 | Sina_Common_Chat_Control | 聊天之前的控制消息 | 95 | 2 | 0
+257 | RDT | 实时数据传输 | 96 | 6 | 0
+258 | QeShow_TCP | 视频数据流 | 97 | 2 | 0
+259 | QeShow_UDP | 视频数据流 | 97 | 2 | 0
+260 | QeShow_HTTP | 网页画面加载流量 | 97 | 2 | 0
+264 | MDNS | 组播DNS | 98 | 11 | 0
+265 | Zoiper_SIP | 语音通话流量的SIP控制流 | 99 | 3 | 175
+266 | Zoiper_HTTP | VOIP通话数据流和其他HTTP流量 | 99 | 3 | 0
+267 | EPM | 所有EPM的流量 | 100 | 17 | 268
+268 | DCERPC | 标准协议, 远程访问 | 101 | 17 | 1782
+269 | SOAP_HTTP | SOAP_HTTP通信流量 | 102 | 4 | 0
+270 | RADIUS | 远端用户拨入验证服务 | 103 | 11 | 0
+271 | NTP | 系统时间进行网络较正时产生访流量 | 104 | 11 | 0
+272 | Tencent_Prot_Data | 寻找服务器, 登录等. | 105 | 2 | 0
+273 | GoGoBox_Login | 登录 | 106 | 1 | 0
+274 | GoGoBox_Upload | 上传流量 | 106 | 1 | 0
+275 | GoGoBox_Download | 下载 | 106 | 1 | 0
+276 | GoGoBox_UploadCtrl | 上传控制 | 106 | 1 | 0
+277 | GoGoBox_DownloadCtrl | 下载控制 | 106 | 1 | 0
+278 | GoGoBox_Unknown | 末知流 | 106 | 1 | 0
+279 | GoGoBox_Validate | 验证 | 106 | 1 | 0
+280 | KuBao_Login | 登录 | 107 | 3 | 0
+281 | KuBao_Chat_Tcp | 文本聊天 | 107 | 3 | 0
+282 | KuBao_Chat_Udp | 文本聊天 | 107 | 3 | 0
+283 | KuBao_Phone | 语音聊天 | 107 | 3 | 0
+284 | KuBao_Interaction | 语音互动 | 107 | 3 | 0
+285 | KuBao_DialogueDownload | 彩语订购 | 107 | 3 | 0
+286 | KuBao_TransFile | 文件传输 | 107 | 10 | 0
+287 | ICUII_Login | 登录流 | 108 | 2 | 0
+288 | ICUII_TxtMsg | 文本聊天流量 | 108 | 2 | 0
+289 | ICUII_SendFile | 发送离线文件流量 | 108 | 10 | 0
+290 | ICUII_RecvFile | 接收离线文件流量 | 108 | 10 | 0
+291 | ICUII_VideoCall | 视频聊天流 | 108 | 2 | 0
+292 | ICUII_VideoCall_UDP | 视频聊天UDP流量 | 108 | 2 | 0
+293 | ICUII_ChatRoom_Audio | 聊天室 语音流 | 108 | 2 | 0
+294 | ICUII_Login_FirstTime | 第一次登录流 | 108 | 2 | 0
+295 | ICUII_Logout_UDP | 退出登录流量 | 108 | 2 | 0
+296 | ICUII_Others | 登陆就产生该流量 | 108 | 2 | 0
+297 | PoPo_HTTP | HTTP流量 | 109 | 2 | 0
+298 | PoPo_VideoAudioFile | 视频聊天流量 | 109 | 2 | 0
+299 | PoPo_UDPControl | UDP控制流 | 109 | 2 | 0
+300 | PoPo_IM | IM聊天 | 109 | 2 | 0
+301 | PoPo_Refresh | 刷新流量 | 109 | 2 | 0
+302 | PoPo_TCPControl | TCP控制流 | 109 | 2 | 0
+303 | Xfire_SendText | 发送短信 | 110 | 2 | 0
+304 | Xfire_Normal | Xfire TCP 常用流 | 110 | 2 | 0
+305 | Xfire_Voice | 两人内网语音聊天 | 110 | 2 | 0
+306 | Xfire_TransFile | 发送文件 | 110 | 10 | 0
+307 | Xfire_Download | 下载 | 110 | 10 | 0
+308 | Xfire_MulVoice | 多人语音聊天 | 110 | 2 | 0
+309 | Xfire_UploadScreenShot | 上传游戏截图 | 110 | 10 | 0
+310 | Xfire_UploadVideo | 上传游戏录像 | 110 | 10 | 0
+311 | Xfire_Ping | 心跳 | 110 | 2 | 0
+312 | Xfire_GetStatus | 获取状态 | 110 | 2 | 0
+313 | Xfire_HostStatus | 获取主机状态信息 | 110 | 2 | 0
+314 | Xfire_Unknown | 未知 | 110 | 2 | 0
+315 | Xfire_FileData | 文件数据 | 110 | 2 | 0
+316 | KC_Login | 登录 | 111 | 3 | 0
+317 | KC_SIP | KC电话初始化 | 111 | 3 | 0
+318 | KC_Ping | KC_SIP中的pingpong选项 | 111 | 3 | 0
+319 | KC_PhoneReg | KC软电话注册 | 111 | 3 | 0
+320 | VZOchat_Login | 登陆数据流 | 112 | 2 | 0
+321 | VZOchat_Video_Audio | 语音视频通话 | 112 | 2 | 0
+322 | VZOchat_Text_Talk | 文字聊天 | 112 | 2 | 0
+323 | VZOchat_Conference | 新增一个聊天组, 在这个聊天组里可以多个人聊天 | 112 | 2 | 0
+324 | Wuala_TCP_Encrypt | 加密的TCP流量 | 113 | 12 | 0
+325 | Wuala_Control_TCP | tcp的控制流 | 113 | 12 | 0
+326 | Wuala_Data_Upload_UDP | 上传文件的UDP流量 | 113 | 12 | 0
+327 | Wuala_Data_Upload_TCP | TCP上传小数据 | 113 | 12 | 0
+328 | Wuala_Control_UDP | UDP的控制流 | 113 | 12 | 0
+329 | Wuala_Data_Download_UDP | 在线下载文件 | 113 | 12 | 0
+330 | IMAP_SSL | Internet邮件访问加密协议流量 | 114 | 9 | 0
+331 | POP3_SSL | 加密的邮局协议流量 | 115 | 9 | 0
+332 | SMTP_SSL | 加密邮件传输流量 | 116 | 9 | 0
+333 | WebMail_Hotmail | 邮件操作等流量 | 117 | 9 | 78, 430
+335 | Ares_Control | 使用该软件创建聊天室时出现该流量 | 118 | 1 | 0
+336 | Ares_Data | 该软件下载数据流 | 118 | 1 | 0
+337 | Ares_Other_UDP | 通过该软件进行聊天时出现的UDP流量 | 118 | 1 | 0
+338 | Ares_Other_TCP | 通过该软件进行聊天时出现的TCP流量 | 118 | 1 | 0
+339 | OpenFT | OpenFT文件分享协议  | 119 | 1 | 0
+340 | Kceasy_Chat | 聊天 | 120 | 2 | 0
+341 | TongDaXin | 操作软件的流量 | 121 | 15 | 0
+342 | WebMail_139 | 139网页邮箱的流量, 如登录, 收发邮件等 | 122 | 9 | 0
+343 | LimeWire_HTTP | LimeWire中的HTTP流 | 123 | 1 | 0
+344 | Xnap | 搜索, 上传下载文件等流量 | 124 | 1 | 610
+345 | WOW_Control | 游戏的主要控制流 | 125 | 5 | 0
+346 | WOW_HTTP | WOW_HTTP数据流 | 125 | 10 | 0
+347 | WOW_Login | 登录 | 125 | 5 | 0
+348 | WOW_Audio | 游戏语音聊天数据流 | 125 | 5 | 0
+349 | FrostWire_HTTP | FrostWire的HTTP流量 | 126 | 1 | 0
+350 | QianLong_Login | 登录流量 | 127 | 15 | 0
+351 | QianLong_Information | 浏览股票信息流量 | 127 | 15 | 0
+352 | QianLong_News | 股票资讯流量 | 127 | 15 | 0
+353 | QianLong_Update | 空协议, 保留协议ID | 127 | 15 | 0
+354 | QianLong_TV | 财经电视中一部分流量 | 127 | 6 | 0
+355 | Globe7_HTTP | HTTP流量 | 128 | 3 | 0
+356 | Globe7_TransFile | 传输文件时出现该流量 | 128 | 3 | 0
+357 | Globe7_SIP | 打电话时产生时出现该流量 | 128 | 3 | 175
+358 | StockStar | 行情等流量 | 129 | 15 | 0
+359 | StockStar_Quote | 网上报价流量 | 129 | 15 | 0
+360 | 263_Chat_Car | 玩游戏流量 | 130 | 2 | 208
+361 | Compass | 界面加载的流量 | 131 | 15 | 577
+362 | PeerAware_Login | 登陆流量 | 132 | 1 | 0
+363 | MeteorNetTV_Normal_TV | 流星网络电视普通频道流量 | 133 | 6 | 0
+364 | MeteorNetTV_VIP_Area1 | 流星网络电视VIP频道流量 | 133 | 6 | 0
+365 | WebMail_Aol | AOL网页邮箱的流量, 如登录, 收发邮件等 | 134 | 9 | 0
+366 | WebMail_Eyou | 登入, 登出, 收发邮件及附件, 邮件管理 | 135 | 9 | 0
+367 | WebMail_DongFangYouJu | 登入, 登出, 收发邮件, 邮件管理 | 136 | 9 | 0
+368 | WebMail_OperaMail | 登入, 登出, 收发邮件及附件, 邮件管理 | 137 | 9 | 0
+369 | WebMail_Sohu | 收发邮件及附件, 邮件管理 | 138 | 9 | 0
+370 | WebMail_Sohu_Login | 登录 | 138 | 9 | 0
+371 | WebMail_QQ | 登入, 登出, 收发邮件及附件, 邮件管理 | 139 | 9 | 430
+372 | WebMail_Tom | 登入, 登出, 收发邮件及附件, 邮件管理 | 140 | 9 | 0
+373 | WebMail_Fastmail | 登入, 登出, 收发邮件及附件, 邮件管理 | 141 | 9 | 0
+374 | Shareaza_Chat | shareaza中聊天功能 | 142 | 2 | 0
+375 | WebMail_Myway_Login | 登录 | 143 | 9 | 0
+376 | WebMail_Myway | 收发邮件及附件, 邮件管理 | 143 | 9 | 0
+377 | WebMail_Hexun | 和讯免费邮箱, 收发邮件及附件, 邮件管理 | 144 | 9 | 0
+378 | WebMail_Hexun_Login | hexun免费邮箱登录操作 | 144 | 9 | 0
+379 | Gimme_P2P_Chat_Room | 聊天室中使用的协议 | 145 | 2 | 0
+380 | WebMail_Yahoo | 登入, 登出, 收发邮件及附件, 邮件管理 | 146 | 9 | 78, 269, 330, 332, 430
+381 | WebMail_163 | 163网页邮箱的流量, 如登录, 收发邮件等 | 147 | 9 | 0
+382 | WebMail_21CN | 21CN网页邮箱的流量, 如登录, 收发邮件等 | 148 | 9 | 0
+383 | WebMail_Yeah | 登入, 登出, 收发邮件及附件, 邮件管理 | 149 | 9 | 0
+384 | Shutter_Data | 数据传输 | 150 | 3 | 0
+385 | Shutter_Video | 视频 | 150 | 3 | 0
+386 | Shutter_TryConn | 其他流量 | 150 | 3 | 0
+387 | Shutter_Movie | 电话 | 150 | 3 | 0
+388 | Shutter_HTTP | 图片传输 | 150 | 3 | 1433
+389 | Retroshare_Add_Friends | 添加好友 | 151 | 1 | 0
+390 | Retroshare_Text_Chat | 文本聊天 | 151 | 2 | 0
+391 | WebMail_Sina | 新浪邮箱收发邮件及附件, 邮件管理 | 152 | 9 | 0
+392 | WebMail_Sina_Login | 新浪邮箱登录 | 152 | 9 | 0
+393 | Octoshape_Data | 观看视频, 浏览广播信息 | 153 | 6 | 0
+394 | Octoshape_Unknown | 其他流量 | 153 | 6 | 0
+395 | Octoshape_Signaling | 选择某视频观看, 连接缓冲时产生 | 153 | 6 | 0
+396 | Octoshape_Link_MSG | 选择某视频观看, 在Octoshape_Signaling之前产生 | 153 | 6 | 0
+397 | Octoshape_Control | 控制信息 | 153 | 6 | 0
+398 | SilkroadOnline_Normal | 丝路传说--游戏数据控制流 | 154 | 5 | 0
+399 | SilkroadOnline_Detect | 丝路传说--探测包, 用于测试网络延迟, 用户状态 | 154 | 5 | 0
+400 | DNF_GameData | 游戏控制数据 | 155 | 5 | 0
+401 | DNF_ServerList | 游戏大厅各服务器列表显示 | 155 | 5 | 0
+402 | DNF_KeepAlive | 游戏更新创建角色和进入游戏时均产生此协议流量 | 155 | 5 | 0
+403 | DNF_SysFileListInfoUpload | 系统文件列表信息上传 | 155 | 5 | 0
+404 | Lineage2_Login | 登录游戏 | 156 | 5 | 0
+406 | Lineage2_Update | 游戏更新 | 156 | 5 | 0
+407 | Trillian_login | 登陆场景 | 157 | 2 | 0
+408 | Trillian_File | 收发文件 | 157 | 2 | 0
+409 | Trillian_VideoChat | 视频聊天场景 | 157 | 2 | 0
+410 | PaoPaoTang_Login | 登陆 | 158 | 5 | 0
+411 | PaoPaoTang_Control | 控制流量 | 158 | 5 | 0
+412 | PaoPaoTang_Chat | 文字聊天 | 158 | 5 | 0
+413 | RagnarokOnline_Login | 登录 | 159 | 5 | 0
+414 | RagnarokOnline_Control | 游戏控制流 | 159 | 5 | 0
+415 | RagnarokOnline_SelectCareer | 游戏流, 游戏职业选择 | 159 | 5 | 0
+416 | CrossFire_GameData | 进入游戏后产生此协议流量 | 160 | 5 | 0
+417 | CrossFire_DataDownload | 进入游戏后和加载地图时产生此协议流量 | 160 | 5 | 0
+418 | Pichat_GetStatus | 对等连接产生的流量 | 161 | 2 | 0
+419 | Pichat_TextChat | 文本聊天 | 161 | 2 | 0
+420 | Pichat_Update | 检查更新和升级时 | 161 | 10 | 0
+421 | JinWuTuan_Data | 劲舞团流量 | 162 | 5 | 0
+422 | JinWuTuan_HTTP | 劲舞团HTTP流量 | 162 | 5 | 0
+423 | WebMail_263 | 263收费邮箱的流量 | 163 | 9 | 0
+424 | WebMail_Gawab | 登入, 登出, 收发邮件, 邮件管理 | 164 | 9 | 0
+425 | SeeTV_SinaTV_Play | 播放Sina视频时的协议 | 165 | 6 | 0
+426 | SeeTV_CCTV_Play | 播放CCTV视频时的协议 | 165 | 6 | 0
+429 | WebMail_GMX | 登入, 登出, 收发邮件及附件, 邮件管理 | 166 | 9 | 0
+430 | HTTPS | 端口为443的SSL流量 | 167 | 4 | 0
+431 | SQL_Server | 数据库通信流量 | 168 | 8 | 0
+432 | Diameter | 使用Diameter协议通讯流量 | 169 | 3 | 0
+434 | TeamSpeak_TCP | 版本协商, 信用检测 | 171 | 3 | 513
+435 | TeamSpeak_UDP | TS的主要流量（登陆, chat.....) | 171 | 3 | 0
+436 | SMB | 服务器信息区块 | 172 | 10 | 0
+437 | DHCP | 标准协议, 自动分配ip地址 | 173 | 11 | 0
+438 | Dofus_Auth | 认证功能 | 174 | 5 | 0
+439 | Dofus_Play | 游戏 | 174 | 5 | 0
+440 | Dofus_Upgrade | 升级功能 | 174 | 5 | 0
+441 | Dofus_UIData | 新闻, 欢迎信息等界面数据, 使用HTTP传输 | 174 | 5 | 0
+442 | WebMail_Excite_Login | 空规则, 保留协议ID | 175 | 9 | 0
+443 | WebMail_Excite | 除登录邮箱外的操作 | 175 | 9 | 0
+444 | SSDP | 简单服务发现协议 | 176 | 11 | 0
+445 | WebMail_Pojaa | 登入, 登出, 收发邮件及附件, 邮件管理 | 177 | 9 | 0
+446 | WebMail_Syvip_Login | 登录 | 178 | 9 | 0
+447 | WebMail_3Dup_Login | 登陆数据流 | 179 | 9 | 0
+448 | WebMail_3Dup | 登录后加载邮箱信息, 查看邮件, 收发邮件等 | 179 | 9 | 0
+449 | WebMail_Aussiemail | 浏览邮件, 收发邮件 | 180 | 9 | 0
+450 | WebMail_Aussiemail_Login | 登录数据流 | 180 | 9 | 0
+451 | WebMail_Asean_Login | 东盟邮箱登录 | 181 | 9 | 0
+452 | WebMail_Asean | 东盟邮箱：浏览邮件, 收发邮件, 处理邮件 | 181 | 9 | 0
+453 | WebMail_Empereur | 浏览邮件, 收发邮件 | 182 | 9 | 0
+454 | WebMail_Empereur_Login | 登录 | 182 | 9 | 0
+455 | WebMail_Chinaren | 登录, 浏览邮件, 收发邮件 | 183 | 9 | 0
+456 | WebMail_Sogou | 登入, 登出, 收发邮件及附件, 邮件管理 | 184 | 9 | 0
+457 | DC++ | 打开软件, 连接服务器和下载均出现此协议流量 | 185 | 1 | 0
+458 | WebMail_FreeThinker | 登入, 登出, 收发邮件及附件, 邮件管理 | 186 | 9 | 0
+459 | WebMail_DC_Login | 登录数据流 | 187 | 9 | 0
+460 | WebMail_DC | 浏览邮件, 收发邮件 | 187 | 9 | 0
+461 | WebMail_Freequote | 除登录邮箱外的操作 | 188 | 9 | 0
+462 | WebMail_Freequote_Login | 登录 | 188 | 9 | 0
+463 | Phex_DownLoad | 文件下载 | 189 | 1 | 0
+464 | Phex_Chat | 与连接的主机聊天 | 189 | 1 | 0
+465 | TDS | 使用Tabular Data Stream协议流量 | 190 | 8 | 0
+466 | SightSpeed_Video_Chat | 视频聊天 | 191 | 2 | 0
+467 | SightSpeed_Audio_Chat | 语音聊天 | 191 | 2 | 0
+468 | SightSpeed_Video_Mail | SightSpeed_Audio_Chat | 191 | 9 | 0
+469 | StealthNet | 下载传输数据 | 192 | 1 | 0
+470 | Gizmo5_Check | 登录 | 193 | 2 | 430
+471 | Gizmo5_Audio_Meeting | 音频会议 | 193 | 2 | 0
+472 | 7Liao_VChat_BlueSky | 蓝天语音视频聊天插件的协议 | 194 | 2 | 0
+473 | iSpQ_VideoChat_Login | iSpQ视频聊天软件的登陆流量 | 195 | 2 | 0
+474 | iSpQ_VideoChat_Room_Chat | iSpQ视频聊天软件的房间聊天流量 | 195 | 2 | 0
+475 | iSpQ_VideoChat_Add_Friends | iSpQ视频聊天软件的增加好友流量 | 195 | 2 | 0
+476 | iSpQ_VideoChat_Video_Chat | iSpQ视频聊天软件的的视频流量 | 195 | 2 | 0
+477 | Mail_Ru_Agent_SendFile | 文件发送,文件上传 | 196 | 2 | 0
+478 | Mail_Ru_Agent_PhoneChat | 电话聊天 | 196 | 2 | 577
+479 | Mail_Ru_Agent_All | 发送邮件流量 | 196 | 2 | 0
+480 | Mail_Ru_Agent_Other | 其他加载流量 | 196 | 2 | 430, 513
+481 | PaltalkScene_Login | 登陆流量 | 197 | 2 | 0
+482 | PaltalkScene_Chat | 聊天流量 | 197 | 2 | 0
+483 | PaltalkScene_ChatRoom | 聊天房间流量 | 197 | 2 | 0
+484 | PaltalkScene_Transfer | PaltalkScene Send & Receive File | 197 | 10 | 0
+485 | Eyeball_ChatRoom | 软件登录, 聊天时均产生此协议流量 | 198 | 2 | 175, 247, 248, 528
+486 | Esnips_HTTP | 软件打开和登陆时产生此协议流量 | 199 | 12 | 269
+487 | Esnips_DATA | 数据流量 | 199 | 12 | 0
+488 | RuneScape | 登录等数据流 | 200 | 5 | 0
+489 | RuneScape_Play | 游戏动作 | 200 | 5 | 0
+490 | RuneScape_Scene | 游戏地图流量 | 200 | 5 | 0
+491 | ClubPenguin | 游戏登陆和进入后产生此协议流量 | 201 | 5 | 1873
+492 | ClubPenguin_AccessPolicyConfig | 空协议, 保留协议ID | 201 | 5 | 0
+493 | ClubPenguin_HTTP | 游戏, HTTP交互 | 201 | 5 | 613
+494 | WinPopupX_Login | 登入和登出 | 202 | 2 | 0
+495 | WinPopupX_CheckNetwork | 检查网络状态 | 202 | 2 | 0
+496 | WinPopupX_Message | 发送接收信息 | 202 | 2 | 0
+497 | WinPopupX_TransFile | 文件传输 | 202 | 10 | 0
+498 | WinPopupX_CheckUpdate | 检查更新 | 202 | 2 | 0
+499 | WinPopupX_CheckSignal | WinPopupX检查信号 | 202 | 2 | 0
+500 | WinPopupX_Broadcast | 广播 | 202 | 2 | 0
+501 | WinPopupX_OnlineState | 显示状态流量 | 202 | 2 | 0
+502 | WinPopupX_Nickname | 取昵称 | 202 | 2 | 0
+503 | WinPopupX_Refuse | 拒绝 | 202 | 2 | 0
+504 | Veetle | 视频, 图片流量 | 203 | 6 | 0
+505 | Archlord_Login | 登录 | 204 | 5 | 0
+506 | Archlord_Update | 霸王大陆游戏在线升级 | 204 | 5 | 0
+507 | Tibia_Login | 登录, 游戏 | 205 | 5 | 0
+508 | Tibia_Control | 游戏控制流 | 205 | 5 | 0
+509 | MengHuanXiYou_Data | 梦幻西游游戏 | 206 | 5 | 0
+510 | MengHuanXiYou_HTTP | 打开软件时产及登录之后游戏时产生 | 206 | 5 | 0
+511 | CamFrog_TCP_IM | 登陆该软件时出现该流量 | 207 | 2 | 0
+512 | CamFrog_UDP_VideoChat | 加入房间, 进行群聊时出现该流量 | 207 | 2 | 0
+513 | SSL | 安全套接层 | 208 | 16 | 0
+514 | RXJH | 热血江湖游戏流量 | 209 | 5 | 0
+515 | MetaTrader_Information | 查看软件内资源产生该流量 | 210 | 15 | 0
+516 | MetaTrader_Login | 软件登录时产生该流量 | 210 | 15 | 0
+517 | QNext_Control | 收发离线文件, 文本聊天, 视频聊天 | 211 | 1 | 0
+518 | DaHuaXiYou | 打开游戏客户端和进入游戏时产生此协议流量 | 212 | 5 | 0
+519 | DaHuaXiYou_HTTP | 游戏更新和载入游戏时产生此协议流量 | 212 | 5 | 0
+520 | WenDao | 游戏控制流 | 213 | 5 | 0
+521 | DaFuWeng | 游戏流量 | 214 | 5 | 0
+522 | DaFuWeng_Update | 游戏客户端更新时产生此协议流量 | 214 | 5 | 0
+523 | DaFuWeng_Login | 登录 | 214 | 5 | 0
+524 | Zultrax_ZEPP | P2P文件共享软件 | 215 | 1 | 0
+525 | H248 | H248信令流 | 216 | 3 | 0
+526 | ADC_Protocol_TCP | ADC是一个文本协议的客户端 - 服务器网络 | 217 | 1 | 0
+527 | ADC_Protocol_UDP | ADC是一个文本协议的客户端 - 服务器网络 | 217 | 1 | 0
+528 | Jabber | Jabber协议的流量 | 218 | 2 | 0
+529 | IKE | 第一个版本的IKE  | 219 | 16 | 0
+530 | IKEv2 | 第二个版本的IKE. | 219 | 16 | 0
+531 | WanMeiGuoJi | 完美国际游戏流量 | 220 | 5 | 0
+532 | WanMeiShiJie | 完美世界游戏流量 | 221 | 5 | 0
+533 | ZhuXian2 | 诛仙2游戏流量 | 222 | 5 | 2811
+534 | ChiBi | 赤壁游戏流量 | 223 | 5 | 2811
+535 | WuLinWaiZhuan | 武林外传游戏流量 | 224 | 5 | 0
+536 | ReWuPaiDui | 登录, 游戏数据流 | 225 | 5 | 0
+537 | KouDaiXiYou | 口袋西游游戏流量 | 226 | 5 | 2811
+538 | ShaiYa_TCP_Control | 游戏控制流 | 227 | 5 | 0
+539 | ShaiYa_TCP_Data | 在线游戏 | 227 | 5 | 0
+540 | ShaiYa_HTTP | 页面加载流量 | 227 | 5 | 0
+541 | XiaYiDao2 | 游戏主控制流 | 228 | 5 | 0
+542 | Ventrilo | 聊天 | 229 | 2 | 0
+543 | ZhengTu_Control | 游戏的主要流量包括数据流, 以前名称有误 | 230 | 5 | 0
+544 | Mysql | 数据库通信流量 | 231 | 8 | 0
+545 | CBS_Streaming | 打开网站, 观看视频 | 232 | 6 | 577, 612, 613, 628
+546 | KuaiLeXiYou | 快乐西游 | 233 | 5 | 0
+547 | Woool_TCP | 游戏的TCP流量 | 234 | 5 | 0
+548 | Woool_HTTP | 游戏的HTTP流量 | 234 | 5 | 0
+549 | Woool_UDP | 游戏的UDP流量 | 234 | 5 | 0
+550 | NetBios_Name_Service | NetBIOS名称服务 | 235 | 11 | 0
+551 | NetBios_Session_Service | NetBIOS会话服务 | 235 | 11 | 0
+552 | NetBios_Datagram_Service | NetBIOS数据报服务 | 235 | 11 | 0
+553 | ShengDa_Prot_Data | 登录, 游戏等 | 236 | 5 | 0
+554 | Vuze_OnlinePlay | 在线播放功能 | 237 | 6 | 13
+555 | Vuze_Control_Data_TCP | 属于vuze的TCP方式的控制和数据流 | 237 | 1 | 0
+556 | JinShanGame_Control | 玩金山游戏产生流量 | 238 | 5 | 0
+557 | JinShanGame_Update | 金山游戏更新流量 | 238 | 5 | 0
+558 | HeadCall_UDP | 客户端间通话和VOIP电话流量 | 239 | 3 | 0
+559 | HeadCall_TCP | 客户端升级 | 239 | 3 | 0
+560 | JuRen_Update | 游戏自动更新 | 240 | 5 | 0
+561 | JuRen_ControlData | 游戏中的各场景操作产生该流量 | 240 | 5 | 0
+562 | Namipan | 浏览器上的操作 | 241 | 12 | 0
+563 | Come2Play | 登录, 游戏等 | 242 | 5 | 613
+564 | DaFuXing | 操作软件产生的流量 | 243 | 15 | 0
+565 | WebMail_Mail | mail.com邮箱协议 | 244 | 9 | 0
+566 | WebMail_Mail_IM | mail.com邮箱中IM功能 | 244 | 2 | 0
+567 | Last_fm | 登陆, 收听广播会产生该流量 | 245 | 6 | 627
+568 | KingSoft_ChunQiu_Common | 登录, 查找服务器等 | 246 | 5 | 0
+569 | ShenGuiChuanQi | 游戏的流量. | 247 | 5 | 0
+570 | FengShen_Login | 包括软件的主要流量, 不仅仅登录流量, 以前命名有误 | 248 | 5 | 556
+571 | JuRen_Login | 登陆, 游戏中产生 | 249 | 5 | 0
+573 | XianLvQiYuan2 | 游戏的流量  | 251 | 5 | 0
+574 | Lineage1 | Lineage1游戏相关的流量 | 252 | 5 | 0
+575 | GOM_TV | 观看视频产生的HTTP流量 | 253 | 6 | 0
+576 | Morpheus_TCP_Data | TCP流量 | 254 | 1 | 0
+577 | RTMP | 实时消息协议 | 255 | 6 | 0
+578 | SpeedKu6_VOD_Control_Data_TCP | 视频TCP数据控制流 | 256 | 6 | 612, 628, 1896
+579 | SpeedKu6_VOD_Control_Data_UDP | 视频UDP控制流 | 256 | 6 | 0
+580 | AOL_Video | 视频流量 | 257 | 6 | 0
+581 | OSCAR_Login | 登陆流量 | 258 | 2 | 0
+582 | OSCAR_Control | 控制流量 | 258 | 2 | 0
+583 | OSCAR_FileTransfer | 文件传输协议 | 258 | 2 | 0
+584 | MySpaceIM | 响应采用RC4加密 | 259 | 2 | 0
+585 | MySpaceIM_HTTP | HTTP消息 | 259 | 4 | 0
+586 | iMesh_HTTP | iMesh的HTTP特征 | 260 | 1 | 0
+587 | ITunes_HTTP | HTTP流量 | 261 | 6 | 0
+588 | ITunes_DAAP | 共享DAAP流量 | 261 | 6 | 0
+589 | Mig33 | Mig33手机社交平台 | 262 | 2 | 0
+590 | Mig33_HTTP | HTTP流量 | 262 | 2 | 0
+591 | WinMX_Login_UDP | Primary Client登录 | 263 | 1 | 0
+593 | WinMX_Login_TCP | Secondary Client登录 | 263 | 1 | 610
+594 | WinMX_Peer_TCP | Peer之间的TCP通讯(聊天室, 搜索等) | 263 | 1 | 0
+595 | WinMX_Get_BlockList | 获取BlockList | 263 | 1 | 0
+596 | HaoFang_UDP | 浩方承载在UDP上的数据  | 264 | 5 | 0
+597 | HaoFang_TCP | 进入游戏房间时产生该流量 | 264 | 5 | 0
+598 | MUTE | p2p 文件分享 | 265 | 1 | 0
+599 | KoalaDC | 下载等流量 | 266 | 1 | 0
+600 | Brightcove_HTTP | 访问网站是产生的HTTP流量 | 267 | 6 | 0
+601 | Joost | 视频流量 | 268 | 6 | 0
+602 | ebuddy_HTTP | ebuddy框架较小, 不向本身的ID提供聊天功能, 只有加入 | 269 | 2 | 0
+603 | PPTP | 所有该协议的流量 | 270 | 11 | 0
+604 | Pando | 文件传输流量 | 271 | 1 | 13, 430, 611, 627, 628, 1432
+605 | Citrix | Citrix应用虚拟化流量 | 272 | 14 | 0
+606 | Icecast | 使用Icacaset服务的软件产生该流量 | 273 | 13 | 78, 607, 622, 627, 2828
+607 | Shoutcast | 语音数据流 | 274 | 13 | 78, 2828
+608 | OpenNap_Download | OpenNap协议下载 | 275 | 1 | 0
+609 | OpenNap_Upload | OpenNap协议上传 | 275 | 1 | 0
+610 | OpenNap_Login | OpenNap协议登陆 | 275 | 1 | 0
+611 | HTTP_Ext_rar | URI首行 后缀为rar的HTTP流量 | 276 | 10 | 0
+612 | HTTP_Ext_flv | URI首行后缀为flv的HTTP流量 | 276 | 6 | 0
+613 | HTTP_Ext_swf | URI首行后缀为swf的HTTP流量 | 276 | 6 | 0
+616 | HTTP_Ext_wmv | URI首行后缀为wmv的HTTP流量 | 276 | 6 | 0
+617 | HTTP_Ext_asf | URI首行后缀为asf的HTTP流量 | 276 | 6 | 0
+618 | HTTP_Ext_3gp | URI首行后缀为3gp的HTTP流量 | 276 | 6 | 0
+619 | HTTP_Ext_mgp | URI首行后缀为mgp的HTTP流量 | 276 | 6 | 0
+620 | HTTP_Ext_und | URI首行后缀为und的HTTP流量 | 276 | 10 | 0
+621 | HTTP_Ext_mpeg | URI首行后缀为mpeg的HTTP流量 | 276 | 6 | 0
+622 | HTTP_Ext_ogg | URI首行后缀为ogg的HTTP流量 | 276 | 6 | 0
+623 | HTTP_Ext_rmvb | URI首行后缀为rmvb的HTTP流量 | 276 | 6 | 0
+624 | HTTP_Ext_rm | URI首行后缀为rm的HTTP流量 | 276 | 6 | 0
+625 | HTTP_Ext_ra | URI首行后缀为ra的HTTP流量 | 276 | 6 | 0
+626 | HTTP_Ext_mov | URI首行后缀为mov的HTTP流量 | 276 | 6 | 0
+627 | HTTP_Ext_mp3 | URI首行后缀为mp3的HTTP流量 | 276 | 6 | 0
+628 | HTTP_Ext_mp4 | URI首行后缀为mp4的HTTP流量 | 276 | 6 | 0
+629 | HTTP_Ext_avi | URI首行后缀为avi的HTTP流量 | 276 | 6 | 0
+630 | HTTP_Ext_wma | URI首行后缀为wma的HTTP流量 | 276 | 6 | 0
+631 | GoogleAnalytics | 使用谷歌广告统计脚本网站的广告会产生 | 277 | 4 | 0
+633 | X400_Mail | 信报处理服务的基本标准 | 278 | 9 | 0
+634 | IPv6_Over_UDP | UDP的净荷数据封装的是IPv6数据 | 279 | 16 | 0
+635 | GoogleEarth | 使用谷歌地球是产生的流量 | 280 | 4 | 0
+636 | Jajah_HTTP | Jajah 打电话和发短信的HTTP流量 | 281 | 3 | 430
+637 | aMSN | 聊天流量 | 283 | 2 | 0
+638 | AOL_UnCut_Video | 时代华纳公司于08年已经停止了该项服务  | 284 | 6 | 0
+640 | BBSee | BBSee所有流量 | 286 | 6 | 0
+641 | BianFengGame | 选择某个游戏, 当加入房间时出现该流量 | 287 | 5 | 0
+642 | BiXueQingTian | 游戏相关的流量 | 288 | 5 | 0
+643 | CaiHuaGuWang | 操作财华股王产生的流量 | 289 | 15 | 0
+644 | Carbonite | 上传下载流量 | 290 | 12 | 430
+645 | Cosmic_Rift | 游戏进入后产生此协议流量 | 291 | 5 | 0
+646 | DaTangHaoXia | 游戏相关的流量 | 292 | 5 | 0
+647 | DaZhiHui | 包括登录等其他流量 | 293 | 15 | 0
+648 | EVE_Online | 游戏过程的流量 | 294 | 5 | 0
+649 | Fasttrack | 所有流量 | 295 | 1 | 0
+650 | FeiDian | 所有流量 | 296 | 6 | 0
+651 | FengYinChuanShuo | 游戏过程产生的流量. | 297 | 5 | 0
+652 | FengYun_VChat | 聊天流量 | 298 | 2 | 0
+653 | FLV | FLV视频 | 344 | 6 | 0
+654 | FSJoy | 游戏的流量 | 299 | 5 | 0
+655 | Gaim | 聊天等流量 | 300 | 2 | 0
+656 | GizmoProject_Data | 聊天等流量 | 301 | 2 | 0
+657 | HTTP_Browsing | 未识别的http协议, 如google, 百度等首页流量 | 302 | 4 | 0
+658 | Iqonn | 浏览网页等HTTP流量 | 303 | 4 | 0
+659 | HuangJinDao | 游戏的流量 | 304 | 5 | 0
+660 | ILiao_VChat | 聊天流量 | 305 | 2 | 0
+661 | Infantry | 游戏流量. | 306 | 5 | 0
+663 | JingTian | 游戏流量 | 308 | 5 | 0
+664 | KangZhan | 游戏流量 | 309 | 5 | 0
+665 | Legend_Of_Mir2 | 游戏流量 | 310 | 5 | 0
+666 | Legend_Of_Mir3 | 游戏流量 | 311 | 5 | 0
+668 | MaoXianDao | 玩游戏的流量 | 312 | 5 | 0
+670 | Microsoft_Net_Send | 微软Net命令发送信息时产生的流量 | 314 | 2 | 0
+671 | MoJie | 游戏流量 | 315 | 5 | 0
+672 | MoYu | 游戏流量 | 316 | 5 | 1432
+673 | MySpace_Upload | 空协议, 保留协议ID | 317 | 4 | 1714
+674 | Nate_IM | 合并到NateOn上, 只保留协议ID | 318 | 2 | 0
+675 | Net2Phone | Net2Phone网络电话 | 319 | 3 | 0
+676 | P5P | P5P网络电话短信、语音通话等产生流量 | 320 | 5 | 0
+678 | PandoraTV_Web | 页面加载 | 321 | 6 | 0
+679 | PCast | 播放视频流量 | 322 | 1 | 0
+681 | Xvideos | 浏览网页与在线观看视频 | 324 | 6 | 0
+683 | QQCar | 游戏流量 | 326 | 5 | 0
+684 | QQFantacy | 游戏流量 | 327 | 5 | 0
+685 | QQGame | 登录, 进行游戏 | 328 | 5 | 613
+686 | QQHuaXia | 游戏流量 | 329 | 5 | 0
+687 | RealDaTing | 登录, 游戏等流量 | 330 | 5 | 0
+688 | Second_Life_UDP | 游戏的UDP数据 | 331 | 5 | 0
+689 | ShanDongYiDong_PICA | 语音通话 | 332 | 3 | 0
+690 | ShuiHuQZhuan | 游戏流量 | 333 | 5 | 0
+691 | STongHuaShun | 操作软件的流量 | 334 | 15 | 0
+692 | TeZhongBuDui | 游戏过程产生的流量 | 335 | 5 | 0
+693 | Tor | 路由数据 | 336 | 16 | 430, 513
+694 | TouMingZhuang | 游戏流量 | 337 | 5 | 1432
+695 | WaiHuiTong | 操作软件的流量 | 338 | 15 | 0
+696 | WuLin | 一款中国地区流行的RPG网游 | 339 | 5 | 0
+697 | XiaYiDao | 游戏的主要流量 | 340 | 5 | 0
+698 | XingYe | 登录和在线下载数据的流量 | 341 | 15 | 0
+699 | Youtube_Upload | 在youtube上传视频 | 342 | 6 | 0
+700 | ZhongXin | 中信股票行情软件，就是通达信，规则合入tongdaxin | 343 | 15 | 0
+701 | Windows_Update | windows更新程序的主要流量 | 347 | 17 | 430, 513, 611, 1432
+702 | NNTP | 标准协议(Net News Transfer Protocol-新闻组协议) | 346 | 13 | 0
+703 | BianFengGame_HTTP | 游戏的HTTP流量 | 287 | 5 | 0
+704 | EVE_Online_HTTP | 游戏的HTTP流量 | 294 | 5 | 0
+705 | ApexDC++ | 使用该软件时出现该流量 | 352 | 1 | 0
+706 | BCDC++ | 打开该软件, 操作BCDC++时出现该流量 | 353 | 1 | 0
+707 | StrongDC++ | 下载等流量 | 354 | 1 | 0
+708 | iDC++ | 下载等流量 | 355 | 1 | 0
+709 | Adobe | 访问Adobe网页出现该流量 | 356 | 6 | 430
+712 | Meebo | 语音，聊天，登录等场景产生该种流量 | 349 | 2 | 430, 1432
+718 | Winny | 软件搜索, 多线程下载 | 348 | 1 | 0
+719 | EChat | 聊天等流量 | 360 | 2 | 0
+720 | Vbuzzer_CreateSession | 语音控制流_CreateSession | 362 | 3 | 175
+721 | FTPS_Control | FTPS协议控制流 | 351 | 10 | 0
+722 | FTPS_Data | FTPS协议流量 | 351 | 10 | 0
+723 | Vtalk_UDP | 登录数据 | 350 | 3 | 0
+724 | Vtalk_HTTP | 打开充值页面时产生的流量 | 350 | 3 | 0
+725 | BOOTP | 引导协议 | 345 | 11 | 437
+726 | Vbuzzer | 聊天 | 362 | 3 | 528
+727 | JustVoip_SIP | JustVoip的SIP特征 | 363 | 3 | 175
+728 | BetaMax_Voip | BetaMax公司的VOIP类软件产生 | 365 | 3 | 0
+729 | LowRateVoip_SIP | LowRateVoip的SIP特征 | 364 | 3 | 175
+730 | Vbuzzer_PCtoPC | 语音数据流_PCtoPC | 362 | 3 | 249
+731 | Vbuzzer_PCtoPhone | 拨打电话 | 362 | 3 | 0
+732 | Vbuzzer_Login | Vbuzzer 登陆 | 362 | 3 | 430, 513
+733 | Nimbuzz_Control | 登录中流量 | 361 | 2 | 528
+734 | 360_DownLoad | 360提供软件库, 系统更新等相关下载 | 366 | 10 | 169
+735 | 360_Update | 360软件版本更新 | 366 | 10 | 1432
+736 | 360_UpLoad | 360杀毒相关报告上传 | 366 | 10 | 0
+737 | Youtube_Video | 在线观看视频 | 342 | 6 | 69
+738 | Net2Phone_Login | 登录时产生 | 319 | 3 | 0
+739 | Net2Phone_Phone_Control | 打电话 | 319 | 3 | 738
+740 | KillOnline | 主要是游戏功能killonline的游戏流量 | 367 | 5 | 0
+741 | Net2Phone_Fax | 发送传真 | 319 | 3 | 0
+742 | Nimbuzz_Audio | PC主叫PC, PC被叫PC, PC主叫电话 | 361 | 3 | 247
+743 | BlackBerry_Browse | 浏览网页的流量 | 76 | 4 | 212
+744 | BlackBerry_Mail | 邮件业务的流量 | 76 | 9 | 212
+745 | BlackBerry_Message | 短消息业务流量 | 76 | 2 | 212
+746 | Citrix_SSL | Citrix服务器交换证书 | 272 | 14 | 430, 513
+747 | YahooMsg_Game | Yahoo_Messenger双人玩小游戏 | 11 | 5 | 0
+748 | KuGoo_GameDownload_HTTP | 游戏下载 | 34 | 17 | 0
+749 | SNMP | SNMP,简单网络管理协议 | 368 | 11 | 0
+750 | Vtalk_TCP | 语音数据 | 350 | 3 | 0
+751 | Aimini | 该子协议在Search, Connect, Transfer中都用到. | 369 | 1 | 0
+752 | Aimini_HTTP | 加载页面,注册,登陆等都出现该流量 | 369 | 1 | 0
+753 | Fring_HTTP | 登录加载时该流量 | 370 | 3 | 0
+754 | Fring | 登陆, 文本聊天, 发送文件, fring call | 370 | 3 | 0
+755 | ebuddy | 聊天等流量 | 269 | 2 | 0
+756 | FriendCaller_Update | 下载更新流 | 371 | 3 | 0
+757 | FriendCaller_Login | 登录时出现该流量 | 371 | 3 | 0
+758 | UUCall_Login | 登陆 | 58 | 3 | 0
+759 | Net2Phone_Phone_Data | 打电话 | 319 | 3 | 0
+760 | AliCall_Data | 使用该软件打电话时出现该流量 | 66 | 3 | 0
+761 | YouKu_Iku_Upload | 优酷工具iku用来上传 | 372 | 6 | 0
+762 | YouKu_Video | 优酷的视频流量和HTTP流量 | 372 | 6 | 78, 657, 1896
+763 | YouKu_Upload | 优酷网站上传 | 372 | 6 | 0
+764 | YouKu_MailChat | 优酷邮件 | 372 | 6 | 0
+765 | Loudtalks_Detect | 探测包 | 373 | 3 | 0
+767 | Loudtalks_Main | 主要功能 | 373 | 3 | 0
+768 | Wuala | Wuala是由瑞士Caleido Inc.开发的在线存取软件 | 113 | 12 | 0
+769 | ITunes | ITunes登录，浏览等流量，非下载场景 | 261 | 6 | 430, 513
+770 | Truphone_Login | Jabber登陆流 | 374 | 3 | 430, 513, 528
+771 | Truphone_Control | SIP控制流 | 374 | 3 | 175
+772 | Truphone_Data | RTP数据 | 374 | 3 | 0
+773 | IsKoot_HTTPS | IsKoot产生的HTTPS数据流 | 375 | 3 | 430
+774 | YY_Chat | YY客户端进行文本聊天 | 377 | 2 | 0
+775 | YY_Login | YY客户端软件登录 | 377 | 2 | 0
+776 | YY_Audio | 客户端之间语音聊天 | 377 | 2 | 1869
+777 | Tunnelling_Data_UDP | 现网分析,怀疑是使用隧道传输的UDP数据 | 376 | 17 | 0
+778 | QQ_Music | QQ_Music控制流 | 378 | 6 | 78, 627, 630
+779 | IsKoot_HTTP | 用于识别IsKoot产生的HTTP流 | 375 | 3 | 0
+780 | Tudou_Upload | 土豆网上传 | 379 | 6 | 0
+781 | Tudou_Download | 土豆网下载 | 379 | 6 | 612, 613, 627, 1896
+782 | LDAP | 轻量目录访问协议  | 380 | 8 | 0
+783 | QuickTime_HTTP | 识别QuikcTime软件产生的HTTP流量 | 381 | 6 | 0
+784 | WebDisk_QuPan | 网络硬盘, 上传下载 | 382 | 12 | 0
+785 | KJava_Download | 移动应用程序的无线下载 | 384 | 4 | 78
+786 | OMA_Download | OMA Download提供灵活的机制下载媒体对象, 包括铃音, | 383 | 4 | 78
+787 | WebMail_Findbulgaria | 收发邮件 | 386 | 9 | 0
+788 | OnLineLive | 在线视频, 电视, 收音 | 385 | 6 | 0
+789 | NetMeeting | 语音聊天 | 387 | 2 | 237
+790 | VS_Enter_Room | 进入游戏房间 | 388 | 5 | 0
+791 | VS_Login | 登录 | 388 | 5 | 528
+792 | VS_Play_Game | 玩游戏 | 388 | 5 | 528
+793 | VS_Open_Login | 启动软件时, 弹出的界面 | 388 | 5 | 0
+794 | QQBattleZone_login | 登录QQ对战平台 | 389 | 5 | 0
+795 | Rodi_Connect | 本地客户端绑定SOCKS端口产生的HTTP流量 | 390 | 1 | 0
+796 | Rodi_Find | 搜索和下载流量 | 390 | 1 | 0
+797 | Rodi_Chat | 客户端之间的聊天 | 390 | 1 | 0
+798 | QQBattleZone_Game | 通过对战平台打游戏 | 389 | 5 | 0
+799 | FoxNews_Text | 访问浏览主页时流量 | 391 | 4 | 0
+800 | FoxNews_Video | 网站中的主要视频流 | 391 | 4 | 0
+801 | FoxNews_Radio | FoxNews的广播流量 | 391 | 4 | 627
+802 | QIYI_HTTP_Video | 观看视频 | 392 | 6 | 1896
+803 | Tunnelling_Data_TCP | 现网分析,怀疑是使用隧道传输的TCP数据 | 376 | 17 | 0
+804 | CBS_WebGame | CBS的网页小游戏 | 232 | 5 | 0
+805 | Babelgum_Login | 登录协议 | 285 | 6 | 0
+806 | Babelgum_Video | 视频流协议 | 285 | 6 | 577
+807 | Babelgum_Search | 搜索协议 | 285 | 6 | 0
+811 | H248_MEDIA_CONTROL | H248(MEGACO)协商音视频的控制流 | 216 | 3 | 525
+812 | Doom | 游戏的主要流量 | 394 | 5 | 0
+813 | ExoSee_Server_Operation | 软件连接服务器和下载时产生此协议流量 | 395 | 1 | 0
+814 | ExoSee_Client_Comm | ExoSee社区内的成员下载, 上传等 | 395 | 1 | 0
+815 | DeltaForce_Data | 游戏的主要流量. | 396 | 5 | 0
+816 | QIYI_HTTP_Control | 播放视频 | 392 | 6 | 628
+817 | QIYI_HTTP_Others | 其他的链接时流量 | 392 | 6 | 0
+818 | Shareaza_DownLoad | 下载 | 142 | 2 | 0
+819 | MS_PushMail_HTTP | 与Exchange服务器用HTTP协议通讯的流量 | 401 | 9 | 0
+820 | Badongo_Upload | 访问该网站, 上传文件时出现该流量 | 398 | 12 | 0
+821 | Badongo_Download | 访问该网站, 下载文件时出现该流量 | 398 | 12 | 0
+822 | CCTV_HTTP | 空协议，保留协议ID | 399 | 4 | 0
+823 | CCTV_LiveTV | UDP格式的视频 | 399 | 6 | 0
+824 | CCTV_Video | HTTP视频流量 | 399 | 6 | 612, 628
+827 | FileGuri_DownLoad | 数据下载 | 397 | 1 | 0
+829 | Badongo_Other | 访问该网站, 加载网页时出现该流量 | 398 | 12 | 0
+830 | Granadoespada_Login | 游戏登陆 | 402 | 5 | 0
+831 | Granadoespada_GameData | 游戏数据流 | 402 | 5 | 0
+832 | Granadoespada_AcountCheck | 账户验证 | 402 | 5 | 0
+833 | CS_GameData | 进入到对战界面游戏的数据流 | 78 | 5 | 0
+834 | H248_MEDIA_AUDIO | H248(MEGACO)控制协商出的音频流 | 216 | 3 | 0
+835 | H248_MEDIA_VIDEO | H248(MEGACO)控制协商出的视频流 | 216 | 3 | 0
+836 | PcAnywhere_TCP | 本协议分析的为TCP流 | 403 | 14 | 0
+837 | FileGuri_Control | FileGuri控制流量 | 397 | 1 | 0
+838 | UltimaOnline_Login | 游戏登录 | 405 | 5 | 0
+839 | UltimaOnline_Update | 游戏更新 | 405 | 5 | 0
+840 | UltimaOnline_ControlData | 游戏控制数据流 | 405 | 5 | 0
+841 | CCTV_Login | 空协议，保留协议ID | 399 | 4 | 0
+842 | CDDB_Search_HTTP | 识别查询CD音乐信息流 | 404 | 8 | 0
+843 | CDDB_Other_HTTP | 流量CDDB网站页面流量 | 404 | 8 | 0
+844 | TantraOnline_Update | 游戏客户端更新 | 407 | 5 | 0
+846 | TantraOnline_ControlData | 游戏控制数据流 | 407 | 5 | 0
+849 | Battlefield1942_GameData | 游戏数据 | 408 | 5 | 0
+850 | Battlefield1942_TCP_Login | 游戏网络对战的时候登陆 | 408 | 5 | 0
+851 | Battlefield1942_UDP_Login | 游戏局域网对战的时候登陆 | 408 | 5 | 0
+852 | Kohan2_Lan_game | 局域网对战 | 409 | 5 | 0
+853 | Crysis_IRC | 进入服务器后的聊天通讯流量 | 410 | 5 | 0
+854 | Crysis | 游戏流量 | 410 | 5 | 0
+855 | Kohan2_Chat | 文本聊天 | 409 | 5 | 0
+856 | GameSpyArcade_Login | 游戏对战平台 | 420 | 5 | 0
+857 | Day_Of_Defeat_GameData | 战争动作游戏‘胜利之日’游戏产生的流量 | 412 | 5 | 0
+858 | Valve_Steam_Login | 登录功能 | 417 | 5 | 0
+859 | Valve_Steam_Update | 在线升级 | 417 | 5 | 0
+860 | Valve_Steam_Tracker_TCP | Steam数字下载 | 417 | 5 | 0
+861 | GameSpyArcade_Chat | 游戏对战平台 | 420 | 5 | 0
+862 | Valve_Steam_Data_TCP | 下载和变种产生的TCP流 | 417 | 5 | 0
+863 | GameSpyArcade_TransferFile | 游戏对战平台 | 420 | 5 | 0
+864 | Valve_Steam_Heartbeat | 心跳流, 有UDP和变种后的TCP这两种 | 417 | 5 | 0
+865 | Valve_Steam_HTTP | Steam产生的各种HTTP流 | 417 | 5 | 0
+866 | Valve_Steam_Tracker_UDP | 游戏服务器的集中式目录服务器 | 417 | 5 | 0
+867 | Half_Life_DeathMatch_GameData | Half_Life_DeathMatch进入到对战游戏的数据 | 414 | 5 | 0
+868 | LETV_Upload | LETV视频上传 | 419 | 6 | 0
+869 | Team_Fortress_Classic_GameData | 游戏的主要流量 | 413 | 5 | 0
+870 | Battlefield2_GameData | 游戏数据 | 411 | 5 | 0
+871 | Battlefield2_Login | 登陆游戏 | 411 | 5 | 0
+872 | Tony_Hawk_ProSkater_3_Chat | 即时消息 | 416 | 5 | 0
+873 | MLB_TV_video | 观看视频资源时产生该流 | 422 | 6 | 0
+875 | Tony_Hawk_ProSkater_3_ControlData | 游戏的主要流量 | 416 | 5 | 0
+876 | rediff_bol | Rediff IM的识别协议 | 418 | 2 | 0
+877 | LETV_Data_TCP | 直播P2P产生的数据流 | 419 | 6 | 0
+878 | Netfolder_Login | Netfolder登陆流 | 415 | 12 | 0
+879 | Habbo_http | 哈宝加载是的HTTP流 | 421 | 5 | 613, 1432
+880 | Netfolder_Upload | Netfolder上传数据 | 415 | 12 | 254
+881 | Habbo_Data | 哈宝游戏产生的数据流 | 421 | 5 | 0
+889 | Storm | 暴风影音 | 428 | 6 | 577
+891 | Netfolder_Download | 资源下载 | 415 | 12 | 1432
+892 | PeerCast_Relays | peercast的转播流量 | 432 | 6 | 78
+893 | PeerCast_HTTP | peercast软件打开浏览器和网站自身产生的流量 | 432 | 6 | 0
+894 | GigaTribe_Login | 登陆过成中的流也包括用户信息的修改 | 433 | 1 | 0
+895 | GigaTribe_Download | 下载时出现该流量 | 433 | 1 | 0
+896 | Symantec_live_update | 软件更新 | 434 | 17 | 430, 513, 1433
+897 | Teredo | Teredo局域网消息 | 431 | 16 | 0
+898 | Soapbox_PlayVideo | 在线观看视频 | 430 | 6 | 0
+899 | SID_Login | 登录流量 | 429 | 4 | 0
+900 | SID_Register | 注册流量 | 429 | 4 | 0
+901 | SID_Search | 搜索流量 | 429 | 4 | 0
+902 | SID_Download | 下载流量 | 429 | 4 | 0
+903 | Behavior_TransferFile | 文件传输的行为识别 | 435 | 10 | 0
+904 | Behavior_P2P | P2P软件行为识别 | 436 | 1 | 0
+1054 | kerberos | 网络认证协议，进行网络认证时产生的流量 | 586 | 17 | 0
+1167 | rsync | Rsync建立连结 | 699 | 10 | 0
+1168 | rtelnet | 远程登录 | 700 | 14 | 0
+1266 | Star_Wars_Galactic_Battlegrounds_ControlData | 游戏数据 | 798 | 5 | 0
+1269 | SID_HTTP | HTTP承载数据 | 429 | 4 | 0
+1270 | Identd_TCP | 请求应答. | 799 | 11 | 0
+1271 | Flash_Yahoo_RTMP | 空协议，规则移入Yahoo_Video | 801 | 6 | 0
+1272 | Flash_Yahoo_HTTP | 空协议，规则移入Yahoo_Video | 801 | 4 | 0
+1273 | PandoraTV_Login | 打开网页, 登录 | 321 | 6 | 0
+1274 | PandoraTV_Video_Control | 在线视频播放的控制流 | 321 | 6 | 0
+1275 | Shockwave_Chat | 聊天流量 | 718 | 5 | 0
+1276 | Shockwave_OnlineGame | 在线游戏流量 | 718 | 5 | 0
+1277 | Shockwave_DownloadGame | 下载游戏流量 | 718 | 5 | 1432
+1278 | PandoraTV_Video_Data | 在线视频播放的数据流 | 321 | 6 | 612, 613, 629
+1279 | Syslog | 日志管理 | 800 | 11 | 0
+1280 | Windows_Media_Center_Video | windows 自带媒体播放工具 | 802 | 6 | 0
+1281 | Soapbox_PlayVideo_RTMP | 在线观看视频之RTMP流 | 430 | 6 | 577
+1282 | Sony_Online_Games_HTTP | 在线游戏流量 | 803 | 5 | 0
+1283 | Opera_Mini_HTTP | 浏览器选择HTTP通讯访问网站流量 | 804 | 4 | 0
+1284 | Opera_Mini_Socks | 浏览器选择socks通讯访问网站流量 | 804 | 4 | 0
+1286 | JumpTV_Other | JumpTV 网站http流量 | 805 | 6 | 0
+1287 | TVUPlayer | 播放视频 | 806 | 6 | 0
+1288 | ooVoo_VideoChat | 与对方视频, 语音时, 连接通话时产生 | 814 | 3 | 430
+1289 | ooVoo_Jabber | 弹出广告窗口, 文本聊天 | 814 | 3 | 430, 528
+1290 | BGP_TCP | 边界路由协议, RFC1771 | 813 | 11 | 0
+1291 | DivxWebPlayer_Video | Divx格式浏览器安装插件后视频播放的流 | 812 | 6 | 0
+1292 | DivxWebPlayer_Agent | 插件代理 | 812 | 6 | 0
+1293 | PacketiX_SSL | 加密的PacketiX流量 | 811 | 16 | 430, 513
+1294 | ABC_Streaming | 网页HTTP传输文件 | 807 | 6 | 0
+1295 | Gadu_Gadu_IM | IM软件的登录聊天, 语音视频, 文件传输等功能 | 808 | 2 | 175
+1296 | SageTV_Video | 用客户端看视频等 | 810 | 6 | 0
+1297 | TVUPlayer_HTTP | HTTP流量 | 806 | 6 | 0
+1298 | MegaUpload_Upload | 上传文件. | 809 | 12 | 1375
+1299 | MegaUpload_Download | 下载文件. | 809 | 12 | 1375
+1300 | JumpTV_Streaming | JumpTV 视频和radio的流量 | 805 | 6 | 0
+1301 | Mxit_Login | 登录, 账号操作时产生该流量 | 815 | 2 | 0
+1302 | Mxit_Chat_Sendfile | 软件登录之后产生该流量, 为主要流量 | 815 | 2 | 0
+1303 | Matacafe_Search | 视频网站搜索 | 816 | 6 | 0
+1304 | Vuze_HTTP_Control | 网页控制远端Vuze客户端流量 | 817 | 1 | 0
+1306 | QQ_VChat | 语音, 视频聊天 | 819 | 2 | 0
+1307 | CinemaNow_Roxionow | 下载视频时产生的流量 | 822 | 4 | 0
+1308 | BBC_iPlayer_RTMP | 打开该网站, 收听Radio时出现该流量 | 818 | 6 | 577
+1309 | BBC_iPlayer_HTTP | 打开该网站, 加载页面时出现该流量 | 818 | 6 | 430
+1310 | SageTV_Update | 客户端更新 | 810 | 6 | 0
+1311 | MySpace_UploadPhoto | 空协议, 保留协议ID | 317 | 4 | 0
+1312 | MySpace_Login | 登陆 | 317 | 4 | 430
+1313 | MySpace_Trailer | 空协议, 保留协议ID | 317 | 4 | 0
+1314 | Crackle_HTTP | 浏览网站时流量 | 823 | 6 | 612, 613, 628
+1315 | Crackle_RTMP | 网站RTMP视频流 | 823 | 6 | 577
+1316 | Poivy_Login | 登录 | 821 | 3 | 513
+1317 | Metacafe_Download | 空协议，保留协议ID | 313 | 6 | 0
+1318 | Metacafe_Upload | 空协议，保留协议ID | 313 | 6 | 0
+1319 | BBSee_Streaming | 访问音乐Tai网站, 观看MV时出现该流量 | 286 | 6 | 612, 613
+1321 | BBSee_Login | 网站和Mini客户端登录 | 286 | 6 | 0
+1322 | CinemaNow_HTTPS | 下载或者观看视频时验证文件产生的流量 | 822 | 4 | 430
+1323 | Zattoo | 视频流 | 824 | 6 | 613
+1324 | Vshare_UpLoad | 上传电影或视频 | 820 | 1 | 0
+1325 | Vshare_Login | 登陆数据流 | 820 | 1 | 0
+1326 | XDCC_Data_TCP | XDCC Catcher的文件传输TCP数据流 | 825 | 17 | 0
+1327 | GameSpyArcade_Common | 游戏对战平台 | 420 | 5 | 0
+1328 | NicoVideo_PlayVideo | 观看视频 | 826 | 6 | 0
+1330 | Other_VoIP | 其它的Other VoIP类流量 | 828 | 3 | 0
+1331 | Facebook | 主页产生的流量 | 829 | 4 | 613, 627, 628, 1432, 1434
+1332 | Yahoo_Games | 游戏时的流量 | 830 | 5 | 0
+1333 | Poivy_SIP | 客户端位于内网时才会使用sip | 821 | 3 | 175
+1335 | MegaShares_Upload | 上传资源时产生该种流量 | 839 | 12 | 0
+1336 | MegaShares_Download | 下载资源时产生该种流量 | 839 | 12 | 611, 617, 627, 1432, 1433
+1337 | KaZaA | 包括加载KaZaA的页面, 搜索音乐等. | 831 | 1 | 627, 628, 630
+1338 | XDCC_HTTP | XDCC Catcher的服务器控制流 | 825 | 17 | 0
+1340 | Poivy_Update | 检查更新和升级时 | 821 | 3 | 0
+1341 | JibJab_Login | 登录流量 | 843 | 4 | 0
+1342 | Veoh_UDP_Video | UDP视频流量 | 833 | 6 | 0
+1343 | Soribada_HTTP | 浏览网站流量 | 832 | 4 | 0
+1344 | Ants_Chat | 聊天服务流 | 836 | 1 | 208
+1348 | Dailymotion_Video | 网站播放视频产生流 | 835 | 6 | 612, 2633
+1349 | Ifilm_Comment | Ifilm电影网站Comment流量 | 840 | 6 | 0
+1350 | Yahoo_Games_DownloadGame | 下载游戏 | 830 | 5 | 0
+1351 | Ifilm_HTTP | IFilm电影网站HTTP流量 | 840 | 6 | 0
+1353 | BBBroadcast_Video | BBBroadcast视频流 | 841 | 6 | 0
+1354 | BlipTV_Upload | BlipTV的上传流量 | 842 | 6 | 1374
+1355 | BlipTV_Video | 看视频或听音乐时产生该流量 | 842 | 6 | 612, 1374
+1356 | DarkReign | 游戏的主要流量 | 837 | 5 | 0
+1357 | LotusNotes_SendMail | 发送邮件流量 | 844 | 9 | 0
+1358 | MegaShare_Download | 下载资源时产生该种流量 | 850 | 12 | 0
+1359 | MegaShare_Upload | 上传资源时产生该种流量 | 850 | 12 | 0
+1361 | Motorhead_PlayGame | 游戏时产生该流量 | 855 | 5 | 0
+1363 | NBC_Flashvideo | 播放网站内视频产生该流量 | 851 | 13 | 577, 613
+1364 | Nintendo_Wii | 新闻 | 846 | 5 | 430
+1366 | Outlaws_PlayGame | 游戏的主要流量 | 847 | 5 | 0
+1367 | Outlaws_SearchHost | 寻找游戏服务器的流量 | 847 | 5 | 1376
+1368 | PlayStation3_Comm | 游戏时产生的主要流量 | 849 | 5 | 0
+1369 | PlayStation3_Download | Traffic of download. | 849 | 5 | 0
+1370 | Xbox | 游戏时的主要流量 | 853 | 5 | 0
+1372 | Xbox_Video | 观看视频时的流量 | 853 | 5 | 616
+1374 | BlipTV_HTTP | 加载网页时出现该流量 | 842 | 6 | 0
+1375 | MegaUpload_Other | 打开网页. | 809 | 12 | 612, 1432
+1376 | directplay | 玩Motorhead等游戏时产生该流量 | 510 | 5 | 0
+1377 | F16 | 游戏的主要流量 | 848 | 5 | 0
+1378 | Boxee_HTTP | 打开网站, 加载网页时出现该流量 | 852 | 6 | 1433
+1379 | Nimbuzz | 文件传输, 广告等 | 361 | 3 | 0
+1380 | appleJuice_HTTP | 获取图形用户界面的显示信息 | 845 | 12 | 0
+1381 | appleJuice | appleJuice流量 | 845 | 12 | 0
+1383 | LotusNotes_Login | 登录流量 | 844 | 9 | 551
+1384 | CuSeeMe_Connect | 建立通道 | 856 | 3 | 0
+1385 | CuSeeMe_Data | 连接后的通信数据,包括文本聊天 | 856 | 3 | 0
+1386 | CuSeeMe_Media | 连接后的通信的媒体流 | 856 | 3 | 0
+1387 | Viber_Login | 开启Viber客户端 | 857 | 3 | 430, 1433
+1388 | Viber_Phone | 用Viber客户端之间打电话 | 857 | 3 | 0
+1389 | FriendCaller_Rtp | 打电话流量 | 371 | 3 | 0
+1390 | FriendCaller_Sip | 登录时出现该流量 | 371 | 3 | 0
+1391 | QuickTime_RtspRtpRtcp | 观看视频 | 381 | 6 | 69
+1392 | QuickTime_RtspRtp_Data | 观看视频 | 381 | 6 | 0
+1393 | QuickTime_RtspRtcp_Data | 观看视频 | 381 | 6 | 0
+1395 | TelTel_VOIP | 语音聊天数据 | 64 | 3 | 247
+1396 | Fetion_Media | 飞信文件传输,音视频数据流 | 65 | 2 | 192, 248
+1397 | DoShow_VideoChat | 视频聊天时出现此协议流量 | 67 | 3 | 0
+1398 | Xbox_UDP | 空协议，规则合入xbox live保留协议ID | 853 | 5 | 0
+1399 | Facetime_control | facetime的获取证书的HTTP消息 | 858 | 3 | 0
+1400 | Facetime_StunData | 通话过程中产生此协议流量 | 858 | 3 | 175, 247, 248
+1401 | Facetime_Detect | 拨打电话和通话过程中出现此协议流量 | 858 | 3 | 0
+1402 | Facetime_Authenticate | 保留协议ID, 识别为iMessage, 阻断不影响Facetime使用 | 858 | 3 | 430
+1403 | WhatsApp_Message | 短信聊天 | 859 | 2 | 430, 513, 528
+1404 | WhatsApp_HTTP | HTTP流量 | 859 | 2 | 0
+1405 | Thunder_Get_PeerList_HTTP | 使用HTTP协议从特定的Track服务器上获取PeerList | 31 | 1 | 0
+1406 | Thunder_Get_PeerList_TCP | 使用TCP协议从特定的Track服务器上获取PeerList | 31 | 1 | 106
+1407 | PlayStation3_Home | 游戏主页 | 849 | 5 | 0
+1408 | JibJab_Media | 播放视频和图片流量 | 843 | 4 | 0
+1409 | JibJab_Upload | 上传图像流量 | 843 | 4 | 0
+1410 | HTTP_CMCC_CMWAP_PROXY | CMWAP使用HTTP代理协议浏览网站浏览 | 860 | 4 | 0
+1412 | PingChat_Chat | 自动登录 | 861 | 2 | 0
+1414 | 4oD_RTMP | 观看视频时产生该流量 | 862 | 6 | 577
+1415 | CBC_Http | 打开网站, 加载网页时出现该流量 | 868 | 4 | 0
+1416 | CBC_RTMP | 播放视频, 接收广播 | 868 | 4 | 577
+1417 | Kaspersky_Update | 升级病毒库产生流量 | 863 | 17 | 430
+1418 | Kaspersky_Upload | Kaspersky客户端和服务器交互信息流量 | 863 | 17 | 0
+1419 | NBA_HTTP | NBA网站内加载图片, 文字时产生该流量 | 864 | 6 | 0
+1420 | NBA_MEDIA | 播放网站内视频产生该流量 | 864 | 6 | 612
+1421 | Nicovideo_Upload | 上传视频 | 826 | 6 | 0
+1422 | SapoVideo | Sapo网站视频上传下载 | 865 | 6 | 628
+1424 | Songsari_HTTP | 浏览Songsari主页面 | 866 | 6 | 0
+1425 | SpareBackup | 网页数据 | 867 | 12 | 0
+1426 | StupidVideos | StupidVideos网站视频和图片上传下载 | 869 | 6 | 612, 613
+1427 | TomatoPang_Download | 搜索, 下载文件 | 870 | 1 | 0
+1428 | TomatoPang_Login | 登录 | 870 | 1 | 0
+1429 | Vimeo_Login | 登陆流 | 871 | 6 | 0
+1430 | Vimeo_Player | 空协议，保留协议ID | 871 | 6 | 0
+1431 | Vimeo_Transfers | 空协议，保留协议ID | 871 | 6 | 0
+1432 | HTTP_Ext_exe | 首行后缀为exe的HTTP流量 | 276 | 10 | 0
+1433 | HTTP_Ext_zip | 首行后缀为zip的HTTP流量 | 276 | 10 | 0
+1434 | HTTP_Ext_pdf | 首行后缀为pdf的HTTP流量 | 276 | 10 | 0
+1435 | Anarchy_LoadMend | 下载补丁 | 874 | 5 | 0
+1436 | Anarchy_Login | 登录 | 874 | 5 | 0
+1437 | Anarchy_Game | 运行游戏时的流量 | 874 | 5 | 0
+1438 | Anarchy_State | 游戏中聊天等 | 874 | 5 | 0
+1439 | ClubBox_Login | 登录 | 873 | 6 | 0
+1440 | Jango_Music | 播放音乐流量 | 878 | 4 | 0
+1441 | Jango_HTTP | 浏览网页等HTTP流量 | 878 | 4 | 0
+1442 | CNN_Login | 打开网站登录时产生此协议流量 | 877 | 4 | 0
+1443 | CNN_PlayVideo | 网页播放视频时产生此协议的流量 | 877 | 4 | 577, 612, 613, 628
+1444 | Livestation_Commend | 登录之前产生该流量 | 879 | 6 | 0
+1445 | Livestation_HTTP | Livestation的Http控制流量 | 879 | 6 | 0
+1446 | Rutube_Flash_Control | Flash视频点播 | 880 | 6 | 0
+1447 | SmartVoip_SIP | 内网SIP协商 | 876 | 3 | 175
+1448 | ClubBox_Other | 打开网站和登陆时产生流量出现该流量 | 873 | 6 | 430
+1449 | EliteForce | 游戏的主要流量 | 875 | 5 | 0
+1450 | GoBoogy_Download | 视频和图片格式的文件下载, 上传 | 872 | 1 | 0
+1451 | GoBoogy_HTTP | 其它HTTP业务. | 872 | 1 | 0
+1452 | GoBoogy_Login | GoBoogy登录 | 872 | 1 | 0
+1453 | GoBoogy_Other | 其它流量 | 872 | 1 | 0
+1454 | Opera_Turbo | 使用Turbo加速功能的流量 | 881 | 4 | 0
+1455 | Opera_Unite | 使用Unite分享功能的流量 | 881 | 4 | 0
+1456 | Opera_Widget | 使用Widget插件功能的流量 | 881 | 4 | 0
+1457 | Brightcove_RTMP | 观看视频时产生的流量 | 267 | 4 | 577
+1459 | Rutube_Flash_Data | Flash视频点播 | 880 | 6 | 0
+1460 | GoogleTalk_CreateSession | 创建会话流量 | 9 | 2 | 0
+1462 | skype_login_ssl | skype 登陆ssl中证书特征,仅供测试用 | 4 | 3 | 430, 513
+1464 | Deezer_Music | 收听音乐流量 | 884 | 4 | 0
+1466 | Deezer_Search | 音乐搜索,主页流量 | 884 | 4 | 0
+1467 | ActionVoip_SIP | 内网SIP协商 | 883 | 3 | 175
+1468 | ezPeerPlus_HTTP | 主页访问HTTP流量 | 885 | 1 | 630
+1469 | ezPeerPlus_Login | 登陆 | 885 | 1 | 0
+1470 | ezPeerPlus_Music | 播放音乐 | 885 | 1 | 0
+1471 | ezPeerPlus_Video | 播放视频 | 885 | 1 | 0
+1472 | Gobby | 文本编辑 | 886 | 17 | 0
+1473 | MATOnline_Game | 游戏 | 892 | 5 | 0
+1474 | MATOnline_HTTP | 游戏HTTP流 | 892 | 5 | 0
+1475 | MATOnline_Login | 游戏登陆 | 892 | 5 | 0
+1476 | HTTPTunnel_Control | 启动软件产生流量 | 887 | 16 | 0
+1477 | HTTPTunnel_Data | 使用软件产生流量 | 887 | 16 | 0
+1478 | HTTPTunnel_HTTP | 使用软件产生HTTP流量 | 887 | 16 | 0
+1479 | LadbrokesPoker_HTTP | 扑克客户端Http流量 | 888 | 5 | 0
+1480 | LadbrokesPoker_Other | 游戏时的主要流量 | 888 | 5 | 0
+1481 | Legends_Game | 口袋传奇的游戏时产生的数据流 | 889 | 5 | 0
+1482 | Legends_HTTP | 口袋传奇登陆之前界面数据加载 | 889 | 5 | 0
+1483 | SuddenAttack_Game | 游戏时产生的流量 | 890 | 5 | 0
+1484 | SuddenAttack_HTTP | 游戏的HTTP流量 | 890 | 5 | 0
+1485 | Valor | 游戏的主要流量 | 891 | 5 | 0
+1486 | Lineage2_Game | 天堂2游戏 | 156 | 5 | 0
+1487 | Lineage2_HTTP | Http流 | 156 | 5 | 0
+1488 | Hopster | 穿越防火墙 | 893 | 11 | 0
+1489 | Espn_Radio | 收听ESPN在线Radio | 894 | 6 | 0
+1490 | Espn_Video | 点播高清体育视频 | 894 | 6 | 0
+1491 | NateOn_HTTP | NateOn广告, 发送flash形式的礼物图片等功能使用HTTP | 896 | 2 | 0
+1492 | NateOn_IRC | 客户端产生的TCP流 | 896 | 2 | 0
+1493 | NateOn_VideoAudio | NateOn的视频和音频消息格式一样, 只是端口不一样 | 896 | 2 | 0
+1494 | Rozzlobenimuzi_Video | 视频播放 | 898 | 6 | 0
+1495 | Rozzlobenimuzi_Other | 页面加载流量 | 898 | 6 | 0
+1496 | X224 | 应用X.224的网络管理流量 | 897 | 11 | 0
+1497 | JustinTV_PlayVideo | 播放视频 | 895 | 6 | 577
+1499 | Rynga_SIP | 内网SIP协商 | 899 | 3 | 175
+1500 | Espn_Http | 收听ESPN在线Radio | 894 | 6 | 612, 613
+1501 | Fring_Call | fring通话流量 | 370 | 3 | 754, 1502
+1502 | Fring_Other | 登录和文本聊天数据 | 370 | 3 | 0
+1503 | HuLu | 视频流量 | 900 | 6 | 612, 613
+1505 | Graboid_DownLoad | 看视频时产生该流量 | 901 | 6 | 0
+1506 | Graboid_HTTP | Graboid的HTTP流量 | 901 | 6 | 0
+1507 | Rutube_Http | Flash视频点播 | 880 | 6 | 0
+1508 | Second_Life_HTTP | 游戏的HTTP流量 | 331 | 5 | 0
+1509 | Kik | 登陆和聊天就会产生该流 | 904 | 2 | 430, 513, 528
+1510 | Kik_HTTP | Kik的HTTP数据 | 904 | 2 | 0
+1511 | Smotri_Broadcast | 观看广播和制作广播 | 902 | 6 | 577
+1512 | Smotri_Upload | 上传视频 | 902 | 6 | 0
+1513 | Smotri_Video | 播放视频 | 902 | 6 | 612
+1516 | EliminatePro_Jabber_Control | 查找服务器时出现此协议流量 | 905 | 5 | 528
+1517 | EliminatePro_Ping | 查找游戏服务器时出现此协议流量 | 905 | 5 | 0
+1519 | NS_QuickShare | 上传和下载以外的流量 | 907 | 12 | 0
+1520 | NS_QuickShare_Download | QuickShare网盘的下载流量 | 907 | 12 | 1519
+1521 | NS_QuickShare_Upload | QuickShare网盘的上传流量 | 907 | 12 | 1519
+1523 | SaveShare_Download | 下载 | 909 | 12 | 0
+1524 | SaveShare_Upload | 文件共享的网站, 可以上传或是下载文件. | 909 | 12 | 0
+1525 | SimpleUpload_Download | 下载 | 910 | 12 | 0
+1527 | SimpleUpload_Upload | 上传 | 910 | 12 | 0
+1528 | TongCheng | 登录及游戏流量数据 | 911 | 5 | 1432
+1529 | TTPlayer_Lyric | 歌词下载HTTP流量 | 912 | 1 | 1530
+1530 | TTPlayer_Mini | 迷你窗口音乐资源浏览HTTP流量 | 912 | 1 | 0
+1531 | TTPlayer | 与P2P服务器建立连接及下载音乐资源的流量 | 912 | 1 | 0
+1533 | Uloz_Download | 文件下载 | 913 | 12 | 0
+1534 | Uloz_Live | 在线观看视频文件 | 913 | 12 | 0
+1535 | Uloz_Upload | 文件上传 | 913 | 12 | 0
+1536 | XunXian_Detect | 网络探测 | 914 | 5 | 0
+1537 | XunXian_Game | 游戏数据流量 | 914 | 5 | 0
+1539 | XunXian_Update | 版本更新 | 914 | 5 | 1432
+1540 | Daum_Chat | 软件聊天时产生此协议流量 | 915 | 2 | 0
+1541 | Daum_Control | 软件登录时产生此协议流量 | 915 | 2 | 0
+1542 | Daum_HTTP | 其它HTTP流 | 915 | 2 | 0
+1543 | Daum_Login | 登录 | 915 | 2 | 0
+1544 | Revver_Search | 资源查找 | 931 | 6 | 0
+1545 | Revver_Upload | 资源上传 | 931 | 6 | 0
+1546 | Revver_Video | 视频点播 | 931 | 6 | 612, 613
+1547 | TBS_HTTP | 页面浏览 | 932 | 6 | 0
+1548 | TBS_Search | 资源搜索 | 932 | 6 | 0
+1549 | TBS_Video | 视频播放 | 932 | 6 | 577
+1550 | 4shared_Download | 下载某个从4Shared网站上搜索的资源时出现该流量 | 917 | 12 | 0
+1551 | 4shared_Login | 登陆 | 917 | 12 | 0
+1552 | 4shared_Upload | 上传资源 | 917 | 12 | 0
+1553 | depositfiles_Download | 下载. | 918 | 12 | 0
+1554 | depositfiles_Upload | 上传文件时出现此协议流量 | 918 | 12 | 0
+1555 | EasyShare_Download | 下载资源 | 926 | 12 | 0
+1556 | EasyShare_Upload | 上传资源 | 926 | 12 | 0
+1557 | FileHost_Download | 下载资源 | 924 | 12 | 0
+1558 | FileHost_Upload | 上传资源 | 924 | 12 | 0
+1559 | WebMail_Gmail_HTTP | 普通HTTP流量 | 929 | 9 | 0
+1560 | IFolder_Download | 文件下载 | 933 | 12 | 0
+1561 | IFolder_HTTP | 加载页面信息 | 933 | 12 | 0
+1562 | IFolder_SharePhoto | 共享图片 | 933 | 12 | 0
+1563 | IFolder_Upload | 文件上传 | 933 | 12 | 0
+1564 | MediaFire_Download | 下载资源时产生该种流量 | 920 | 12 | 0
+1565 | MediaFire_Login | 登录 | 920 | 12 | 0
+1566 | MediaFire_Upload | 资源上传时产生该种流量 | 920 | 12 | 0
+1567 | MOFile_Download | 文件下载 | 928 | 12 | 0
+1568 | MOFile_Login | 登录 | 928 | 12 | 0
+1569 | MOFile_Upload | 上传文件 | 928 | 12 | 0
+1570 | Nova_HTTP | 其他 | 916 | 1 | 612, 628
+1571 | Nova_Video | 视频播放 | 916 | 1 | 577
+1572 | FileSend_Download | 资源下载 | 925 | 12 | 0
+1573 | FileSend_Upload | 资源上传 | 925 | 12 | 0
+1574 | FileUpYours_Download | 下载, 查看文件 | 922 | 12 | 612, 627, 628
+1576 | FileUpYours_Upload | 上传文件时出现此协议流量 | 922 | 12 | 612, 627, 628, 1433, 1434
+1577 | GigaSize_Download | 下载时出现该流量 | 923 | 12 | 0
+1578 | GigaSize_Login | 登录时出现该流量 | 923 | 12 | 0
+1579 | GigaSize_Upload | 上传时出现该流量 | 923 | 12 | 0
+1580 | SaveFile_Download | 下载资源 | 921 | 12 | 0
+1581 | SaveFile_Upload | 上传资源 | 921 | 12 | 0
+1584 | UStreamTV_RTMP | UStreamTV直播流量 | 930 | 6 | 577
+1585 | UStreamTV_Video | 观看点播视频 | 930 | 6 | 0
+1586 | YourFiles_Download | 下载资源 | 927 | 12 | 628
+1587 | YourFiles_Login | 帐户登录 | 927 | 12 | 1586
+1588 | YourFiles_Upload | 上传资源文件 | 927 | 12 | 1586
+1589 | JustinTV_Http | http浏览流量 | 895 | 6 | 612
+1590 | EliminatePro_Data | 游戏探测流 | 905 | 5 | 0
+1591 | NateOn_RemoteControl | 客户端产生的远程控制流 | 896 | 2 | 0
+1592 | NateOn_WhiteBoard | 空协议, 保留协议ID | 896 | 2 | 0
+1593 | CBC_HTTPS | 登陆时出现该流量 | 868 | 6 | 430
+1594 | OpenVPN_Tunnel | VPN通道数据 | 934 | 16 | 0
+1595 | Swat4 | 游戏流量 | 935 | 5 | 0
+1597 | 4oD_HTTPS | 打开网站, 加载网页时出现该流量 | 862 | 6 | 430
+1598 | SpareBackup_HTTPS | 数据加密流 | 867 | 12 | 430
+1599 | NBA_HTTPS | 登录及注册账号时产生该流量 | 864 | 6 | 430
+1600 | NicoVideo_HTTPS | HTTPS流量 | 826 | 6 | 430
+1601 | Espn_HTTPS | 网页上登陆时产生此协议 | 894 | 6 | 430
+1602 | Skype_PCtoPC | 客户端对客户端语音视频 | 4 | 3 | 4, 1603
+1603 | Skype_Signal | PC2PC语音, 视频聊天, 文件传输 | 4 | 3 | 0
+1604 | Hotmail_Login | hotmail 登录时流量 | 117 | 9 | 0
+1605 | RapidShare_Upload | 上传 | 170 | 12 | 430, 1607
+1606 | RapidShare_Download | 下载 | 170 | 12 | 1607
+1607 | RapidShare_Others | 其他流量 | 170 | 12 | 0
+1608 | Foxy_Download | 文件下载(添加了eDonkey软件协议关联) | 937 | 1 | 0
+1610 | Miro | miro网络操作时产生该流量 | 938 | 1 | 430, 612, 613, 616, 627, 628, 630, 1432
+1611 | NeedForSpeed3_Game | 游戏的主要流量 | 939 | 5 | 0
+1612 | SoldierOfFortune_Game | 游戏的主要流量 | 941 | 5 | 0
+1613 | SoldierOfFortune | 登录 | 941 | 5 | 0
+1614 | OperationFlashPoint_Game | 游戏的主要流量 | 940 | 5 | 0
+1615 | WebMail_Gmail_SSL | 登陆等加密SSL流量 | 929 | 9 | 430
+1616 | HuLu_HTTPS | 登陆产生该流量 | 900 | 6 | 430
+1617 | Vagaa_HTTP | HTTP流量 | 40 | 1 | 0
+1618 | XiaoNeiTong_Transfer | 传输文件 | 69 | 2 | 247
+1619 | Namipan_Download | 下载 | 241 | 12 | 0
+1620 | Namipan_Upload | 上传 | 241 | 12 | 0
+1621 | Youtube_others | youtube其他流量 | 342 | 6 | 430, 513, 613, 1896
+1622 | Yahoo_SIP | 语音SIP流 | 11 | 2 | 175
+1623 | Zkouknito_OnlineTV | 网络电视流量 | 942 | 6 | 0
+1624 | Zkouknito_Upload | 上传流量 | 942 | 6 | 0
+1625 | DaCeLve_Download | 操作软件产生的流量 | 943 | 15 | 0
+1626 | TianLongBaBu_Game | 游戏时的主要流量 | 944 | 5 | 0
+1627 | TianLongBaBu_Login | 登录游戏 | 944 | 5 | 0
+1628 | TianLongBaBu_Update | 更新补丁文件/服务器文件等等 | 944 | 5 | 0
+1629 | Zkouknito_Video | 播放影片流量 | 942 | 6 | 0
+1630 | Viber_Message | 同时注册了viber的两个用户互发短信 | 857 | 3 | 0
+1631 | Compass_Download | 盘后数据下载流量 | 131 | 15 | 0
+1632 | Compass_Login | 登录软件流量 | 131 | 15 | 0
+1633 | Compass_Update | 实时数据更新流量 | 131 | 15 | 0
+1634 | FileFactory_Download | 文件下载 | 945 | 12 | 0
+1635 | FileFactory_Upload | 文件上传 | 945 | 12 | 0
+1636 | DaZhiHui_Data | 股票信息实时更新 | 293 | 15 | 0
+1637 | DaZhiHui_Download | 下载课程资源 | 293 | 15 | 0
+1638 | DaZhiHui_HTTP | 信息咨询浏览等流量 | 293 | 15 | 613
+1639 | LadbrokesPoker_HTTPS | 扑克客户端Https流量 | 888 | 5 | 430
+1640 | Megavideo_Image | 加载的页面图片 | 946 | 6 | 0
+1641 | Megavideo_Login | 登陆 | 946 | 6 | 0
+1642 | Megavideo_Upload | 上传资源 | 946 | 6 | 0
+1643 | Megavideo_Video | 观看视频 | 946 | 6 | 0
+1644 | Terra | 流量网页流量 | 947 | 4 | 430
+1645 | QQLive_Video_HTTP | 视频HTTP流量 | 32 | 6 | 78, 612, 613, 627, 628, 1675
+1646 | SinaUC_CreateSession | 音视频控制流 | 63 | 2 | 0
+1647 | SinaUC_AudioVideo_Date_UDP | 音视频流 | 63 | 2 | 247
+1648 | SinaUC_AudioVideo_Date_TCP | 音视频流 | 63 | 2 | 247
+1649 | SinaUC_STUN_Control | 聊天控制流 | 63 | 2 | 0
+1650 | SinaUC_STUN_Date | 聊天数据流 | 63 | 2 | 0
+1651 | LinkedIn_Action | 浏览或者观看视频流量 | 948 | 4 | 430
+1652 | LinkedIn_Media | 空协议, 保留协议ID | 948 | 4 | 0
+1653 | LinkedIn_Static | 空协议, 保留协议ID | 948 | 4 | 0
+1654 | Uploading_Download | 资源下载. | 949 | 12 | 1655
+1655 | Uploading_Upload | 上传文件 | 949 | 12 | 0
+1656 | Uloz_HTTP | http其他流量 | 913 | 6 | 0
+1657 | OMA | OMA Download提供灵活的机制下载媒体对象, 包括铃音, | 383 | 4 | 0
+1658 | OFF | OFF流量 | 950 | 1 | 0
+1659 | OperaMobile | 使用浏览器访问网页浏览流量 | 951 | 4 | 0
+1660 | COTP_Data | 标准协议, 用于口令认证 | 952 | 17 | 0
+1661 | AoWei/ShiJiWangTong/ShangYang | 傲威/世纪网通/尚阳语音网关 | 953 | 3 | 0
+1662 | RealPlayer_Update | 检查更新 | 80 | 6 | 0
+1663 | Azureus_HTTP | HTTP流量 | 954 | 1 | 269
+1664 | L2TP | 第二层隧道协议 | 955 | 16 | 0
+1665 | Livestation_HTTPS | 登录账号时产生该流量 | 879 | 6 | 430
+1666 | Livestation_Video | 视频时产生该流量 | 879 | 6 | 0
+1667 | NNTP_SSL | 加密的新闻组协议 | 346 | 13 | 0
+1668 | SyncML | SyncML数据传输协议 | 956 | 17 | 0
+1671 | YouKu_iKu_Login | iku登录 | 372 | 6 | 0
+1672 | QQDouDiZhu_Game | 游戏的主要流量 | 959 | 5 | 0
+1673 | IMAP2 | Internet邮件访问协议版本2流量 | 957 | 9 | 0
+1674 | ScreenPlay | 网络视频 | 960 | 6 | 628
+1675 | QQLive_Others | QQLive中图片缓存的流量 | 32 | 6 | 0
+1676 | Aliww_TelenetData | 远程协助时产生该流量 | 90 | 2 | 0
+1677 | Abacast | 网络电台流量 | 961 | 13 | 0
+1678 | TeZhongBuDui_HTTP | 游戏的HTTP流量 | 335 | 5 | 0
+1679 | ZhongFang | 众方语音其他流量 | 962 | 3 | 1681
+1680 | ZhongFang_HTTP | 众方语音HTTP数据 | 962 | 3 | 0
+1681 | ZhongFang_Control | 众方语音控制数据 | 962 | 3 | 0
+1682 | IMAP3 | Internet Mail Access Protocol（IMAP）, 即交互式邮件存取协议, IMAP3是它的一个变种 | 963 | 9 | 0
+1683 | TeZhongBuDui_Login | 登录流量 | 335 | 5 | 0
+1684 | Nicovideo_HTTP | 打开主页, 登陆用户 | 826 | 6 | 0
+1685 | T125 | 多点通信服务T.125 | 964 | 3 | 1496
+1686 | AnxinStock_HTTP | 软件加载时产生的HTTP流量 | 965 | 15 | 0
+1687 | AnxinStock | 操作时产生的非HTTP流量 | 965 | 15 | 0
+1688 | FreeCiv_Game | 游戏的主要流量 | 966 | 5 | 0
+1689 | Hyves_HTTP | 流量网站流量 | 967 | 4 | 612, 616, 618, 619, 627, 628, 629, 630
+1690 | Hyves | 登陆, 发表评论流量 | 967 | 4 | 430, 528
+1693 | PoBo_Data | 页面加载和浏览信息 | 968 | 15 | 0
+1694 | PoBo_Login | 登录流量 | 968 | 15 | 0
+1695 | PoBo_Update | 检查更新和升级流量 | 968 | 15 | 1432
+1696 | MengHuanZhuXian | 梦幻诛仙游戏时产生该种流量 | 969 | 5 | 1433
+1697 | QQ_YinSu | 游戏的主要流量 | 970 | 5 | 0
+1698 | PP365_VOD | PP点点通的视频流量 | 971 | 1 | 0
+1699 | ICQ_Control | 控制流 | 61 | 2 | 430, 513, 1699
+1700 | AIM_Media | AIM音视频流量 | 73 | 2 | 0
+1701 | Aliww_Media | 传输文件,语音,视频时都会出现该流量 | 90 | 2 | 0
+1702 | Octoshape_HTTP | 打开主网页, 子网页 | 153 | 6 | 0
+1703 | PaoPaoTang_Update | 更新 | 158 | 5 | 0
+1704 | PaoPaoTang_Game | 玩游戏时产生的流 | 158 | 5 | 0
+1705 | Gizmo5_Sip | PC2PC语音时出现该流量 | 193 | 2 | 175
+1706 | OSCAR_Voip_Data | 阻断AIM_ICQ时的音频变种流量 | 258 | 2 | 0
+1707 | Citrix_HTTP | Citrix的HTTP流量 | 272 | 14 | 0
+1708 | Waste | Waste系统所有流量 | 975 | 1 | 0
+1709 | IM+ | IM+集合类即时通讯软件数据 | 972 | 2 | 78, 430
+1710 | OWA | Outlook Web Access, 是基于微软Hosted Exchange托管邮件技术的一项Web访问功能.邮箱用户通过访问Outlook Web Access页面, 可以直接使用Web浏览器读取, 管理或发送电子邮件 | 974 | 9 | 0
+1713 | Twitter | 使用推特流量 | 973 | 4 | 430, 513, 612, 613, 627
+1714 | MySpace_HTTP | HTTP非视频流量 | 317 | 4 | 0
+1715 | Boxee_Streaming | 打开网站, 点击视频广告或是视频时出现该流量 | 852 | 6 | 612, 627, 628, 1378
+1716 | MySpace_RTMP | RTMP视频流量 | 317 | 6 | 577
+1717 | MySpace_RTMP_Control | 空协议, 保留协议ID | 317 | 4 | 0
+1718 | Veoh_HTTP | HTTP非视频流量 | 833 | 4 | 0
+1719 | Nintendo_Wii_DATA | 游戏时的主要流量 | 846 | 5 | 0
+1720 | Foxy_HTTP | 空协议, PS需求, 保持PS8.1一致. | 937 | 1 | 0
+1721 | PP365 | 空规则, 保留协议信息 | 976 | 1 | 0
+1722 | Vbuzzer_IM_Jabber | 空规则, 保留协议ID | 362 | 3 | 0
+1723 | Vbuzzer_Transfer | 空规则, 保留协议ID | 362 | 3 | 247
+1725 | Vonage_SIP | Vonage SIP流量 | 977 | 3 | 175
+1726 | Tribes | 游戏的主要流量 | 978 | 5 | 0
+1727 | MGCP_Audio_Data_RTP | 音视频流 | 60 | 3 | 0
+1728 | DIGStream | 网站的主要流量 | 979 | 6 | 0
+1729 | 5oD | 访问该网站或观看视频时候产生的流量 | 980 | 4 | 612, 628
+1730 | Stream_HD | 观看高清视频 | 981 | 6 | 1732
+1731 | Stream_LQ | 观看普通视频 | 981 | 6 | 1732
+1732 | Stream | Stream流量 | 981 | 6 | 577
+1733 | TNT | 网页流量 | 984 | 6 | 430, 612
+1734 | Finger | Finger查询 | 982 | 11 | 0
+1735 | SkyDrive | 上传下载 | 983 | 12 | 0
+1736 | SkyDrive_HTTPS | 加密流 | 983 | 12 | 430
+1737 | AppStore_Others | IOS系统的手机访问AppStore时出现访流量 | 985 | 4 | 587
+1738 | RSH | 允许一个用户在一个远程系统执行命令 | 986 | 11 | 0
+1739 | Gizmo5_Jabber | Jabber流量 | 193 | 2 | 528
+1740 | Mail_Ru_Agent_Login | 登陆流量 | 196 | 2 | 513
+1741 | Vonage | 语音视频流量 | 977 | 3 | 430, 513
+1742 | Vonage_RTP | RTP流量 | 977 | 3 | 0
+1743 | 1LegCall | 移动VoIP拨号器1LegCall流量 | 987 | 3 | 0
+1744 | VGOLive | 空协议, PS需求, 保持PS8.1一致. | 988 | 6 | 0
+1745 | TOnline_IM | 空协议, PS需求, 保持PS8.1一致. | 989 | 2 | 0
+1746 | Allods | 玩游戏Allods时出现该流量 | 990 | 5 | 0
+1747 | IRC_Vuze | 空协议, PS需求, 保持PS8.1一致. | 74 | 17 | 0
+1749 | Gizmo5_RTP | 空协议, PS需求, 保持PS8.1一致. | 193 | 2 | 0
+1750 | Kuro | 使用软件流量 | 991 | 6 | 0
+1751 | TVKoo | 空协议, PS需求, 保持PS8.1一致. | 1002 | 6 | 0
+1752 | Manolito | 空协议, PS需求, 保持PS8.1一致. | 996 | 10 | 0
+1753 | Kuro_RTSP | 空协议, PS需求, 保持PS8.1一致. | 991 | 1 | 0
+1754 | Mysee | Mysee视频网站 | 997 | 6 | 0
+1755 | Furthurnet | 空协议, PS需求, 保持PS8.1一致. | 994 | 1 | 0
+1756 | Share | 空协议, PS需求, 保持PS8.1一致. | 999 | 1 | 0
+1757 | Blubster | Blubster流量 | 992 | 6 | 0
+1758 | Dijjer | 空协议, PS需求, 保持PS8.1一致. | 1010 | 6 | 0
+1759 | NodeZilla | 空协议, PS需求, 保持PS8.1一致. | 1004 | 6 | 0
+1760 | NEONet | 空协议, PS需求, 保持PS8.1一致. | 1009 | 10 | 0
+1761 | Epicea | Epicea所有流量 | 1003 | 10 | 0
+1762 | Kontiki | 空协议, PS需求, 保持PS8.1一致. | 995 | 6 | 0
+1763 | Skinny | 空协议, PS需求, 保持PS8.1一致. | 1000 | 6 | 0
+1764 | Kali | 空协议, PS需求, 保持PS8.1一致. | 1008 | 5 | 0
+1765 | DayDay_VChat | 空协议, PS需求, 保持PS8.1一致. | 993 | 3 | 0
+1766 | SaynSay_VChat | 空协议, PS需求, 保持PS8.1一致. | 998 | 3 | 0
+1767 | Asheron | 空协议, PS需求, 保持PS8.1一致. | 1005 | 5 | 0
+1768 | F22 | 空协议, PS需求, 保持PS8.1一致. | 1007 | 5 | 0
+1769 | Black_And_White | 空协议, PS需求, 保持PS8.1一致. | 1006 | 5 | 0
+1770 | fox_rtmp | 空协议, PS需求, 保持PS8.1一致. | 1011 | 5 | 0
+1771 | SlingBox | 空协议, PS需求, 保持PS8.1一致. | 1001 | 6 | 617
+1772 | TVB_Streaming | 现网提升性能 | 325 | 6 | 70, 71, 249, 577, 612, 613
+1773 | PlayStation3_HTTPS | https流量 | 849 | 5 | 430
+1774 | HotSpot | 无线热点流量 | 1012 | 16 | 0
+1775 | Skype_Sip | 4.0.4.226版本特有的流量 | 4 | 3 | 175
+1776 | WOW | 游戏数据流 | 125 | 5 | 0
+1777 | JAP | Java Anonymous Proxy（Java 匿名代理） | 1013 | 16 | 0
+1778 | Netflix | Netflix非视频流量 | 1015 | 4 | 0
+1782 | RPC | Remote Procedure Call, 远程过程调用 | 1016 | 14 | 0
+1783 | LianZhong | 打开软件及登录, 游戏下载, 游戏时产生该流量 | 1014 | 5 | 0
+1784 | WebTV | WebTV可以从Internet上获取动画信息, 观看“Internet电视节目” | 1017 | 2 | 0
+1785 | iTalkBB_Signal | iTalkBB信号流量 | 1018 | 3 | 175
+1786 | iTalkBB_Data | iTalkBB流量 | 1018 | 3 | 0
+1787 | Comcast | 网页播放视频时产生此协议的流量 | 1019 | 6 | 612, 613
+1788 | Fancast | www.fancast.com | 1020 | 6 | 612, 628
+1789 | Fancast_RTMP | www.fancast.com | 1020 | 6 | 577
+1790 | Storm_HTTP | 暴风影音 | 428 | 6 | 612, 613, 628, 1433
+1791 | CitrixICA | 服务数据流量 | 1021 | 14 | 0
+1792 | FIX | FIX(Financial Information exchange), 金融信息交换协议协议, 适用于实时证券, 金融电子交易开发的数据通信标准. 它是由国际FIX协会组织提供的一个开放式协议. | 1022 | 17 | 0
+1793 | QIP_IM | 注册登录等 | 1023 | 3 | 430, 528
+1794 | QIP_TransferFile | 文件传输功能 | 1023 | 3 | 0
+1795 | QIP_Media | 语音视频聊天数据 | 1023 | 3 | 0
+1796 | Rexec | 远程执行 | 1024 | 14 | 0
+1797 | Sina_WeiBo | 微博, 新闻, 评论等流量 | 1025 | 4 | 430
+1798 | BlackBerry_PIN | BlackBerry PIN 认证 | 76 | 17 | 430
+1799 | RLogin | 远程登入 | 1026 | 14 | 0
+1800 | BlockBuster | 流量网站流量 | 1028 | 6 | 430
+1801 | TNS | Oracle透明网络底层传输流量 | 1027 | 8 | 0
+1802 | BitTorrent_UTP | 在使用软件时, 配置端口时出现该流量 | 5 | 1 | 16
+1803 | Sohu_WeiBo | 微博, 新闻, 评论等流量 | 1029 | 4 | 430
+1804 | GooglePlay_Download | 谷歌商店下载应用时产生流量 | 1030 | 10 | 0
+1805 | GooglePlay_Others | 谷歌商店下载以外的流量 | 1030 | 4 | 430
+1816 | QQ_WeiBo | 登录, 使用微博 | 1033 | 4 | 0
+1817 | Aliww_Web | 原淘宝旺旺的WEB版本, 用于即时通信.Aliww的HTTP流量 | 90 | 2 | 2101
+1827 | Amazon | 网页产生的HTTP或者HTTPS流量 | 1039 | 4 | 430
+1832 | MiTalk | 使用米聊软件时产生该流量 | 1042 | 2 | 430
+1834 | Vyke_Audio | 语音通信数据流 | 1044 | 3 | 0
+1835 | Vyke_HTTPS | HTTPS加密流量 | 1044 | 3 | 430
+1836 | Vyke_SIP | 语音控制流 | 1044 | 3 | 175
+1837 | WeiXin | 微信登录, 文本聊天, 发送接收图片信息和语音信息, 摇一摇, 查附近 | 1045 | 2 | 0
+1839 | Multifon | 登录, 协商媒体通道 | 1046 | 3 | 175, 430
+1840 | Multifon_MediaData | 媒体数据, 包括SMS, PCtoPC, PCtoPhone | 1046 | 3 | 0
+1859 | Spotify | 音乐数据流量(不区分功能) | 1056 | 6 | 0
+1860 | Tango_Call | Tango是一款跨平台的视频通话软件 | 1057 | 3 | 247
+1861 | Tango_Login | 登陆 | 1057 | 2 | 430, 513, 528
+1863 | Scydo_TCP | 登陆, 发送信息, 好友信息加载 | 1059 | 3 | 0
+1864 | Scydo_Audio | 语音数据 | 1059 | 3 | 0
+1865 | WeiXin_VoIP | ios4.2版WeiXin视频通话新特性 | 1045 | 3 | 0
+1866 | Google+ | 登录会产生此协议流量 | 1060 | 4 | 430
+1869 | YY_Control | YY的语音控制流 | 377 | 3 | 0
+1870 | MS_Authority_SSL | 微软大多产品鉴权过程产生的流量 | 1063 | 4 | 430, 513
+1873 | SmartFoxServer_Pro | Pro版本 | 1064 | 5 | 0
+1874 | SmartFoxServer_2X | 使用2X版本产生的流量 | 1064 | 5 | 0
+1875 | HotFile | HotFile网盘流量 | 1065 | 12 | 430, 611, 612, 627, 628, 1432, 1433, 1434
+1876 | KaKaoTalk_IM | IM流量 | 1066 | 2 | 430, 513
+1877 | KaKaoTalk_Audio | 语音流量 | 1066 | 2 | 0
+1878 | KMPlayer | KMPlayer的流量 | 1067 | 6 | 0
+1879 | NateOn_IM | IM聊天 | 896 | 2 | 175, 430, 513, 613, 1433
+1880 | Vkontakte | 网页浏览流量 | 1068 | 4 | 430, 627, 628
+1881 | PandoraRadio | 视频和网页流量 | 1069 | 6 | 430, 577, 613
+1882 | FeiLiao_IM | 聊天等流量 | 1070 | 2 | 0
+1883 | Freakshare | Freakshare网盘的所有流量 | 1071 | 12 | 0
+1884 | DaumTvpot | 韩国Daum视频播放器的流量 | 1072 | 6 | 430, 613, 628, 1896
+1885 | Mozy | 网盘操作 | 1073 | 12 | 430
+1886 | YourSearch | 网页搜索 | 1074 | 4 | 0
+1887 | Armagetron | 游戏的主要流量 | 1075 | 5 | 0
+1888 | viddler | 视频 | 1079 | 6 | 577, 613
+1889 | Hi5 | 浏览或者观看视频流量 | 1077 | 4 | 430, 513
+1890 | Orkut | 流量网站流量 | 1076 | 4 | 430
+1891 | NCAA | 美国大学体育总会 | 1078 | 6 | 577, 612, 613, 628
+1892 | AVG_Update | AVG杀毒软件更新流量 | 1080 | 17 | 430
+1893 | iMessage | iMessage功能激活时产生的流量 | 1081 | 2 | 430, 513
+1894 | Apple_Siri | 使用该软件是出现流量 | 1082 | 6 | 430
+1895 | 360_Mobile | 360手机平台 | 366 | 17 | 0
+1896 | HTTP_Ext_m3u8 | m3u8格式后缀 | 276 | 6 | 0
+1897 | Apple_TV | 苹果电视盒流量 | 1084 | 6 | 627, 628
+1898 | MSRP | 主要应用于及时消息, 文件传输等功能上. | 1083 | 2 | 0
+1899 | 56_Data | 56视频流量 | 1085 | 17 | 577
+1900 | Vevo_RTMP | 观看视频的RTMP流量 | 1086 | 6 | 577
+1901 | Vevo_Data | 浏览网站流量 | 1086 | 6 | 1896
+1902 | 6Rooms | 六间房在线视频播放流量 | 1087 | 6 | 577, 613
+1903 | Baomihua | 访问网站，观看视频等流量 | 1088 | 6 | 577, 612
+1904 | Sohu_Video | 搜狐HTTP格式视频 | 1089 | 6 | 613, 628
+1905 | RTMFP | RTMFP | 1090 | 6 | 0
+1906 | Bing | 只关注视频, 包括MSN Video | 1091 | 6 | 628
+1907 | Avast_Update | AVAST杀毒软件更新流量 | 1092 | 17 | 430
+1908 | Facebook_Others | facebook非主页操作产生的流量 | 829 | 4 | 430, 613, 627, 628, 1432, 1434
+1909 | WangYi_WeiBo | 微博, 新闻, 评论等流量 | 1093 | 4 | 430
+1910 | Island_TV | 半岛电视台 | 1094 | 6 | 0
+1911 | Google_Common_Upload | Google HTTPS 公共上传证书 | 1095 | 6 | 430
+1913 | Melon | 浏览网站流量 | 1097 | 4 | 0
+1914 | Age_Of_Conan | 游戏的主要流量 | 1098 | 5 | 1432
+1915 | Blizzard_Battle | 游戏平台产生的流量 | 1099 | 5 | 0
+1916 | Halo | 游戏的主要流量 | 1100 | 5 | 0
+1917 | Itv | 英国独立电视台视频流量 | 1101 | 6 | 430, 513, 628
+1918 | Skyrock | 浏览法国博客流量 | 1102 | 4 | 627
+1919 | HaoFang_HTTP | HTTP流量 | 264 | 4 | 0
+1920 | Flickr | 访问浏览时流量 | 1105 | 4 | 0
+1921 | GodTube | 使用GodTube观看视频 | 1106 | 6 | 577
+1922 | McAfee_Update | McAfee杀毒软件更新 | 1107 | 17 | 0
+1923 | Naver_IM | Naver登录流 | 1103 | 3 | 430, 513, 628, 1433
+1924 | Naver_Control | Naver语音控制流, 采用SIP协议 | 1103 | 3 | 175
+1925 | Naver_Data | Naver语音流量 | 1103 | 3 | 247, 1433
+1926 | Totorosa | Totodisk网盘流量 | 1104 | 6 | 430
+1928 | Zimbra_Desktop | yahoo的桌面同步软件, 可以同步邮件, 日历, 工作计划, twitter, facebook等, 可以使用多家邮箱帐号登陆. | 1108 | 17 | 0
+1929 | AppStore_Download | 下载应用时的流量 | 985 | 10 | 1737
+1930 | PostgreSQL | PostgreSQL数据库软件产生的流量 | 1109 | 8 | 0
+1932 | GuaGua | GuaGua视频社区流量 | 1111 | 6 | 0
+1934 | Trend_Micro_Update | 趋势杀毒软件更新流量 | 1112 | 17 | 430
+1937 | Talkout | 登录，界面信息加载等产生的HTTP流 | 1114 | 3 | 430, 513, 528
+1940 | Talkout_SIP | SIP流量 | 1114 | 3 | 175
+1941 | Talkout_Audio | 语音聊天和拨打VOIP电话流 | 1114 | 3 | 231
+1946 | Opera_Browser | 使用浏览器访问网站 | 881 | 4 | 78
+1954 | Tango_HTTP | 登录，文本聊天、界面信息加载等产生的HTTP流量 | 1057 | 2 | 0
+1958 | PPLive_Upload | 上传视频时产生的流量 | 29 | 6 | 0
+2077 | QQZone | 访问空间流量 | 1242 | 4 | 0
+2089 | SinaNews | 访问该网站的流量 | 1254 | 4 | 0
+2101 | TaoBao | HTTP规则 | 1266 | 4 | 0
+2162 | BaiDuZhangMen | 访问该网站或收听音乐时候产生的流量 | 1323 | 6 | 627
+2168 | MyTV | MyTV，TVB节目在线播放平台 | 325 | 6 | 430, 513, 612, 613
+2173 | WebEx | 网络会议流量 | 1332 | 3 | 430
+2184 | Hookt_Login | 登录流量 | 1333 | 3 | 430, 513
+2185 | Hookt_HTTP | http流量 | 1333 | 3 | 0
+2187 | NetTalk_Login | 登录流量 | 1338 | 3 | 430, 513
+2188 | NetTalk_SIP | 语音SIP流 | 1338 | 3 | 175
+2190 | Palringo_Login | 登录流量 | 1340 | 3 | 0
+2191 | Palringo_HTTP | http流量 | 1340 | 3 | 1433
+2193 | Netflix_Login | 登录流量 | 1015 | 6 | 430
+2197 | AppleDaily | 苹果日报，壹传媒旗下新闻网站 | 1345 | 4 | 612, 613, 628
+2198 | Voxer | 使用Voxer产生的流量 | 1346 | 2 | 430
+2199 | Rebtel | 使用该软件产生的流量 | 1347 | 3 | 430, 513
+2202 | Stun_Rtp | Stun承载的RTP数据 | 1349 | 3 | 247
+2204 | GoogleMap | 使用谷歌地图产生 | 1351 | 17 | 430, 513
+2212 | SIP_Media_Audio | 音频数据 | 59 | 3 | 0
+2213 | SIP_Media_Video | 视频数据 | 59 | 3 | 0
+2215 | ESP | 标准协议流量 | 1360 | 17 | 0
+2216 | NetTalk_Audio | 语音通话流量 | 1338 | 3 | 0
+2217 | CCTV_Others | 登录，界面加载，图片加载等视频以外的流量 | 399 | 4 | 0
+2218 | MetaCafe_Video | 视频流量 | 313 | 6 | 577, 612, 616, 628
+2219 | MetaCafe_Others | 图片，界面加载等流量 | 313 | 4 | 0
+2220 | MySpace_Video | 观看HTTP视频流量 | 317 | 6 | 613, 628, 1714
+2222 | HTTP_Attr_3dm | 首行后缀为3dm的HTTP流量 | 276 | 6 | 78
+2223 | HTTP_Attr_3ds | 首行后缀为3ds的HTTP流量 | 276 | 6 | 78
+2224 | HTTP_Attr_3g2 | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2225 | HTTP_Attr_3gp | 首行后缀为3gp的HTTP流量 | 276 | 6 | 78
+2226 | HTTP_Attr_7z | 首行后缀为7z的HTTP流量 | 276 | 10 | 78
+2227 | HTTP_Attr_a5w | 首行后缀为a5w的HTTP流量 | 276 | 6 | 78
+2228 | HTTP_Attr_aa3 | 首行后缀为aa3的HTTP流量 | 276 | 6 | 78
+2229 | HTTP_Attr_aac | 首行后缀为aac的HTTP流量 | 276 | 6 | 78
+2230 | HTTP_Attr_accdb | 首行后缀为accdb的HTTP流量 | 276 | 6 | 78
+2231 | HTTP_Attr_ace | 首行后缀为ace的HTTP流量 | 276 | 6 | 78
+2232 | HTTP_Attr_acsm | 首行后缀为acsm的HTTP流量 | 276 | 6 | 78
+2233 | HTTP_Attr_ai | 首行后缀为ai的HTTP流量 | 276 | 6 | 78
+2234 | HTTP_Attr_aif | 首行后缀为aif的HTTP流量 | 276 | 6 | 78
+2236 | HTTP_Attr_aiff | 首行后缀为aiff的HTTP流量 | 276 | 6 | 78
+2237 | HTTP_Attr_alx | 首行后缀为alx的HTTP流量 | 276 | 6 | 78
+2238 | HTTP_Attr_amr | 首行后缀为amr的HTTP流量 | 276 | 6 | 78
+2239 | HTTP_Attr_ape | 首行后缀为ape的HTTP流量 | 276 | 6 | 78
+2240 | HTTP_Attr_apk | 首行后缀为apk的HTTP流量 | 276 | 10 | 78
+2241 | HTTP_Attr_app | 首行后缀为app的HTTP流量 | 276 | 6 | 78
+2242 | HTTP_Attr_arj | 首行后缀为arj的HTTP流量 | 276 | 6 | 78
+2243 | HTTP_Attr_asax | 首行后缀为asax的HTTP流量 | 276 | 6 | 78
+2244 | HTTP_Attr_asf | 首行后缀为asf的HTTP流量 | 276 | 6 | 78
+2245 | HTTP_Attr_asfv1 | 首行后缀为asfv1的HTTP流量 | 276 | 6 | 78
+2246 | HTTP_Attr_asmx | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2247 | HTTP_Attr_asp | 首行后缀为asp的HTTP流量 | 276 | 4 | 78
+2248 | HTTP_Attr_aspx | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2249 | HTTP_Attr_asx | 首行后缀为asx的HTTP流量 | 276 | 6 | 78
+2250 | HTTP_Attr_atom | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2251 | HTTP_Attr_att | 首行后缀为att的HTTP流量 | 276 | 6 | 78
+2252 | HTTP_Attr_avi | 首行后缀为avi的HTTP流量 | 276 | 6 | 78
+2253 | HTTP_Attr_axd | 首行后缀为axd的HTTP流量 | 276 | 6 | 78
+2254 | HTTP_Attr_azw | 首行后缀为azw的HTTP流量 | 276 | 6 | 78
+2255 | HTTP_Attr_azw1 | 首行后缀为azw1的HTTP流量 | 276 | 6 | 78
+2256 | HTTP_Attr_azw3 | 首行后缀为azw3的HTTP流量 | 276 | 6 | 78
+2257 | HTTP_Attr_azw4 | 首行后缀为azw4的HTTP流量 | 276 | 6 | 78
+2258 | HTTP_Attr_bak | 首行后缀为bak的HTTP流量 | 276 | 6 | 78
+2259 | HTTP_Attr_bat | 首行后缀为bat的HTTP流量 | 276 | 6 | 78
+2260 | HTTP_Attr_bin | 首行后缀为bin的HTTP流量 | 276 | 6 | 78
+2261 | HTTP_Attr_bmp | 首行后缀为bmp的HTTP流量 | 276 | 4 | 78
+2262 | HTTP_Attr_bz2 | 首行后缀为bz2的HTTP流量 | 276 | 10 | 78
+2263 | HTTP_Attr_c | 首行后缀为c的HTTP流量 | 276 | 6 | 78
+2264 | HTTP_Attr_cab | 首行后缀为cab的HTTP流量 | 276 | 10 | 78
+2265 | HTTP_Attr_cbr | 首行后缀为cbr的HTTP流量 | 276 | 6 | 78
+2266 | HTTP_Attr_ccd | 首行后缀为ccd的HTTP流量 | 276 | 6 | 78
+2267 | HTTP_Attr_cer | 首行后缀为cer的HTTP流量 | 276 | 6 | 78
+2268 | HTTP_Attr_cfg | 首行后缀为cfg的HTTP流量 | 276 | 6 | 78
+2269 | HTTP_Attr_cfm | 首行后缀为cfm的HTTP流量 | 276 | 6 | 78
+2270 | HTTP_Attr_cgi | 首行后缀为cgi的HTTP流量 | 276 | 6 | 78
+2271 | HTTP_Attr_chm | 首行后缀为chm的HTTP流量 | 276 | 6 | 78
+2272 | HTTP_Attr_class | 首行后缀为class的HTTP流量 | 276 | 6 | 78
+2273 | HTTP_Attr_com | 首行后缀为com的HTTP流量 | 276 | 6 | 78
+2274 | HTTP_Attr_cpl | 首行后缀为cpl的HTTP流量 | 276 | 6 | 78
+2275 | HTTP_Attr_cpp | 首行后缀为cpp的HTTP流量 | 276 | 6 | 78
+2276 | HTTP_Attr_crdownload | 首行后缀为crdownload的HTTP流量 | 276 | 6 | 78
+2277 | HTTP_Attr_crt | 首行后缀为crt的HTTP流量 | 276 | 6 | 78
+2278 | HTTP_Attr_cs | 首行后缀为cs的HTTP流量 | 276 | 6 | 78
+2279 | HTTP_Attr_cshtml | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2280 | HTTP_Attr_csr | 首行后缀为csr的HTTP流量 | 276 | 6 | 78
+2281 | HTTP_Attr_css | 首行后缀为css的HTTP流量 | 276 | 4 | 78
+2282 | HTTP_Attr_csv | 首行后缀为csv的HTTP流量 | 276 | 6 | 78
+2283 | HTTP_Attr_cue | 首行后缀为cue的HTTP流量 | 276 | 6 | 78
+2284 | HTTP_Attr_cur | 首行后缀为cur的HTTP流量 | 276 | 6 | 78
+2285 | HTTP_Attr_cvs | 首行后缀为cvs的HTTP流量 | 276 | 10 | 78
+2286 | HTTP_Attr_dat | 首行后缀为dat的HTTP流量 | 276 | 6 | 78
+2287 | HTTP_Attr_db | 首行后缀为db的HTTP流量 | 276 | 6 | 78
+2288 | HTTP_Attr_dbf | 首行后缀为dbf的HTTP流量 | 276 | 6 | 78
+2290 | HTTP_Attr_dds | 首行后缀为dds的HTTP流量 | 276 | 6 | 78
+2291 | HTTP_Attr_deb | 首行后缀为deb的HTTP流量 | 276 | 6 | 78
+2292 | HTTP_Attr_deskthemepack | 首行后缀为deskthemepack的HTTP流量 | 276 | 6 | 78
+2293 | HTTP_Attr_disc | 首行后缀为disc的HTTP流量 | 276 | 6 | 78
+2294 | HTTP_Attr_div | 首行后缀为div的HTTP流量 | 276 | 6 | 78
+2295 | HTTP_Attr_divx | 首行后缀为divx的HTTP流量 | 276 | 6 | 78
+2296 | HTTP_Attr_dll | 首行后缀为dll的HTTP流量 | 276 | 6 | 78
+2297 | HTTP_Attr_dls | 首行后缀为dls的HTTP流量 | 276 | 6 | 78
+2298 | HTTP_Attr_dmg | 首行后缀为dmg的HTTP流量 | 276 | 6 | 78
+2299 | HTTP_Attr_dmgpart | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2300 | HTTP_Attr_dmp | 首行后缀为dmp的HTTP流量 | 276 | 6 | 78
+2301 | HTTP_Attr_doc | 首行后缀为doc的HTTP流量 | 276 | 10 | 78
+2302 | HTTP_Attr_docx | 首行后缀为docx的HTTP流量 | 276 | 10 | 78
+2303 | HTTP_Attr_drv | 首行后缀为drv的HTTP流量 | 276 | 6 | 78
+2304 | HTTP_Attr_dtd | 首行后缀为dtd的HTTP流量 | 276 | 6 | 78
+2305 | HTTP_Attr_dv | 首行后缀为dv的HTTP流量 | 276 | 6 | 78
+2306 | HTTP_Attr_dwg | 首行后缀为dwg的HTTP流量 | 276 | 10 | 78
+2307 | HTTP_Attr_dwt | 首行后缀为dwt的HTTP流量 | 276 | 6 | 78
+2308 | HTTP_Attr_dxf | 首行后缀为dxf的HTTP流量 | 276 | 6 | 78
+2309 | HTTP_Attr_e01 | 首行后缀为e01的HTTP流量 | 276 | 6 | 78
+2310 | HTTP_Attr_ecm | 首行后缀为ecm的HTTP流量 | 276 | 6 | 78
+2311 | HTTP_Attr_emf | 首行后缀为emf的HTTP流量 | 276 | 6 | 78
+2312 | HTTP_Attr_ephtml | 首行后缀为ephtml的HTTP流量 | 276 | 6 | 78
+2313 | HTTP_Attr_eps | 首行后缀为eps的HTTP流量 | 276 | 6 | 78
+2314 | HTTP_Attr_epub | 首行后缀为epub的HTTP流量 | 276 | 6 | 78
+2315 | HTTP_Attr_exe | 首行后缀为exe的HTTP流量 | 276 | 10 | 78
+2316 | HTTP_Attr_f4v | 首行后缀为f4v的HTTP流量 | 276 | 6 | 78
+2317 | HTTP_Attr_fb2 | 首行后缀为fb2的HTTP流量 | 276 | 6 | 78
+2318 | HTTP_Attr_fcgi | 首行后缀为fcgi的HTTP流量 | 276 | 6 | 78
+2319 | HTTP_Attr_fla | 首行后缀为fla的HTTP流量 | 276 | 6 | 78
+2320 | HTTP_Attr_flc | 首行后缀为flc的HTTP流量 | 276 | 6 | 78
+2321 | HTTP_Attr_fli | 首行后缀为fli的HTTP流量 | 276 | 6 | 78
+2322 | HTTP_Attr_flv | 首行后缀为flv的HTTP流量 | 276 | 6 | 78
+2323 | HTTP_Attr_gadget | 首行后缀为gadget的HTTP流量 | 276 | 6 | 78
+2324 | HTTP_Attr_gbr | 首行后缀为gbr的HTTP流量 | 276 | 6 | 78
+2325 | HTTP_Attr_ged | 首行后缀为ged的HTTP流量 | 276 | 6 | 78
+2326 | HTTP_Attr_gif | HTTP_Ext_gif | 276 | 10 | 78
+2327 | HTTP_Attr_gz | 首行后缀为gz的HTTP流量 | 276 | 10 | 78
+2328 | HTTP_Attr_h | 首行后缀为h的HTTP流量 | 276 | 6 | 78
+2329 | HTTP_Attr_htm | 首行后缀为htm的HTTP流量 | 276 | 4 | 78
+2330 | HTTP_Attr_html | 首行后缀为html的HTTP流量 | 276 | 4 | 78
+2331 | HTTP_Attr_htx | 首行后缀为htx的HTTP流量 | 276 | 6 | 78
+2332 | HTTP_Attr_ibooks | 首行后缀为ibooks的HTTP流量 | 276 | 6 | 78
+2333 | HTTP_Attr_icns | 首行后缀为icns的HTTP流量 | 276 | 6 | 78
+2334 | HTTP_Attr_ico | 首行后缀为ico的HTTP流量 | 276 | 6 | 78
+2335 | HTTP_Attr_ics | 首行后缀为ics的HTTP流量 | 276 | 6 | 78
+2336 | HTTP_Attr_iff | 首行后缀为iff的HTTP流量 | 276 | 6 | 78
+2337 | HTTP_Attr_img | 首行后缀为img的HTTP流量 | 276 | 6 | 78
+2338 | HTTP_Attr_indd | 首行后缀为indd的HTTP流量 | 276 | 6 | 78
+2339 | HTTP_Attr_ini | 首行后缀为ini的HTTP流量 | 276 | 6 | 78
+2340 | HTTP_Attr_ipa | 首行后缀为ipa的HTTP流量 | 276 | 10 | 78
+2341 | HTTP_Attr_iso | 首行后缀为iso的HTTP流量 | 276 | 10 | 78
+2342 | HTTP_Attr_jar | 首行后缀为jar的HTTP流量 | 276 | 10 | 78
+2343 | HTTP_Attr_java | 首行后缀为java的HTTP流量 | 276 | 6 | 78
+2344 | HTTP_Attr_jpeg | 首行后缀为jpeg的HTTP流量 | 276 | 4 | 78
+2345 | HTTP_Attr_jpg | HTTP_Ext_jpg | 276 | 10 | 78
+2346 | HTTP_Attr_js | 首行后缀为js的HTTP流量 | 276 | 6 | 78
+2347 | HTTP_Attr_json | 首行后缀为json的HTTP流量 | 276 | 6 | 78
+2348 | HTTP_Attr_jsp | 首行后缀为jsp的HTTP流量 | 276 | 4 | 78
+2349 | HTTP_Attr_jspx | 首行后缀为jspx的HTTP流量 | 276 | 6 | 78
+2350 | HTTP_Attr_key | 首行后缀为key的HTTP流量 | 276 | 6 | 78
+2351 | HTTP_Attr_keychain | 首行后缀为keychain的HTTP流量 | 276 | 6 | 78
+2352 | HTTP_Attr_lib | 首行后缀为lib的HTTP流量 | 276 | 6 | 78
+2353 | HTTP_Attr_lic | 首行后缀为lic的HTTP流量 | 276 | 6 | 78
+2354 | HTTP_Attr_lit | 首行后缀为lit的HTTP流量 | 276 | 6 | 78
+2355 | HTTP_Attr_lnk | 首行后缀为lnk的HTTP流量 | 276 | 6 | 78
+2356 | HTTP_Attr_log | 首行后缀为log的HTTP流量 | 276 | 6 | 78
+2357 | HTTP_Attr_lrf | 首行后缀为lrf的HTTP流量 | 276 | 6 | 78
+2358 | HTTP_Attr_lua | 首行后缀为lua的HTTP流量 | 276 | 6 | 78
+2359 | HTTP_Attr_lzh | 首行后缀为lzh的HTTP流量 | 276 | 10 | 78
+2360 | HTTP_Attr_m | 首行后缀为m的HTTP流量 | 276 | 6 | 78
+2361 | HTTP_Attr_m3u | 首行后缀为m3u的HTTP流量 | 276 | 6 | 78
+2362 | HTTP_Attr_m3u8 | HTTP_Ext_m3u8 | 276 | 10 | 78
+2363 | HTTP_Attr_m4a | 首行后缀为m4a的HTTP流量 | 276 | 6 | 78
+2364 | HTTP_Attr_m4b | 首行后缀为m4b的HTTP流量 | 276 | 6 | 78
+2365 | HTTP_Attr_m4p | 首行后缀为m4p的HTTP流量 | 276 | 6 | 78
+2366 | HTTP_Attr_m4v | 首行后缀为m4v的HTTP流量 | 276 | 6 | 78
+2367 | HTTP_Attr_max | 首行后缀为max的HTTP流量 | 276 | 6 | 78
+2368 | HTTP_Attr_mdb | 首行后缀为mdb的HTTP流量 | 276 | 6 | 78
+2369 | HTTP_Attr_mdf | 首行后缀为mdf的HTTP流量 | 276 | 6 | 78
+2370 | HTTP_Attr_mdx | 首行后缀为mdx的HTTP流量 | 276 | 6 | 78
+2371 | HTTP_Attr_mgp | 首行后缀为mgp的HTTP流量 | 276 | 6 | 78
+2372 | HTTP_Attr_mht | 首行后缀为mht的HTTP流量 | 276 | 6 | 78
+2373 | HTTP_Attr_mhtm | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2374 | HTTP_Attr_mhtml | 首行后缀为mhtml的HTTP流量 | 276 | 6 | 78
+2375 | HTTP_Attr_mid | 首行后缀为mid的HTTP流量 | 276 | 6 | 78
+2376 | HTTP_Attr_midi | 首行后缀为midi的HTTP流量 | 276 | 6 | 78
+2377 | HTTP_Attr_mkv | 首行后缀为mkv的HTTP流量 | 276 | 6 | 78
+2378 | HTTP_Attr_mmf | 首行后缀为mmf的HTTP流量 | 276 | 6 | 78
+2379 | HTTP_Attr_mov | 首行后缀为mov的HTTP流量 | 276 | 6 | 78
+2380 | HTTP_Attr_mp3 | 首行后缀为mp3的HTTP流量 | 276 | 6 | 78
+2381 | HTTP_Attr_mp4 | 首行后缀为mp4的HTTP流量 | 276 | 6 | 78
+2382 | HTTP_Attr_mpa | 首行后缀为mpa的HTTP流量 | 276 | 6 | 78
+2383 | HTTP_Attr_mpeg | 首行后缀为mpeg的HTTP流量 | 276 | 6 | 78
+2384 | HTTP_Attr_mpg | 首行后缀为mpg的HTTP流量 | 276 | 6 | 78
+2385 | HTTP_Attr_mpp | 首行后缀为mpp的HTTP流量 | 276 | 6 | 78
+2386 | HTTP_Attr_msg | 首行后缀为msg的HTTP流量 | 276 | 6 | 78
+2387 | HTTP_Attr_msi | 首行后缀为msi的HTTP流量 | 276 | 6 | 78
+2388 | HTTP_Attr_mvb | 首行后缀为mvb的HTTP流量 | 276 | 6 | 78
+2389 | HTTP_Attr_nrg | 首行后缀为nrg的HTTP流量 | 276 | 6 | 78
+2390 | HTTP_Attr_nri | 首行后缀为nri的HTTP流量 | 276 | 6 | 78
+2391 | HTTP_Attr_nsf | 首行后缀为nsf的HTTP流量 | 276 | 6 | 78
+2392 | HTTP_Attr_ntf | 首行后缀为ntf的HTTP流量 | 276 | 6 | 78
+2393 | HTTP_Attr_obj | 首行后缀为obj的HTTP流量 | 276 | 6 | 78
+2394 | HTTP_Attr_odt | 首行后缀为odt的HTTP流量 | 276 | 6 | 78
+2395 | HTTP_Attr_ogg | 首行后缀为ogg的HTTP流量 | 276 | 6 | 78
+2396 | HTTP_Attr_ogm | 首行后缀为ogm的HTTP流量 | 276 | 6 | 78
+2397 | HTTP_Attr_oma | 首行后缀为oma的HTTP流量 | 276 | 6 | 78
+2398 | HTTP_Attr_omg | 首行后缀为omg的HTTP流量 | 276 | 6 | 78
+2399 | HTTP_Attr_opml | 首行后缀为opml的HTTP流量 | 276 | 6 | 78
+2400 | HTTP_Attr_pages | 首行后缀为pages的HTTP流量 | 276 | 6 | 78
+2401 | HTTP_Attr_part | 首行后缀为part的HTTP流量 | 276 | 6 | 78
+2402 | HTTP_Attr_pct | 首行后缀为pct的HTTP流量 | 276 | 6 | 78
+2403 | HTTP_Attr_pcx | 首行后缀为pcx的HTTP流量 | 276 | 6 | 78
+2404 | HTTP_Attr_pdb | 首行后缀为pdb的HTTP流量 | 276 | 6 | 78
+2405 | HTTP_Attr_pdf | 首行后缀为pdf的HTTP流量 | 276 | 10 | 78
+2406 | HTTP_Attr_php | 首行后缀为php的HTTP流量 | 276 | 4 | 78
+2407 | HTTP_Attr_pif | 首行后缀为pif的HTTP流量 | 276 | 6 | 78
+2408 | HTTP_Attr_pkg | 首行后缀为pkg的HTTP流量 | 276 | 10 | 78
+2409 | HTTP_Attr_pl | 首行后缀为pl的HTTP流量 | 276 | 6 | 78
+2410 | HTTP_Attr_pl0 | 首行后缀为pl0的HTTP流量 | 276 | 6 | 78
+2411 | HTTP_Attr_pl1 | 首行后缀为pl1的HTTP流量 | 276 | 6 | 78
+2412 | HTTP_Attr_pl2 | 首行后缀为pl2的HTTP流量 | 276 | 6 | 78
+2413 | HTTP_Attr_png | 首行后缀为png的HTTP流量 | 276 | 4 | 78
+2414 | HTTP_Attr_pps | 首行后缀为pps的HTTP流量 | 276 | 6 | 78
+2415 | HTTP_Attr_ppt | 首行后缀为ppt的HTTP流量 | 276 | 10 | 78
+2416 | HTTP_Attr_pptx | 首行后缀为pptx的HTTP流量 | 276 | 10 | 78
+2417 | HTTP_Attr_prc | 首行后缀为prc的HTTP流量 | 276 | 6 | 78
+2418 | HTTP_Attr_prf | 首行后缀为prf的HTTP流量 | 276 | 6 | 78
+2419 | HTTP_Attr_ps | 首行后缀为3g2的HTTP流量 | 276 | 6 | 78
+2420 | HTTP_Attr_psd | 首行后缀为psd的HTTP流量 | 276 | 6 | 78
+2421 | HTTP_Attr_pspimage | 首行后缀为pspimage的HTTP流量 | 276 | 6 | 78
+2422 | HTTP_Attr_pvm | 首行后缀为pvm的HTTP流量 | 276 | 6 | 78
+2423 | HTTP_Attr_pxl | 首行后缀为pxl的HTTP流量 | 276 | 6 | 78
+2424 | HTTP_Attr_py | 首行后缀为py的HTTP流量 | 276 | 6 | 78
+2425 | HTTP_Attr_qbo | 首行后缀为qbo的HTTP流量 | 276 | 6 | 78
+2426 | HTTP_Attr_qt | 首行后缀为qt的HTTP流量 | 276 | 6 | 78
+2427 | HTTP_Attr_ra | 首行后缀为ra的HTTP流量 | 276 | 6 | 78
+2428 | HTTP_Attr_ram | 首行后缀为ram的HTTP流量 | 276 | 6 | 78
+2429 | HTTP_Attr_rar | 首行后缀为rar的HTTP流量 | 276 | 10 | 78
+2430 | HTTP_Attr_rm | 首行后缀为rm的HTTP流量 | 276 | 6 | 78
+2431 | HTTP_Attr_rmvb | 首行后缀为rmvb的HTTP流量 | 276 | 6 | 78
+2432 | HTTP_Attr_rpm | 首行后缀为rpm的HTTP流量 | 276 | 6 | 78
+2433 | HTTP_Attr_rss | 首行后缀为rss的HTTP流量 | 276 | 6 | 78
+2434 | HTTP_Attr_rtf | 首行后缀为rtf的HTTP流量 | 276 | 6 | 78
+2435 | HTTP_Attr_rv | 首行后缀为rv的HTTP流量 | 276 | 6 | 78
+2436 | HTTP_Attr_sdf | 首行后缀为sdf的HTTP流量 | 276 | 6 | 78
+2437 | HTTP_Attr_sh | 首行后缀为sh的HTTP流量 | 276 | 6 | 78
+2438 | HTTP_Attr_shtm | 首行后缀为shtm的HTTP流量 | 276 | 6 | 78
+2439 | HTTP_Attr_shtml | 首行后缀为shtml的HTTP流量 | 276 | 6 | 78
+2440 | HTTP_Attr_sis | 首行后缀为sis的HTTP流量 | 276 | 10 | 78
+2441 | HTTP_Attr_sisx | 首行后缀为sisx的HTTP流量 | 276 | 10 | 78
+2442 | HTTP_Attr_sitx | 首行后缀为sitx的HTTP流量 | 276 | 6 | 78
+2443 | HTTP_Attr_sln | 首行后缀为sln的HTTP流量 | 276 | 6 | 78
+2444 | HTTP_Attr_spc | 首行后缀为spc的HTTP流量 | 276 | 6 | 78
+2445 | HTTP_Attr_sql | 首行后缀为sql的HTTP流量 | 276 | 6 | 78
+2446 | HTTP_Attr_srt | 首行后缀为srt的HTTP流量 | 276 | 6 | 78
+2447 | HTTP_Attr_svg | 首行后缀为svg的HTTP流量 | 276 | 6 | 78
+2448 | HTTP_Attr_swf | 首行后缀为swf的HTTP流量 | 276 | 6 | 78
+2449 | HTTP_Attr_sys | 首行后缀为sys的HTTP流量 | 276 | 6 | 78
+2450 | HTTP_Attr_tar | 首行后缀为tar的HTTP流量 | 276 | 10 | 78
+2451 | HTTP_Attr_tar.gz | 首行后缀为tar.gz的HTTP流量 | 276 | 6 | 78
+2452 | HTTP_Attr_tax2012 | 首行后缀为tax2012的HTTP流量 | 276 | 6 | 78
+2453 | HTTP_Attr_taz | 首行后缀为taz的HTTP流量 | 276 | 6 | 78
+2454 | HTTP_Attr_tex | 首行后缀为tex的HTTP流量 | 276 | 6 | 78
+2455 | HTTP_Attr_tga | 首行后缀为tga的HTTP流量 | 276 | 6 | 78
+2456 | HTTP_Attr_tgz | 首行后缀为tgz的HTTP流量 | 276 | 10 | 78
+2457 | HTTP_Attr_thm | 首行后缀为thm的HTTP流量 | 276 | 6 | 78
+2458 | HTTP_Attr_tif | 首行后缀为tif的HTTP流量 | 276 | 6 | 78
+2459 | HTTP_Attr_tiff | 首行后缀为tiff的HTTP流量 | 276 | 6 | 78
+2460 | HTTP_Attr_tmp | 首行后缀为tmp的HTTP流量 | 276 | 6 | 78
+2461 | HTTP_Attr_toast | 首行后缀为toast的HTTP流量 | 276 | 6 | 78
+2462 | HTTP_Attr_torrent | 首行后缀为torrent的HTTP流量 | 276 | 6 | 78
+2463 | HTTP_Attr_tpz | 首行后缀为tpz的HTTP流量 | 276 | 6 | 78
+2464 | HTTP_Attr_txt | 首行后缀为txt的HTTP流量 | 276 | 10 | 78
+2465 | HTTP_Attr_tz | 首行后缀为tz的HTTP流量 | 276 | 6 | 78
+2466 | HTTP_Attr_ucf | 首行后缀为ucf的HTTP流量 | 276 | 6 | 78
+2467 | HTTP_Attr_umd | 首行后缀为umd的HTTP流量 | 276 | 10 | 78
+2468 | HTTP_Attr_und | 首行后缀为und的HTTP流量 | 276 | 10 | 78
+2469 | HTTP_Attr_uue | 首行后缀为uue的HTTP流量 | 276 | 10 | 78
+2470 | HTTP_Attr_vb | 首行后缀为vb的HTTP流量 | 276 | 6 | 78
+2471 | HTTP_Attr_vcd | 首行后缀为vcd的HTTP流量 | 276 | 6 | 78
+2472 | HTTP_Attr_vcf | 首行后缀为vcf的HTTP流量 | 276 | 6 | 78
+2473 | HTTP_Attr_vcxproj | 首行后缀为vcxproj的HTTP流量 | 276 | 6 | 78
+2474 | HTTP_Attr_vdi | 首行后缀为vdi的HTTP流量 | 276 | 6 | 78
+2475 | HTTP_Attr_vhd | 首行后缀为vhd的HTTP流量 | 276 | 6 | 78
+2476 | HTTP_Attr_vmdk | 首行后缀为vmdk的HTTP流量 | 276 | 6 | 78
+2477 | HTTP_Attr_vob | 首行后缀为vob的HTTP流量 | 276 | 6 | 78
+2478 | HTTP_Attr_vsd | 首行后缀为vsd的HTTP流量 | 276 | 6 | 78
+2480 | HTTP_Attr_wav | 首行后缀为wav的HTTP流量 | 276 | 6 | 78
+2481 | HTTP_Attr_wax | 首行后缀为wax的HTTP流量 | 276 | 6 | 78
+2482 | HTTP_Attr_webarchive | 首行后缀为webarchive的HTTP流量 | 276 | 6 | 78
+2483 | HTTP_Attr_wgt | 首行后缀为wgt的HTTP流量 | 276 | 6 | 78
+2484 | HTTP_Attr_wma | 首行后缀为wma的HTTP流量 | 276 | 6 | 78
+2485 | HTTP_Attr_wmf | 首行后缀为wmf的HTTP流量 | 276 | 6 | 78
+2486 | HTTP_Attr_wml | 首行后缀为wml的HTTP流量 | 276 | 6 | 78
+2487 | HTTP_Attr_wmv | 首行后缀为wmv的HTTP流量 | 276 | 6 | 78
+2488 | HTTP_Attr_wpd | 首行后缀为wpd的HTTP流量 | 276 | 6 | 78
+2489 | HTTP_Attr_wps | 首行后缀为wps的HTTP流量 | 276 | 10 | 78
+2490 | HTTP_Attr_wsdl | 首行后缀为wsdl的HTTP流量 | 276 | 6 | 78
+2491 | HTTP_Attr_wsf | 首行后缀为wsf的HTTP流量 | 276 | 6 | 78
+2492 | HTTP_Attr_xcodeproj | 首行后缀为xcodeproj的HTTP流量 | 276 | 6 | 78
+2493 | HTTP_Attr_xfdl | 首行后缀为xfdl的HTTP流量 | 276 | 6 | 78
+2494 | HTTP_Attr_xht | 首行后缀为xht的HTTP流量 | 276 | 6 | 78
+2495 | HTTP_Attr_xhtm | 首行后缀为xhtm的HTTP流量 | 276 | 6 | 78
+2496 | HTTP_Attr_xhtml | 首行后缀为xhtml的HTTP流量 | 276 | 6 | 78
+2497 | HTTP_Attr_xls | 首行后缀为xls的HTTP流量 | 276 | 10 | 78
+2498 | HTTP_Attr_xlsx | 首行后缀为xlsx的HTTP流量 | 276 | 10 | 78
+2499 | HTTP_Attr_xml | 首行后缀为xml的HTTP流量 | 276 | 4 | 78
+2500 | HTTP_Attr_xva | 首行后缀为xva的HTTP流量 | 276 | 6 | 78
+2501 | HTTP_Attr_yuv | 首行后缀为yuv的HTTP流量 | 276 | 6 | 78
+2502 | HTTP_Attr_zip | 首行后缀为zip的HTTP流量 | 276 | 10 | 78
+2503 | HTTP_Attr_zipx | 首行后缀为zipx的HTTP流量 | 276 | 6 | 78
+2504 | Youtube_HD_Video | Youtube高清视频 | 342 | 6 | 737
+2510 | SIP_Control_Encrypted | SIP协议的加密信令流 | 59 | 3 | 0
+2518 | Xbox_Live | Xbox Live在线平台 | 853 | 5 | 0
+2520 | Rebtel_Control | 语音控制流 | 1347 | 3 | 175
+2521 | Rebtel_Media_Data | VOIP 数据流 | 1347 | 3 | 0
+2522 | Sohu_Others | 观看视频时的图片，浏览等非视频流量 | 1089 | 4 | 0
+2530 | MGCP_Video_Data_RTP | 视频数据 | 60 | 3 | 0
+2540 | TeamSpeak_HTTP | TeamSpeak_HTTP | 171 | 3 | 0
+2547 | NBC_RTMPvideo | RTMP类型视频 | 851 | 6 | 577
+2571 | QQ_Transfer | 文件传输 | 62 | 10 | 0
+2596 | KooWo_HTTP | KooWo中HTTP流量 | 44 | 6 | 627, 628
+2597 | DailyMotion_RTMP | 网站播放视频产生流 | 835 | 6 | 577
+2600 | FSJoy_HTTP | 游戏的流量 | 299 | 5 | 0
+2604 | Fs2You_HTTP | Fs2you的HTTP流量 | 25 | 1 | 1432
+2605 | Yahoo_Video_RTMP | RTMP承载的雅虎视频 | 1878 | 6 | 577
+2607 | HTTP_Text | content-type 为 Text的HTTP流量 | 276 | 10 | 0
+2611 | Linphone_IM | 登录，文字信息等流量 | 1370 | 3 | 175, 430, 513
+2612 | Vimeo_Video | 视频流量 | 871 | 6 | 2613
+2613 | Vimeo_Others | 图片等非视频流量 | 871 | 4 | 0
+2616 | Linphone_VOIP | 语音通话，视频通话 | 1370 | 3 | 247, 249, 250
+2619 | UStreamTV_Others | 非视频流量 | 930 | 4 | 0
+2624 | Netflix_Video | Netflix视频流量 | 1015 | 6 | 657, 1778
+2633 | Dailymotion_Others | 网站浏览流量，非视频流量 | 835 | 4 | 0
+2638 | LETV_HTTP_Video | LETV里面的HTTP视频流量 | 419 | 6 | 3029
+2811 | WanMeiShiKong | 北京完美时空网络技术有限公司是一个大型在线游戏开发商，旗下产品包括完美时空、武林外传、完美世界、诛仙和赤壁等。 | 1611 | 5 | 0
+2828 | ICY | Icy是Ripdev公司开发和维护的数据包安装和管理软件，供iPhone和iPod Touch用户从各种渠道浏览并下载应用程序。大部分应用程序可以免费下载，但有些下载后需要购买才能使用，包括Ripdev开发的 | 1851 | 6 | 0
+2830 | Yahoo_Video | 雅虎HTTP视频 | 1878 | 6 | 613
+2848 | GTP | GPRS隧道协议是基于IP地址的协议，支持全球移动通信系统（GSM）和通用移动通讯系统（UMTS）网络里的通用分组无线系统（GPRS）。 | 1984 | 18 | 0
+2987 | Fetion_Transfer | 飞信是中国移动推出的一款即时通讯客户端，目前是中国第三大最受欢迎的即时通讯客户端。用户能通过飞信在个人电脑和手机间免费收发短信。中国移动计划把飞信打造成一项专注于无线 | 65 | 2 | 0
+2988 | ICQ_Transfer | ICQ是一款即时通讯软件，为时代华纳旗下的美国在线子公司所拥有。 | 61 | 2 | 0
+3025 | Yahoo_Others | Yahoo非视频流量 | 1878 | 4 | 0
+3027 | Veoh_HTTP_Video | Veoh_HTTP_Video | 833 | 6 | 0
+3029 | LETV_HTTP | LETV_HTTP | 419 | 4 | 0
+3030 | Thunder_KanKan_Other | 迅雷看看其他流量 | 1341 | 17 | 0
+3031 | PPLive_Others | 非视频流量 | 29 | 4 | 0
+[PROTOCOL END]
