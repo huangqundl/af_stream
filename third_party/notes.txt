@@ -1,2 +1,0 @@
-Version
-    zeromq: 4.0.5
