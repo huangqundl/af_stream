@@ -37,8 +37,8 @@ public:
         stopped_.push_back(false);
     }
 
-    InCallbackSimple(int num_in) : 
-        num_in_(num_in),
+
+    InCallbackSimple() : 
         num_stop_(0),
         event_(0),
         start_ts(0), stop_ts(0)
@@ -47,7 +47,7 @@ public:
 private:
     std::vector<ZeroRingBuffer<WrapT>*> queues_;
     std::vector<bool> stopped_;
-    int num_in_;
+    
     int num_stop_;
     int event_;
     uint64_t start_ts, stop_ts;
@@ -63,18 +63,19 @@ int InCallbackSimple<T>::PushRecord(void* data, uint32_t len) {
     if (afs_unlikely(((WrapT*)data)->get_type()==ITEM_FINISH)) {
         WrapT* wrap_item = (WrapT*)data;
         int source = wrap_item->get_worker_source();
-        //LOG_MSG("in callback get finish from %d\n", source);
+        LOG_MSG("in callback get finish from %d\n", source);
         if (!stopped_[source]) {
             stopped_[source] = true;
             num_stop_++;
+            for (auto x : queues_) {
+                x->Insert(data);
+                x->Flush();
+            }
             if (num_stop_ == num_in_) {
                 stop_ts = now_us();
                 //LOG_MSG("in_callback recv %d\n", event_);
-                for (int i=0; i<RB_BATCH; i++) {
-                    for (auto x : queues_) {
-                        x->Insert(data);
-                    }
-                }
+                //for (int i=0; i<RB_BATCH; i++) {
+                //}
                 return 1;
             }
         }

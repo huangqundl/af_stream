@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
         }
 
         afs::DownThreadNet<DummyType, afs::NullClass>* o_thread
-            = new afs::DownThreadNet<DummyType, afs::NullClass>(num_compute_thread, num_downstream);
+            = new afs::DownThreadNet<DummyType, afs::NullClass>(num_compute_thread);
         std::string prefix("downstream_addr");
         for (int i=0; i<num_downstream; i++) {
             char tmp[10];

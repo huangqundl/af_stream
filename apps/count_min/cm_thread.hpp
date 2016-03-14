@@ -13,8 +13,8 @@
 
 class ComputeThreadThread : public afs::ComputeThread<afs::RawItem, struct CMItem, afs::NullClass, afs::NullClass> {
 public:
-    ComputeThreadThread(int num_out_queue, afs::RouterBase* r) :
-        afs::ComputeThread<afs::RawItem, struct CMItem, afs::NullClass, afs::NullClass>(num_out_queue, r, 0, NULL) {}
+    ComputeThreadThread(int num_downstream) :
+        afs::ComputeThread<afs::RawItem, struct CMItem, afs::NullClass, afs::NullClass>(0, num_downstream) {}
 
 private:
     CountMin* cm_sketch;
@@ -85,7 +85,7 @@ private:
         cand.clear();
     }
 
-    void ProcessRecord(afs::RawItem& tuple, uint64_t seq) {
+    void ProcessData(uint32_t worker, uint32_t thread, uint64_t seq, afs::RawItem& tuple) {
         char* line = tuple.raw_data;
         char* tok = strtok(line, " ");
         tok = strtok(NULL, " ");
@@ -106,6 +106,6 @@ private:
         }
     }
 
-    void ProcessTimeout() {}
+    void ProcessPunc() {}
 
 };

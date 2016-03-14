@@ -24,10 +24,10 @@ public:
         MPSCObject<T>::peers[writer]->push(reader_id, (T*)addr);
     }
 
-    MPSCReader<T>(int num_writers) :
-        MPSCObject<T>(num_writers),
-        num_writer(num_writers) {
-    }
+    MPSCReader<T>() :
+        MPSCObject<T>()
+        //num_writer(num_writers) 
+        {}
 
     void SetReaderId(int r) {
         reader_id = r; 
@@ -39,7 +39,7 @@ public:
 
     void Flush() {
         //for (auto d=0; d<RB_BATCH; d++) {
-            for (int i=0; i<num_writer; i++) {
+            for (uint64_t i=0; i<MPSCObject<T>::peers.size(); i++) {
                 //MPSCObject<T>::peers[i]->push(reader_id, NULL);
                 MPSCObject<T>::peers[i]->flush();
             }
@@ -50,7 +50,7 @@ public:
 
 private:
     int ack_cnt;
-    int num_writer;
+    //int num_writer;
     int reader_id;
 };
 

@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    int num_in = config->getint("num_upstreams", 0);
+    int num_upstream = config->getint("num_upstreams", 0);
     //afs::InCallbackSimple<DummyType>* in_callback =
     //    new afs::InCallbackSimple<DummyType>(num_in);
     //std::vector<afs::OutCallbackBase*> callbacks;
@@ -59,15 +59,15 @@ int main(int argc, char* argv[]) {
     //afs::UpThreadNet<DummyType, DummyType>* i_thread =
     //    new afs::UpThreadNet<DummyType, DummyType>(in_callback, &callbacks);
     afs::UpThreadNet<DummyType, DummyType>* i_thread =
-        new afs::UpThreadNet<DummyType, DummyType>(num_in, num_compute_thread);
+        new afs::UpThreadNet<DummyType, DummyType>(num_upstream, num_compute_thread);
     i_thread->AddSource(addr);
     worker->AddUpThread(i_thread);
 
     for (int i=0; i<num_compute_thread; i++) {
-        LOG_MSG("num_in %d\n", num_in);
-        afs::RouterRR* router_tmp = new afs::RouterRR(num_in);
+        LOG_MSG("num_upstream %d\n", num_upstream);
+        //afs::RouterRR* router_tmp = new afs::RouterRR(num_upstream);
         ComputeThreadThread2* compute_thread =
-            new ComputeThreadThread2(num_in, router_tmp);
+            new ComputeThreadThread2(num_upstream);
         worker->AddComputeThread(compute_thread);
     }
 

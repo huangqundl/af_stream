@@ -50,29 +50,30 @@ public:
     }
 
     bool IsReverse() {
-        return is_reverse_;
+        return support_feedback_
+;
     }
 
 private:
 
     int num_upstream_;
-    bool is_reverse_;
+    bool support_feedback_;
 
     // listen on single port
     //int listen_port;
     std::string listen_addr_;
 
     // epoll
-    afs_zmq::epoll_t* poller;
+    afs_zmq::epoll_t* poller_;
 
-    afs_zmq::options_t* options;
+    afs_zmq::options_t* options_;
 
     // route incoming events to compute_threads
     InCallbackBase* in_callback_;
     OutCallbackBase** out_callbacks_;
 
     //  monitor number of process events
-    uint64_t _event;
+    uint64_t event_;
 
     //struct timeval start_time, end_time;
 
@@ -92,26 +93,30 @@ private:
 
 template <class InT, class ROutT>
 UpThreadNet<InT, ROutT>::UpThreadNet(
-        int num_in,
+        int num_upstream,
         int num_compute_thread
+        //bool support_feedback
         //InCallbackBase* in_callback,
         //std::vector<OutCallbackBase*>* out_callbacks
             ) :
     UpThread<InT, ROutT>(),
-    num_upstream_(num_in), is_reverse_(false),
-    poller(NULL), options(NULL), 
+    num_upstream_(num_upstream), support_feedback_(false),
+    poller_(NULL), options_(NULL), 
     //in_callback_(in_callback),
     //out_callbacks_(NULL),
-    _event(0) {
+    event_(0) {
         
-        is_reverse_ = true;
+        in_callback_ = new afs::InCallbackSimple<InT>();
 
-        in_callback_ = new afs::InCallbackSimple<InT>(num_in);
-
-        out_callbacks_ = (OutCallbackBase**)calloc(num_in, sizeof(OutCallbackBase*));
-        for (int i=0; i<num_in; i++) {
-            out_callbacks_[i] = 
-                new afs::OutCallbackSimple<ROutT>(num_compute_thread);
+        support_feedback_
+ = true;
+        if (support_feedback_
+    ) {
+            out_callbacks_ = (OutCallbackBase**)calloc(num_upstream, sizeof(OutCallbackBase*));
+            for (int i=0; i<num_upstream; i++) {
+                out_callbacks_[i] = 
+                    new afs::OutCallbackSimple<ROutT>(num_compute_thread);
+            }
         }
         //if (out_callbacks) {
         //    num_upstream_ = out_callbacks->size();
@@ -124,13 +129,16 @@ UpThreadNet<InT, ROutT>::UpThreadNet(
         //}
     }
 
+
 template <class InT, class ROutT>
 void UpThreadNet<InT, ROutT>::AddOutQueue(ZeroRingBuffer<WInT>* q) {
     in_callback_->AddOutQueue(q);
 }
 
+
 template <class InT, class ROutT>
 void UpThreadNet<InT, ROutT>::AddSource(char* source) {
+    in_callback_->IncNumIn();
     listen_addr_ = source;
 }
 
@@ -155,13 +163,13 @@ void UpThreadNet<InT, ROutT>::ThreadInitHandler() {
     rc = check_protocol (protocol);
     afs_assert(!rc, "check protocol error: %s\n", protocol.c_str());
 
-    options = new (std::nothrow) afs_zmq::options_t;
-    options->type = ZMQ_PULL;
+    options_ = new (std::nothrow) afs_zmq::options_t;
+    options_->type = ZMQ_PULL;
     afs_zmq::tcp_listener_t *listener =
         new (std::nothrow) afs_zmq::tcp_listener_t (
             in_callback_,
             out_callbacks_,
-            *options);
+            *options_);
     alloc_assert (listener);
     rc = listener->set_address (address.c_str ());
     if (rc != 0) {
@@ -169,9 +177,9 @@ void UpThreadNet<InT, ROutT>::ThreadInitHandler() {
         LOG_ERR("liseten error\n");
     }
 
-    poller = new afs_zmq::epoll_t();
-    afs_assert (poller, "allocate poller error\n");
-    listener->set_poller(poller);
+    poller_ = new afs_zmq::epoll_t();
+    afs_assert (poller_, "allocate poller_ error\n");
+    listener->set_poller(poller_);
 }
 
 template <class InT, class ROutT>
@@ -179,10 +187,10 @@ void UpThreadNet<InT, ROutT>::ThreadMainHandler() {
     LOG_MSG("%s start to run\n", UpThread<InT, ROutT>::get_thread_str());
     //gettimeofday(&start_time, NULL);
 
-    poller->loop();
+    poller_->loop();
 
     /*
-    if (is_reverse_) {
+    if (support_feedback_) {
         for (int i=0; i<num_upstream_; i++) {
             out_callbacks_[i]->Flush();
         }
@@ -201,13 +209,14 @@ void UpThreadNet<InT, ROutT>::ThreadFinishHandler() {
             "run_time = %lf\n"
             "Average: %lf (msg/s)\n"
             "=================================================\n",
-            _event,
+            event_,
             used_time,
-            _event / used_time);
+            event_ / used_time);
     */
 
     in_callback_->Clean();
-    if (is_reverse_) {
+    if (support_feedback_
+) {
         for (int i=0; i<num_upstream_; i++) {
             out_callbacks_[i]->Clean();
         }

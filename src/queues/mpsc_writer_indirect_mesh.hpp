@@ -20,9 +20,9 @@ public:
         MPSCObject<T>::peers[reader]->push(writer_id, addr);
     }
 
-    MPSCWriter<T>(int num_readers) :
-        MPSCObject<T>(num_readers),
-        num_reader(num_readers),
+    MPSCWriter<T>() :
+        MPSCObject<T>(),
+        //num_reader(num_readers),
         writer_id(-1)
     {
         slots = (T*) calloc(RB_SIZE, sizeof(T));
@@ -42,7 +42,7 @@ public:
     }
 
     void Flush() {
-        for (int i=0; i<num_reader; i++) {
+        for (uint64_t i=0; i<MPSCObject<T>::peers.size(); i++) {
             MPSCObject<T>::peers[i]->flush();
         }
     }
@@ -63,7 +63,7 @@ public:
 
 private:
     T* slots;
-    int num_reader;
+    //int num_reader;
     int writer_id;
     int clean_cnt;
 };

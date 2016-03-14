@@ -17,8 +17,8 @@
 
 class MergeThread : public afs::ComputeThread<struct CMItem, afs::NullClass, afs::NullClass, afs::NullClass> {
 public:
-    MergeThread(int num_upstreams, afs::RouterBase* r) :
-        afs::ComputeThread<struct CMItem, afs::NullClass, afs::NullClass, afs::NullClass>(0, NULL, num_upstreams, r) {}
+    MergeThread(int num_upstreams) :
+        afs::ComputeThread<struct CMItem, afs::NullClass, afs::NullClass, afs::NullClass>(num_upstreams, 0) {}
 
 private:
     CountMin* cm_sketch;
@@ -61,7 +61,7 @@ private:
 
     void ComputeThreadRecovery() {}
 
-    void ProcessRecord(struct CMItem &item, uint64_t seq) {
+    void ProcessData(uint32_t worker, uint32_t thread, uint64_t seq, struct CMItem &item) {
         LOG_MSG("counter %u, heavy hitter %u\n", item.num_counter, item.num_hh);
         for (uint32_t i=0; i<item.num_counter; i++) {
             std::pair<uint32_t, long long> pair = item.GetCounter(i);
@@ -81,6 +81,6 @@ private:
         }
     }
 
-    void ProcessTimeout() {}
+    void ProcessPunc() {}
 
 };

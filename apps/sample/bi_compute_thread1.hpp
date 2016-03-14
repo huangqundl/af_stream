@@ -3,22 +3,25 @@
 
 class BiComputeThreadThread1 : public afs::ComputeThread<DummyType, DummyType, DummyType, afs::NullClass> {
 public:
-    BiComputeThreadThread1(int num_out_queue, afs::RouterBase* r) :
-        afs::ComputeThread<DummyType, DummyType, DummyType, afs::NullClass>(num_out_queue, r, 0, NULL) {}
+    BiComputeThreadThread1(int num_downstream) :
+        afs::ComputeThread<DummyType, DummyType, DummyType, afs::NullClass>(0, num_downstream) {}
 
 private:
+    int cur = 0;
+
     void ComputeThreadInit() {}
     void ComputeThreadFinish() {}
     void ComputeThreadRecovery() {}
 
-    void ProcessRecord(DummyType& tuple, uint64_t seq) {
-        //printf("ComputeThread %d, data number %u\n", get_tid(), tuple.number);
-        EmitData(tuple);
+    void ProcessData(uint32_t worker, uint32_t thread, uint64_t seq, DummyType& tuple) {
+        //LOG_MSG("ComputeThread %d, data number %u\n", get_tid(), tuple.number);
+        EmitData(cur, tuple);
+        cur = (cur+1) % GetNumDownstream();
     }
 
-    void ProcessTimeout() {}
+    void ProcessPunc() {}
 
-    void ProcessReverse(int src_worker, int src_thread, DummyType& tuple) {
+    void ProcessFeedback(int src_worker, int src_thread, DummyType& tuple) {
         //LOG_MSG("feedback data number %d from worker %d thread %d\n", tuple.number, src_worker, src_thread);
     }
 };

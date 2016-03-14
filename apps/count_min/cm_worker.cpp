@@ -3,14 +3,15 @@
 
 #include "config.hpp"
 
-#include "thread/worker.hpp"
+//#include "../include/afs.h"
 
+#include "thread/worker.hpp"
 #include "thread/up_thread_trace.hpp"
 #include "thread/up_thread_trace_afs.hpp"
 #include "thread/router_rr.hpp"
+#include "thread/down_thread_net.hpp"
 
 #include "cm_thread.hpp"
-#include "thread/down_thread_net.hpp"
 
 //#include "down_thread_net.hpp"
 //#include "out_callback_simple.hpp"
@@ -51,17 +52,13 @@ int main(int argc, char* argv[]) {
 
     int num_downstream = config->getint("num_downstreams", 0);
     for (int i=0; i<num_compute_thread; i++) {
-        afs::RouterRR* router_tmp = NULL;
-        if (num_downstream) {
-            router_tmp = new afs::RouterRR(num_downstream);
-        }
         ComputeThreadThread* compute_thread =
-            new ComputeThreadThread(num_downstream, router_tmp);
+            new ComputeThreadThread(num_downstream);
         worker->AddComputeThread(compute_thread);
     }
 
     if (num_downstream) {
-        afs::DownThreadNet<struct CMItem, afs::NullClass>* o_thread = new afs::DownThreadNet<struct CMItem, afs::NullClass>(num_compute_thread, num_downstream);
+        afs::DownThreadNet<struct CMItem, afs::NullClass>* o_thread = new afs::DownThreadNet<struct CMItem, afs::NullClass>(num_compute_thread);
         std::string prefix("downstream_addr");
         for (int i=0; i<num_downstream; i++) {
             char tmp[10];

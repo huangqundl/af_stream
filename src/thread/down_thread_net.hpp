@@ -36,15 +36,15 @@ typedef WrapItem<RInT> WRInT;
 
 public:
 
-    DownThreadNet(size_t num_in, size_t num_out
+    DownThreadNet(uint64_t num_compute_thread
             //InCallbackBase* in_callback,
             //std::vector<OutCallbackBase*> &out_callbacks
             );
 
     ~DownThreadNet() {
-        delete poller;
-        delete options;
-        free(out_callbacks_);
+        delete poller_;
+        delete options_;
+        //free(out_callbacks_);
     }
 
     //  each destination is handled by a stream_engine
@@ -56,11 +56,11 @@ public:
     }
 
     int GetDownstream() {
-        return num_out_;
+        return num_downstream_;
     }
 
     bool IsReverse() {
-        return is_reverse_;
+        return support_feedback_;
     }
 
     void AddReverseInBuffer(ZeroRingBuffer<WRInT>* q) {
@@ -69,26 +69,25 @@ public:
 
 private:
 
-    int num_upstream_;
-    bool is_reverse_;
+    bool support_feedback_;
 
-    size_t num_in_, num_out_;
+    size_t num_compute_thread_, num_downstream_;
 
     InCallbackBase* in_callback_;
-    OutCallbackBase** out_callbacks_;
+    //OutCallbackBase** out_callbacks_;
 
     // listen on single port
     //int listen_port;
     std::vector<std::string> connect_addrs_;
+    std::vector<OutCallbackBase*> out_callbacks_;
 
     // epoll
-    afs_zmq::epoll_t* poller;
+    afs_zmq::epoll_t* poller_;
 
-    afs_zmq::options_t* options;
-
+    afs_zmq::options_t* options_;
 
     //  monitor number of process events
-    uint64_t _event;
+    uint64_t event_;
 
     // copied from socket_base.hpp in 0MQ
     int parse_uri (const char *uri_,
@@ -107,41 +106,42 @@ private:
 };
 
 template <class OutT, class RInT>
-DownThreadNet<OutT, RInT>::DownThreadNet(size_t num_in, size_t num_out
+DownThreadNet<OutT, RInT>::DownThreadNet(uint64_t num_compute_thread
+        //,uint64_t num_downstream
         //InCallbackBase* in_callback,
         //std::vector<OutCallbackBase*> &callbacks
         ) :
     DownThread<OutT, RInT>(),
-    num_in_(num_in),
-    num_out_(num_out),
+    num_compute_thread_(num_compute_thread),
+    num_downstream_(0),
     //in_callback_(in_callback),
-    out_callbacks_(NULL),
-    poller(NULL), options(NULL), 
-    _event(0) {
+    //out_callbacks_(NULL),
+    poller_(NULL), options_(NULL), event_(0) {
     
-    //afs_assert(num_out==callbacks.size(), "num_out %lu num of callbacks %lu\n",
-    //        num_out, callbacks.size());
+    //afs_assert(num_outdownstreamallbacks.size(), "num_outdownstreamu num of callbacks %lu\n",
+    //        num_outdownstreamallbacks.size());
 
-    in_callback_ = new afs::InCallbackSimple<RInT>(num_out_);
-
-    out_callbacks_ = (OutCallbackBase**)calloc(num_out, sizeof(OutCallbackBase*));
-    for (size_t i=0; i<num_out_; i++) {
-        out_callbacks_[i] = new afs::OutCallbackSimple<OutT>(num_in_);
+    support_feedback_ = true;
+    if (support_feedback_) {
+        in_callback_ = new afs::InCallbackSimple<RInT>();
     }
 
-    options = new (std::nothrow) afs_zmq::options_t;
-    options->type = ZMQ_PUSH;
+    //out_callbacks_ = (OutCallbackBase**)calloc(num_outdownstreamizeof(OutCallbackBase*));
 
-    poller = new afs_zmq::epoll_t();
-    afs_assert (poller, "allocate poller error\n");
+    options_ = new (std::nothrow) afs_zmq::options_t;
+    options_->type = ZMQ_PUSH;
 
-    if (in_callback_) {
-        is_reverse_ = true;
-    }
+    poller_ = new afs_zmq::epoll_t();
+    afs_assert (poller_, "allocate poller_ error\n");
 }
 
 template <class OutT, class RInT>
 void DownThreadNet<OutT, RInT>::AddDest(int dest_index, char* dest) {
+    
+    num_downstream_++;
+
+    in_callback_->IncNumIn();
+    out_callbacks_.push_back(new afs::OutCallbackSimple<OutT>(num_compute_thread_));
     connect_addrs_.push_back(dest);
 }
 
@@ -164,26 +164,26 @@ void DownThreadNet<OutT, RInT>::Connect(int i, const char* addr_) {
     alloc_assert (paddr->resolved.tcp_addr);
 
     rc = paddr->resolved.tcp_addr->resolve (
-            address.c_str (), false, options->ipv6);
+            address.c_str (), false, options_->ipv6);
     afs_assert(rc==0, "tcp resolve\n");
 
     afs_zmq::tcp_connecter_t *connecter = 
         new (std::nothrow) afs_zmq::tcp_connecter_t (
             DownThread<OutT, RInT>::get_wid(),
             in_callback_, out_callbacks_[i],
-            *options, paddr, false);
+            *options_, paddr, false);
     alloc_assert (connecter);
 
-    connecter->set_poller(poller);
+    connecter->set_poller(poller_);
     connecter->start_connecting();
 }
 
 template <class OutT, class RInT>
 void DownThreadNet<OutT, RInT>::ThreadInitHandler() {
 
-    afs_assert(num_out_== connect_addrs_.size(),
-            "num_out %lu, connect_addr_ %lu\n", num_out_, connect_addrs_.size());
-    for (size_t i=0; i<num_out_; i++) {
+    afs_assert(num_downstream_== connect_addrs_.size(),
+            "num_outdownstream %lu, connect_addr_ %lu\n", num_downstream_, connect_addrs_.size());
+    for (size_t i=0; i<num_downstream_; i++) {
         Connect(i, connect_addrs_[i].c_str());
     }
 
@@ -194,10 +194,10 @@ template <class OutT, class RInT>
 void DownThreadNet<OutT, RInT>::ThreadMainHandler() {
     LOG_MSG("DownThreadNet (%d) start to run\n", getpid());
 
-    poller->loop();
+    poller_->loop();
 
     /*
-    for (size_t i=0; i<num_out_; i++) {
+    for (size_t i=0; i<num_downstream_; i++) {
         out_callbacks_[i]->Flush();
     }
     */
@@ -208,7 +208,7 @@ void DownThreadNet<OutT, RInT>::ThreadFinishHandler() {
     if (in_callback_) {
         in_callback_->Clean();
     }
-    for (size_t i=0; i<num_out_; i++) {
+    for (size_t i=0; i<num_downstream_; i++) {
         out_callbacks_[i]->Clean();
     }
 }

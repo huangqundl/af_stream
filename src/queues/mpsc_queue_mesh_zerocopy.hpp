@@ -1,6 +1,7 @@
 #ifndef __MPMC_QUEUE_MESH_HPP_INCLUDED__
 #define __MPMC_QUEUE_MESH_HPP_INCLUDED__
 
+#include <vector>
 #include "zerocopy_ringbuffer.hpp"
 
 template<class T>
@@ -35,22 +36,31 @@ public:
         }
     }
 
-    LockFreeQueue(int num_writer) : num_queue(num_writer), cur(0) {
-        q_ = (ZeroRingBuffer<T>**)calloc(num_writer, sizeof(ZeroRingBuffer<T>*));
+    void AddQueue() {
+        num_queue++;
+        q_.push_back(new ZeroRingBuffer<T>());
+    }
+
+    LockFreeQueue() : num_queue(0), cur(0) {
+        //q_ = (ZeroRingBuffer<T>**)calloc(num_writer, sizeof(ZeroRingBuffer<T>*));
+        /*
         for (int i=0; i<num_writer; i++) {
-            q_[i] = new ZeroRingBuffer<T>();
+            //q_[i] = new ZeroRingBuffer<T>();
+            q_.push_back(new ZeroRingBuffer<T>());
         }
+        */
     }
 
     ~LockFreeQueue() {
         for (int i=0; i<num_queue; i++) {
             delete q_[i];
         }
-        free(q_);
+        //free(q_);
     }
 
 private:
-    ZeroRingBuffer<T>** q_;
+    //ZeroRingBuffer<T>** q_;
+    std::vector<ZeroRingBuffer<T>*> q_;
     int num_queue;
     int cur;
 };

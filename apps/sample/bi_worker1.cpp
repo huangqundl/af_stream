@@ -9,6 +9,7 @@
 #include "thread/up_thread_trace.hpp"
 #include "thread/router_rr.hpp"
 
+#include "adapter_dummy.hpp"
 #include "bi_compute_thread1.hpp"
 
 #include "thread/down_thread_net.hpp"
@@ -45,15 +46,18 @@ int main(int argc, char* argv[]) {
     afs::RouterRR* router = new afs::RouterRR(num_compute_thread);
     afs::UpThreadTrace<DummyType>* i_thread =
         new afs::UpThreadTrace<DummyType>(router);
+    i_thread->SetAdapter(new AdapterDummy());
     worker->AddUpThread(i_thread);
 
     for (int i=0; i<num_compute_thread; i++) {
+        /*
         afs::RouterRR* router_tmp = NULL;
         if (num_downstream) {
             router_tmp = new afs::RouterRR(num_downstream);
         }
+        */
         BiComputeThreadThread1* compute_thread =
-            new BiComputeThreadThread1(num_downstream, router_tmp);
+            new BiComputeThreadThread1(num_downstream);
         worker->AddComputeThread(compute_thread);
     }
 
@@ -68,7 +72,7 @@ int main(int argc, char* argv[]) {
         //}
 
         //afs::DownThreadNet<DummyType, DummyType>* o_thread = new afs::DownThreadNet<DummyType, DummyType>(num_compute_thread, num_downstream, in_callback, callbacks);
-        afs::DownThreadNet<DummyType, DummyType>* o_thread = new afs::DownThreadNet<DummyType, DummyType>(num_compute_thread, num_downstream);
+        afs::DownThreadNet<DummyType, DummyType>* o_thread = new afs::DownThreadNet<DummyType, DummyType>(num_compute_thread);
         std::string prefix("downstream_addr");
         for (int i=0; i<num_downstream; i++) {
             char tmp[10];

@@ -27,7 +27,7 @@ public:
                 //LOG_MSG("outcallback finish\n");
                 num_stop_++;
                 if (num_stop_ == num_in_) {
-                    //LOG_MSG("outcallback all finish\n");
+                    LOG_MSG("outcallback all finish\n");
                     reader_->Flush();
                     return 1;
                 }
@@ -47,7 +47,7 @@ public:
     }
 
     OutCallbackSimple(int num_in) : OutCallbackBase(), num_in_(num_in), num_stop_(0), event_(0) {
-        reader_ = new MPSCReader<WrapT>(num_in_);
+        reader_ = new MPSCReader<WrapT>();
     }
 
     ~OutCallbackSimple() {

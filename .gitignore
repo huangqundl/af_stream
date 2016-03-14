@@ -1,0 +1,10 @@
+release/
+conf.bak/
+Notes
+libegn
+data
+dns_name.txt
+results
+result
+*.bak
+build.tmp

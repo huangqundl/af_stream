@@ -81,28 +81,26 @@ add_library(afstream_net SHARED
     )
 target_link_libraries(afstream_net zmq_mailbox)
 
-add_library(afstream_core SHARED
+add_library(afstream SHARED
     src/thread/thread.cpp
     src/thread/thread_id.cpp
     src/config.cpp
     src/controller/zk_worker_client.cpp
     )
-target_link_libraries(afstream_core pthread afstream_net afstream_ft iniparser zmq zkmt)
+target_link_libraries(afstream pthread afstream_net afstream_ft iniparser zmq zkmt)
 
 #add libegn
 include_directories(third_party/libegn/)
 
-#------------------------------------------------------------
-
 #----------------------- executable -------------------------
 
-add_executable(sample_worker1
-    apps/sample/sample_worker1.cpp
-    )
-
-add_executable(sample_worker2
-    apps/sample/sample_worker2.cpp
-    )
+#add_executable(sample_worker1
+#    apps/sample/sample_worker1.cpp
+#    )
+#
+#add_executable(sample_worker2
+#    apps/sample/sample_worker2.cpp
+#    )
 
 add_executable(bi_worker1
     apps/sample/bi_worker1.cpp
@@ -135,12 +133,12 @@ add_executable(backup_server
 #--------------------------- Link ---------------------------
 
 target_link_libraries(controller zkmt)
-target_link_libraries(sample_worker1 afstream_core)
-target_link_libraries(sample_worker2 afstream_core)
-target_link_libraries(bi_worker1 afstream_core)
-target_link_libraries(bi_worker2 afstream_core)
-target_link_libraries(cm_worker afstream_core)
-target_link_libraries(cm_merger afstream_core)
+#target_link_libraries(sample_worker1 afstream)
+#target_link_libraries(sample_worker2 afstream)
+target_link_libraries(bi_worker1 afstream)
+target_link_libraries(bi_worker2 afstream)
+target_link_libraries(cm_worker afstream)
+target_link_libraries(cm_merger afstream)
 
 
 #-----------------------------------

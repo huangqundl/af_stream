@@ -52,9 +52,8 @@ int main(int argc, char* argv[]) {
     worker->AddUpThread(i_thread);
 
     for (int i=0; i<num_compute_thread; i++) {
-        afs::RouterRR* router_tmp = new afs::RouterRR(1);
         MergeThread* compute_thread =
-            new MergeThread(num_in, router_tmp);
+            new MergeThread(num_in);
         worker->AddComputeThread(compute_thread);
     }
 

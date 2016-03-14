@@ -1,9 +1,10 @@
 #ifndef __AFS_ADAPTER_DUMMY_HPP_INCLUDED__
 #define __AFS_ADAPTER_DUMMY_HPP_INCLUDED__
 
-#include "adapter_base.hpp"
-#include "apps/sample/dummy_item.hpp"
 #include "config.hpp"
+#include "thread/adapter_base.hpp"
+
+#include "dummy_item.hpp"
 
 class AdapterDummy : public afs::AdapterBase {
 private:

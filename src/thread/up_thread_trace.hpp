@@ -37,6 +37,8 @@ public:
     // derived from UpThread
     void AddOutQueue(ZeroRingBuffer<WInT>* q);
 
+    void SetAdapter(AdapterBase* adapter);
+
 protected:
 
     void Emit(void* data, uint32_t len) {
@@ -71,6 +73,7 @@ UpThreadTrace<InT>::UpThreadTrace(
         RouterBase* router
         ) :
     UpThread<InT, NullClass>(),
+    adapter_(NULL),
     router_(router),
     //parser_(parser),
     event_(0) {}
@@ -78,6 +81,11 @@ UpThreadTrace<InT>::UpThreadTrace(
 template<class T>
 void UpThreadTrace<T>::AddOutQueue(ZeroRingBuffer<WInT>* q) {
     queues_.push_back(q);
+}
+
+template<class T>
+void UpThreadTrace<T>::SetAdapter(AdapterBase* adapter) {
+    adapter_ = adapter;
 }
 
 template<class T>
@@ -89,21 +97,24 @@ void UpThreadTrace<T>::ThreadInitHandler() {
     char* adapter_type_str = config->getstring("adapter_type", NULL);
     afs_assert(adapter_type_str, "Adapter type is not specified\n");
 
-    std::string adapter_type(adapter_type_str);
-    if (adapter_type == "ram") {
-        LOG_MSG("RAM adapter is used\n");
-        adapter_ = new AdapterRAM();
-    }
-    else if (adapter_type == "disk") {
-        LOG_MSG("Disk adapter is used\n");
-        adapter_ = new AdapterDisk();
-    }
-    //else if (adapter_type == "dummy") {
-    //    LOG_MSG("Dummy adapter is used\n");
-    //    adapter_ = new AdapterDummy();
-    //}
-    else {
-        PrintAdapterNotFound(adapter_type.c_str());
+    if (adapter_ == NULL) {
+        PrintUseBuiltinAdapter();
+        std::string adapter_type(adapter_type_str);
+        if (adapter_type == "ram") {
+            LOG_MSG("RAM adapter is used\n");
+            adapter_ = new AdapterRAM();
+        }
+        else if (adapter_type == "disk") {
+            LOG_MSG("Disk adapter is used\n");
+            adapter_ = new AdapterDisk();
+        }
+        //else if (adapter_type == "dummy") {
+        //    LOG_MSG("Dummy adapter is used\n");
+        //    adapter_ = new AdapterDummy();
+        //}
+        else {
+            PrintAdapterNotFound(adapter_type.c_str());
+        }
     }
 
     adapter_->Init();

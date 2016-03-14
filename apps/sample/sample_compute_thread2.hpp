@@ -4,7 +4,7 @@
 class ComputeThreadThread2 : public afs::ComputeThread<DummyType, DummyType, afs::NullClass, afs::NullClass> {
 public:
     ComputeThreadThread2(int num_out_queue, afs::RouterBase* r) :
-        afs::ComputeThread<DummyType, DummyType, afs::NullClass, afs::NullClass>(num_out_queue, r) {}
+        afs::ComputeThread<DummyType, DummyType, afs::NullClass, afs::NullClass>(num_out_queue, 0) {}
 
 private:
     void ComputeThreadInit() {}

@@ -10,6 +10,8 @@
 
 namespace afs {
 
+    enum FeedbackType {t_no_feedback=0, t_feedback};
+
     // base class for object which is executed as an individual thread
     
     enum ThreadType {t_ingress=0, t_egress, t_compute_thread};

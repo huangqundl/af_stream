@@ -36,8 +36,7 @@ typedef WrapItem<RInT> WRInT;
 typedef WrapItem<ROutT> WROutT;
 
 public:
-    //ComputeThread(int id);
-    ComputeThread(int num_out_queue, RouterBase* r, int num_r_out_queue=0, RouterBase* rr=NULL);
+    ComputeThread(int num_upstream, int num_downstream);
 
     void ConnectUpThread(UpThread<InT, ROutT>* up_thread);
     void ConnectDownThread(DownThread<OutT, RInT>* down_thread);
@@ -45,19 +44,12 @@ public:
 
     virtual void ComputeThreadRecovery() {};
 
-    MPSCWriter<WOutT>* GetWriter() {
-        return writer_;
-    }
-
-    MPSCWriter<WROutT>* GetRWriter() {
-        return r_writer_;
-    }
-
 protected:
 
     /**
      * Send data to next-hop worker via output_thread
      */
+    /*
     void EmitData(OutT& msg) {
         int dest = router_->GetDestination(&msg, sizeof(OutT));
         WOutT* slot = (WOutT*)writer_->GetSlot();
@@ -65,59 +57,74 @@ protected:
         slot->set_worker_source(get_wid());
         slot->set_thr_source(get_tid());
         slot->data() = msg;
-        writer_->Write(dest, slot);
+        down_writer_->Write(dest, slot);
+    }
+    */
+
+    uint64_t GetNumDownstream() {
+        return num_downstream_; 
     }
 
     void EmitData(int dest, OutT& msg) {
-        WOutT* slot = (WOutT*)writer_->GetSlot();
+        LOG_MSG("To emit %d\n", dest);
+        WOutT* slot = (WOutT*)down_writer_->GetSlot();
         slot->set_type(ITEM_NORMAL);
         slot->set_worker_source(get_wid());
         slot->set_thr_source(get_tid());
         slot->data() = msg;
-        writer_->Write(dest, slot);
+        down_writer_->Write(dest, slot);
+        LOG_MSG("   end emit\n");
     }
 
+    /*
     WOutT* GetSlot() {
         return (WOutT*)writer_->GetSlot();
     }
+    */
 
+    /*
     void CompleteWriteSlot(int dest, WOutT* slot) {
         slot->set_type(ITEM_NORMAL);
         slot->set_worker_source(get_wid());
         slot->set_thr_source(get_tid());
-        writer_->Write(dest, slot);
+        down_writer_->Write(dest, slot);
     }
+    */
 
+    /*
     int GetDest(OutT& msg) {
         return router_->GetDestination(&msg, sizeof(OutT));
     }
+    */
 
     /**
      * Send data to next-hop worker via output_thread
      */
-    void EmitReverseData(ROutT& msg) {
-        afs_assert(r_writer_, "    reverse writer null\n");
-        int dest = r_router_->GetDestination(&msg, sizeof(ROutT));
-        WROutT* slot = (WROutT*)r_writer_->GetSlot();
+    void EmitReverseData(int dest, ROutT& msg) {
+        LOG_MSG("To emit reverse\n");
+        afs_assert(up_writer_, "    reverse writer null\n");
+        //int dest = r_router_->GetDestination(&msg, sizeof(ROutT));
+        WROutT* slot = (WROutT*)up_writer_->GetSlot();
         slot->set_type(ITEM_REVERSE);
         slot->set_worker_source(get_wid());
         slot->set_thr_source(get_tid());
         slot->data() = msg;
-        r_writer_->Write(dest, slot);
+        up_writer_->Write(dest, slot);
+        LOG_MSG("   end emit reverse\n");
     }
 
     void FlushReverseWriter() {
-        r_writer_->Flush();
-        r_writer_->Clean();
-        r_writer_->Init();
+        up_writer_->Flush();
+        up_writer_->Clean();
+        up_writer_->Init();
     }
     
-    void EmitReverseTimeout() {
+    void EmitReverseTimeout(int dest) {
         WROutT r_wrap_msg;
         r_wrap_msg.set_type(ITEM_REVERSE);
         r_wrap_msg.set_worker_source(get_wid());
         r_wrap_msg.set_thr_source(get_tid());
-        EmitReverseWrapData(0, r_wrap_msg);
+        EmitReverseWrapData(dest, r_wrap_msg);
     }
 
 private:
@@ -129,19 +136,19 @@ private:
     uint64_t event_;
     uint64_t r_event_;
 
-    int num_out_queue_;
-    int num_r_out_queue_;
+    int num_downstream_;
+    int num_upstream_;
 
     // forward queues
     ZeroRingBuffer<WInT>* in_queue_;
-    MPSCWriter<WOutT>* writer_;
+    MPSCWriter<WOutT>* down_writer_;
 
     // backward queue
     ZeroRingBuffer<WRInT>* r_in_queue_;
-    MPSCWriter<WROutT>* r_writer_;
+    MPSCWriter<WROutT>* up_writer_;
 
-    RouterBase* router_;
-    RouterBase* r_router_;
+    //RouterBase* router_;
+    //RouterBase* r_router_;
 
     // fault-tolerant operators
     std::vector<FTInterface*> operators;
@@ -158,85 +165,90 @@ private:
 
     //  user-define interface to process events of various types
     //virtual void DoProcessRecord(InT& tuple) = 0;
-    virtual void ProcessRecord(InT& tuple, uint64_t seq) = 0;
-    virtual void ProcessTimeout() = 0;
-    virtual void ProcessReverse(int src_worker, int src_thread, RInT& tuple) {
-        LOG_MSG("Function ProcessReverse does not be implemented\n");
+    virtual void ProcessData(uint32_t src_worker, uint32_t src_thread, uint64_t seq, InT& tuple) = 0;
+    virtual void ProcessPunc() = 0;
+    virtual void ProcessFeedback(int src_worker, int src_thread, RInT& tuple) {
+        LOG_MSG("Function ProcessFeedback does not be implemented\n");
     }
 
     void EmitWrapData(int dest, WOutT& msg) {
-        WOutT* slot = (WOutT*)writer_->GetSlot();
+        WOutT* slot = (WOutT*)down_writer_->GetSlot();
         *slot = msg;
-        writer_->Write(dest, slot);
+        down_writer_->Write(dest, slot);
     }
 
     void EmitReverseWrapData(int dest, WROutT& msg) {
-        WROutT* slot = (WROutT*)r_writer_->GetSlot();
+        WROutT* slot = (WROutT*)up_writer_->GetSlot();
         *slot = msg;
-        r_writer_->Write(dest, slot);
+        up_writer_->Write(dest, slot);
     }
 
     void EmitFinish() {
         WOutT wrap_msg;
-        if (writer_ != NULL) {
+        if (down_writer_ != NULL) {
             wrap_msg.set_type(ITEM_FINISH);
             wrap_msg.set_worker_source(get_wid());
             wrap_msg.set_thr_source(get_tid());
-            for (int i = 0; i < num_out_queue_; i++) {
+            for (int i = 0; i < num_downstream_; i++) {
                 EmitWrapData(i, wrap_msg);
             }
-            writer_->Flush();
+            down_writer_->Flush();
             LOG_MSG("ComputeThread: emit finish\n");
         }
     }
     
     void EmitReverseFinish() {
         WROutT r_wrap_msg;
-        if (r_writer_ != NULL) {
+        if (up_writer_ != NULL) {
             r_wrap_msg.set_type(ITEM_FINISH);
             r_wrap_msg.set_worker_source(get_wid());
             r_wrap_msg.set_thr_source(get_tid());
-            for (int i = 0; i < num_r_out_queue_; i++) {
+            for (int i=0; i < num_upstream_; i++) {
                 EmitReverseWrapData(i, r_wrap_msg);
             }
-            r_writer_->Flush();
+            up_writer_->Flush();
         }
     }
 
 };
 
 template <class InT, class OutT, class RInT, class ROutT>
-ComputeThread<InT, OutT, RInT, ROutT>::ComputeThread(int num_out_queue, RouterBase* r, int num_r_out_queue, RouterBase* rr) :
+ComputeThread<InT, OutT, RInT, ROutT>::ComputeThread(
+        int num_upstream,
+        //RouterBase* r,
+        int num_downstream
+        //, RouterBase* rr
+        ) :
     ThreadBase(t_compute_thread),
     event_(0),
     r_event_(0),
-    num_out_queue_(num_out_queue),
-    num_r_out_queue_(num_r_out_queue),
+    num_downstream_(num_downstream),
+    num_upstream_(num_upstream),
     in_queue_(NULL),
-    writer_(NULL),
+    down_writer_(NULL),
     r_in_queue_(NULL),
-    r_writer_(NULL),
-    router_(r),
-    r_router_(rr)
+    up_writer_(NULL)
+    //router_(r),
+    //r_router_(rr)
         {
-        LOG_MSG("compute_thread out queue %d, reverse queue %d\n", num_out_queue, num_r_out_queue);
-        if (num_out_queue > 0) {
-            writer_ = new MPSCWriter<WOutT>(num_out_queue);
+        LOG_MSG("compute_thread downstream %d, upstream %d\n", num_downstream, num_upstream);
+        if (num_downstream > 0) {
+            down_writer_ = new MPSCWriter<WOutT>();
         }
-        if (num_r_out_queue > 0) {
+        if (num_upstream > 0) {
             LOG_MSG("create reverse write_\n");
-            r_writer_ = new MPSCWriter<WROutT>(num_r_out_queue);
+            up_writer_ = new MPSCWriter<WROutT>();
         }
     }
 
 template <class InT, class OutT, class RInT, class ROutT>
 void ComputeThread<InT, OutT, RInT, ROutT>::ThreadInitHandler() {
     LOG_MSG(INDENT "initializing\n");
-    if (writer_ != NULL) {
-        writer_->Init();
+    if (down_writer_ != NULL) {
+        down_writer_->Init();
     }
-    if (r_writer_ != NULL) {
-        r_writer_->Init();
+    if (up_writer_ != NULL) {
+        up_writer_->Init();
     }
     ComputeThreadInit();
     operators = *(OperatorTracker::GetInstance()->GetThreadOps(thr_id()));
@@ -247,65 +259,79 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ThreadMainHandler() {
     
     WInT* tuple = NULL;
     WRInT* r_tuple = NULL;
-    bool stop = false;
-    bool r_stop = false;
+    int up_stop = 0;
+    int down_stop = 0;
+
+    // no upstream implies external source
+    if (num_upstream_ == 0) {
+        num_upstream_++;
+    }
 
     unsigned int num_operator = operators.size();
     afs_zmq::command_t cmd;
 
+    /*
     if (!r_in_queue_) {
         r_stop = true;
     }
+    */
 
-    LOG_MSG("%s start to run\n", get_thread_str());
-    LOG_MSG("    %s operator number %u\n", get_thread_str(), num_operator);
+    //LOG_MSG("%s start to run\n", get_thread_str());
+    //LOG_MSG("    %s operator number %u\n", get_thread_str(), num_operator);
 
-    while (!stop || !r_stop) {
+    while (up_stop<num_upstream_ || down_stop<num_downstream_) {
         //LOG_MSG("while\n");
-        if (!r_stop && (r_tuple=r_in_queue_->Extract()) != NULL) {
+        while (down_stop<num_downstream_ && (r_tuple=r_in_queue_->Extract()) != NULL) {
             ITEM_TYPE t = r_tuple->get_type();
             switch (t) {
                 case ITEM_FINISH:
-                    r_stop = true;
+                    down_stop++;
                     break;
                 case ITEM_REVERSE:
                     r_event_++;
-                    ProcessReverse(r_tuple->get_worker_source(), r_tuple->get_thr_source(), r_tuple->data());
+                    ProcessFeedback(r_tuple->get_worker_source(), r_tuple->get_thr_source(), r_tuple->data());
                     break;
                 default:
                     LOG_ERR("Unidentified event type %d\n", (int)t);
                     break;
             }
             r_in_queue_->Ack();
-        } // end of if
+        } // end of while reverse
 
         //LOG_MSG("read forward queue\n");
-        if (afs_unlikely(stop)) {
+        if (afs_unlikely(up_stop==num_upstream_)) {
             //LOG_MSG("Attempt to clean\n");
-            writer_->AttemptClean();
+            down_writer_->AttemptClean();
         }
         else {
             if ((tuple=in_queue_->Extract()) != NULL) {
                 ITEM_TYPE t = tuple->get_type();
+                uint32_t worker = tuple->get_worker_source();
+                uint32_t thread = tuple->get_thr_source();
+                uint64_t seq = tuple->get_seq();
+                InT data = tuple->data();
+                in_queue_->Ack();
                 switch (t) {
                     case ITEM_FINISH:
-                        stop = true;
+                        up_stop++;
+                        LOG_MSG("up_stop %d\n", up_stop);
                         // send finish first
                         // but continue to wait for finish from downstream workers
-                        EmitFinish();
+                        if (up_stop == num_upstream_) {
+                            EmitFinish();
+                        }
                         break;
                     case ITEM_TIMEOUT:
-                        ProcessTimeout();
+                        ProcessPunc();
                         break;
                     case ITEM_NORMAL:
                         event_++;
-                        ProcessRecord(tuple->data(), tuple->get_seq());
+                        ProcessData(worker, thread, seq, data);
                         break;
                     default:
                         LOG_ERR("Unidentified event type %d\n", (int)t);
                         break;
                 }
-                in_queue_->Ack();
             } // end of if
         }
 
@@ -331,12 +357,14 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ThreadMainHandler() {
         }
     } // end of while
 
-    if (writer_) {
-        writer_->AttemptClean();
+    LOG_MSG("    up_stop %d, upstream %d, down_stop %d, downstream %d\n", up_stop, num_upstream_, down_stop, num_downstream_);
+
+    if (down_writer_) {
+        down_writer_->AttemptClean();
     }
     EmitReverseFinish();
-    if (r_writer_ != NULL) {
-        r_writer_->Clean();
+    if (up_writer_ != NULL) {
+        up_writer_->Clean();
     }
 }
 
@@ -358,12 +386,12 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ConnectUpThread(UpThread<InT, ROutT>
         int writer_id = get_tid();
         for (int i=0; i<num_upstream; i++) {
             MPSCReader<WROutT>* r_reader = (MPSCReader<WROutT>*)up_thread->GetReverseOutBufferReader(i);
-            afs_assert(r_writer_, "reverse writer %d is not available\n", writer_id);
+            afs_assert(up_writer_, "reverse writer %d is not available\n", writer_id);
             afs_assert(r_reader, "reverse reader %d is not available\n", i);
-            r_writer_->SetWriterId(writer_id);
-            r_writer_->ConnectPeer(i, r_reader);
+            up_writer_->SetWriterId(writer_id);
+            up_writer_->ConnectPeer(i, r_reader);
             r_reader->SetReaderId(i);
-            r_reader->ConnectPeer(writer_id, r_writer_);
+            r_reader->ConnectPeer(writer_id, up_writer_);
         }
     }
 }
@@ -374,12 +402,12 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ConnectDownThread(DownThread<OutT, R
     int num_down_thread_reader = down_thread->GetDownstream();
     for (int i=0; i<num_down_thread_reader; i++) {
         MPSCReader<WOutT>* reader = (MPSCReader<WOutT>*)down_thread->GetOutBufferReader(i);
-        afs_assert(writer_, "writer %d is not available\n", writer_id);
+        afs_assert(down_writer_, "writer %d is not available\n", writer_id);
         afs_assert(reader, "reader %d is not available\n", i);
-        writer_->SetWriterId(writer_id);
-        writer_->ConnectPeer(i, reader);
+        down_writer_->SetWriterId(writer_id);
+        down_writer_->ConnectPeer(i, reader);
         reader->SetReaderId(i);
-        reader->ConnectPeer(writer_id, writer_);
+        reader->ConnectPeer(writer_id, down_writer_);
     }
     
     if (down_thread->IsReverse()) {

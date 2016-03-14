@@ -3,22 +3,20 @@
 
 class ComputeThreadThread2 : public afs::ComputeThread<DummyType, DummyType, afs::NullClass, DummyType> {
 public:
-    ComputeThreadThread2(int num_in_queue, afs::RouterBase* r) :
-        afs::ComputeThread<DummyType, DummyType, afs::NullClass, DummyType>(0, NULL, num_in_queue, r) {
-            LOG_MSG("in queue %d\n", num_in_queue)
-        }
+    ComputeThreadThread2(int num_upstream) :
+        afs::ComputeThread<DummyType, DummyType, afs::NullClass, DummyType>(num_upstream, 0) {}
 
 private:
     void ComputeThreadInit() {}
     void ComputeThreadFinish() {}
     void ComputeThreadRecovery() {}
 
-    void ProcessRecord(DummyType& tuple, uint64_t seq) {
+    void ProcessData(uint32_t worker, uint32_t thread, uint64_t seq, DummyType& tuple) {
         //LOG_MSG("data number %d\n", tuple.number);
         tuple.number += 10000;
-        EmitReverseData(tuple);
+        EmitReverseData(worker, tuple);
         //LOG_MSG("    feedback ok\n");
     }
 
-    void ProcessTimeout() {}
+    void ProcessPunc() {}
 };
