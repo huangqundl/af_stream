@@ -36,7 +36,8 @@ typedef WrapItem<RInT> WRInT;
 
 public:
 
-    DownThreadNet(uint64_t num_compute_thread
+    DownThreadNet(uint64_t num_compute_thread,
+            uint64_t num_downstream
             //InCallbackBase* in_callback,
             //std::vector<OutCallbackBase*> &out_callbacks
             );
@@ -107,13 +108,13 @@ private:
 
 template <class OutT, class RInT>
 DownThreadNet<OutT, RInT>::DownThreadNet(uint64_t num_compute_thread
-        //,uint64_t num_downstream
+        ,uint64_t num_downstream
         //InCallbackBase* in_callback,
         //std::vector<OutCallbackBase*> &callbacks
         ) :
     DownThread<OutT, RInT>(),
     num_compute_thread_(num_compute_thread),
-    num_downstream_(0),
+    num_downstream_(num_downstream),
     //in_callback_(in_callback),
     //out_callbacks_(NULL),
     poller_(NULL), options_(NULL), event_(0) {
@@ -123,7 +124,7 @@ DownThreadNet<OutT, RInT>::DownThreadNet(uint64_t num_compute_thread
 
     support_feedback_ = true;
     if (support_feedback_) {
-        in_callback_ = new afs::InCallbackSimple<RInT>();
+        in_callback_ = new afs::InCallbackSimple<RInT>(num_downstream);
     }
 
     //out_callbacks_ = (OutCallbackBase**)calloc(num_outdownstreamizeof(OutCallbackBase*));
@@ -138,9 +139,9 @@ DownThreadNet<OutT, RInT>::DownThreadNet(uint64_t num_compute_thread
 template <class OutT, class RInT>
 void DownThreadNet<OutT, RInT>::AddDest(int dest_index, char* dest) {
     
-    num_downstream_++;
+    //num_downstream_++;
 
-    in_callback_->IncNumIn();
+    //in_callback_->IncNumIn();
     out_callbacks_.push_back(new afs::OutCallbackSimple<OutT>(num_compute_thread_));
     connect_addrs_.push_back(dest);
 }
@@ -183,6 +184,7 @@ void DownThreadNet<OutT, RInT>::ThreadInitHandler() {
 
     afs_assert(num_downstream_== connect_addrs_.size(),
             "num_outdownstream %lu, connect_addr_ %lu\n", num_downstream_, connect_addrs_.size());
+
     for (size_t i=0; i<num_downstream_; i++) {
         Connect(i, connect_addrs_[i].c_str());
     }

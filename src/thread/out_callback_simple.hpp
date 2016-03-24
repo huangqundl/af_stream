@@ -29,6 +29,7 @@ public:
                 if (num_stop_ == num_in_) {
                     LOG_MSG("outcallback all finish\n");
                     reader_->Flush();
+                    LOG_MSG("    outcallback end\n");
                     return 1;
                 }
                 else {

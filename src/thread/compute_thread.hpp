@@ -66,14 +66,14 @@ protected:
     }
 
     void EmitData(int dest, OutT& msg) {
-        LOG_MSG("To emit %d\n", dest);
+        //LOG_MSG("To emit %d\n", dest);
         WOutT* slot = (WOutT*)down_writer_->GetSlot();
         slot->set_type(ITEM_NORMAL);
         slot->set_worker_source(get_wid());
         slot->set_thr_source(get_tid());
         slot->data() = msg;
         down_writer_->Write(dest, slot);
-        LOG_MSG("   end emit\n");
+        //LOG_MSG("   end emit\n");
     }
 
     /*
@@ -101,7 +101,7 @@ protected:
      * Send data to next-hop worker via output_thread
      */
     void EmitReverseData(int dest, ROutT& msg) {
-        LOG_MSG("To emit reverse\n");
+        //LOG_MSG("To emit reverse\n");
         afs_assert(up_writer_, "    reverse writer null\n");
         //int dest = r_router_->GetDestination(&msg, sizeof(ROutT));
         WROutT* slot = (WROutT*)up_writer_->GetSlot();
@@ -110,7 +110,7 @@ protected:
         slot->set_thr_source(get_tid());
         slot->data() = msg;
         up_writer_->Write(dest, slot);
-        LOG_MSG("   end emit reverse\n");
+        //LOG_MSG("   end emit reverse\n");
     }
 
     void FlushReverseWriter() {
@@ -314,7 +314,7 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ThreadMainHandler() {
                 switch (t) {
                     case ITEM_FINISH:
                         up_stop++;
-                        LOG_MSG("up_stop %d\n", up_stop);
+                        LOG_MSG("compute thread: up_stop %d\n", up_stop);
                         // send finish first
                         // but continue to wait for finish from downstream workers
                         if (up_stop == num_upstream_) {
@@ -357,15 +357,18 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ThreadMainHandler() {
         }
     } // end of while
 
-    LOG_MSG("    up_stop %d, upstream %d, down_stop %d, downstream %d\n", up_stop, num_upstream_, down_stop, num_downstream_);
+    LOG_MSG("    compute thread (out-of-while): up_stop %d, upstream %d, down_stop %d, downstream %d\n", up_stop, num_upstream_, down_stop, num_downstream_);
 
     if (down_writer_) {
         down_writer_->AttemptClean();
     }
+    LOG_MSG("    compute thread send reverse end\n");
     EmitReverseFinish();
     if (up_writer_ != NULL) {
         up_writer_->Clean();
     }
+
+    LOG_MSG("    compute thread end\n");
 }
 
 template <class InT, class OutT, class RInT, class ROutT>

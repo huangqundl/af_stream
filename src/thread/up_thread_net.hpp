@@ -31,7 +31,7 @@ typedef WrapItem<ROutT> WROutT;
 
 public:
 
-    UpThreadNet(int num_in,
+    UpThreadNet(int num_upstream,
         int num_compute_thread
             //InCallbackBase* in_callback,
             //std::vector<OutCallbackBase*>* out_callbacks
@@ -50,8 +50,7 @@ public:
     }
 
     bool IsReverse() {
-        return support_feedback_
-;
+        return support_feedback_;
     }
 
 private:
@@ -106,7 +105,7 @@ UpThreadNet<InT, ROutT>::UpThreadNet(
     //out_callbacks_(NULL),
     event_(0) {
         
-        in_callback_ = new afs::InCallbackSimple<InT>();
+        in_callback_ = new afs::InCallbackSimple<InT>(num_upstream);
 
         support_feedback_
  = true;
@@ -138,7 +137,7 @@ void UpThreadNet<InT, ROutT>::AddOutQueue(ZeroRingBuffer<WInT>* q) {
 
 template <class InT, class ROutT>
 void UpThreadNet<InT, ROutT>::AddSource(char* source) {
-    in_callback_->IncNumIn();
+    //in_callback_->IncNumIn();
     listen_addr_ = source;
 }
 

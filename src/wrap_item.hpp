@@ -71,11 +71,11 @@ namespace afs {
         uint64_t seq_;
 
         // set and get in analyzers
-        int t_source_;
+        uint32_t t_source_;
 
         // set by analyzer
         // get by in_callback
-        int w_source_;
+        uint32_t w_source_;
 
         T data_;
     };

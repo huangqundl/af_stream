@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
     }
 
     if (num_downstream) {
-        afs::DownThreadNet<struct CMItem, afs::NullClass>* o_thread = new afs::DownThreadNet<struct CMItem, afs::NullClass>(num_compute_thread);
+        afs::DownThreadNet<struct CMItem, afs::NullClass>* o_thread = new afs::DownThreadNet<struct CMItem, afs::NullClass>(num_compute_thread, num_downstream);
         std::string prefix("downstream_addr");
         for (int i=0; i<num_downstream; i++) {
             char tmp[10];

@@ -101,7 +101,7 @@ bool afs_zmq::tcp_listener_t::in_event ()
     tune_tcp_socket (fd);
     tune_tcp_keepalives (fd, options.tcp_keepalive, options.tcp_keepalive_cnt, options.tcp_keepalive_idle, options.tcp_keepalive_intvl);
 
-    fprintf(stderr, "listener accept %s\n", peer_addr);
+    //fprintf(stderr, "listener accept %s\n", peer_addr);
 
     int peer_worker = -1;
     while (1) {
@@ -110,10 +110,11 @@ bool afs_zmq::tcp_listener_t::in_event ()
             break;
         }
     }
-    fprintf(stderr, "recv from worker %d\n", peer_worker);
+    //fprintf(stderr, "recv from worker %d\n", peer_worker);
 
-    //  Create the engine object for this connection.
-    // qhuang: TODO
+    // Create the engine object for this connection.
+    // qhuang: cannot 
+    // in_callback_->IncNumIn();
     afs::OutCallbackBase* out_callback = NULL;
     if (out_callbacks_) {
         out_callback = out_callbacks_[peer_worker];

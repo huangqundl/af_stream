@@ -19,11 +19,13 @@ public:
 
     virtual void AddOutQueue(void* q) = 0;
 
+    /*
     void IncNumIn() {
         num_in_++;
     }
+    */
 
-    InCallbackBase(): num_in_(0) {}
+    InCallbackBase(int num_in): num_in_(num_in) {}
 
 private:
     virtual int GetDestination(void* data, uint32_t len) = 0;

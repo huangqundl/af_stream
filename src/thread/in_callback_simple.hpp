@@ -38,7 +38,8 @@ public:
     }
 
 
-    InCallbackSimple() : 
+    InCallbackSimple(int num_in) : 
+        InCallbackBase(num_in),
         num_stop_(0),
         event_(0),
         start_ts(0), stop_ts(0)
@@ -63,7 +64,7 @@ int InCallbackSimple<T>::PushRecord(void* data, uint32_t len) {
     if (afs_unlikely(((WrapT*)data)->get_type()==ITEM_FINISH)) {
         WrapT* wrap_item = (WrapT*)data;
         int source = wrap_item->get_worker_source();
-        LOG_MSG("in callback get finish from %d\n", source);
+        LOG_MSG("in callback: get finish from %d, num_in %d\n", source, num_in_);
         if (!stopped_[source]) {
             stopped_[source] = true;
             num_stop_++;
@@ -76,6 +77,7 @@ int InCallbackSimple<T>::PushRecord(void* data, uint32_t len) {
                 //LOG_MSG("in_callback recv %d\n", event_);
                 //for (int i=0; i<RB_BATCH; i++) {
                 //}
+                LOG_MSG("    incallback end\n");
                 return 1;
             }
         }
