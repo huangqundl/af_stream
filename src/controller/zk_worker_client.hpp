@@ -14,7 +14,7 @@
 #include <set>
 //#include <deque>
 #include "ZkUtil.hpp"
-#include "util.hpp"
+#include "../util.hpp"
 //#include "queues/ControlMessage.hpp"
 using namespace std;
 

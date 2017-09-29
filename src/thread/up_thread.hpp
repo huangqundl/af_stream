@@ -11,9 +11,9 @@
 #include "thread.hpp"
 //#include "compute_thread.hpp"
 
-#include "wrap_item.hpp"
-#include "queues/zerocopy_ringbuffer.hpp"
-#include "queues/mpsc_channel.hpp"
+#include "../wrap_item.hpp"
+#include "../queues/zerocopy_ringbuffer.hpp"
+#include "../queues/mpsc_channel.hpp"
 
 using namespace std;
 

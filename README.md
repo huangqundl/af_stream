@@ -5,18 +5,11 @@ This README would normally document whatever steps are necessary to get your app
 ### What is this repository for? ###
 
 * AF-Stream: a distributed stream processing system with **approximate fault tolerance**
-* Version: 0.1
+* Version: 0.2
 
 ### Example: Count-Min Sketch ###
 
-Step 1: preparation
-
-* source code (see apps/count-min)
-* a configuration file (see conf/count-min/count-min.ini)
-* add target executable files in CMakeLists.txt
-* input trace
-
-Step 2: build executable files 
+Step 1: build AF-Stream library 
 
 * Create a directory (here we select release in the root directory)
 ```
@@ -30,6 +23,23 @@ cmake ..
 
 * Compile
 ```
+make
+```
+
+* Copy it to system lib directory (Or add current directory to LD\_LIBRARY\_PATH
+```
+sudo cp libafstream.so /usr/lib
+```
+
+Step 2: compile applications
+
+* preparation
+    * application source code (see apps/count-min)
+    * a configuration file (see conf/count-min/count-min.ini)
+    * input trace (see apps/count-min/input.txt
+
+```
+cd apps/count-min
 make
 ```
 

@@ -4,10 +4,10 @@
 #include <sstream>
 
 #include <set>
-#include "thread/compute_thread.hpp"
-#include "raw_item.hpp"
+
 #include "cm_item.hpp"
 #include "cm_sketch.hpp"
+
 //#include "operator/hashmap_l1norm.hpp"
 //#include "operator/count_min.hpp"
 
@@ -48,7 +48,6 @@ private:
         afs_assert(thresh>=0, "thresh is not set\n");
 
         window = config->get_ull("app.cm.window_bytes", 0);
-        LOG_MSG("window bytes %llu\n", window);
     }
 
     void ComputeThreadFinish() {
@@ -61,13 +60,13 @@ private:
 
     void TerminateWindow() {
         //fprintf(output, "end window\n");
+        //LOG_MSG("end window\n");
         
         CMItem* cm_item = new CMItem;
         for (int i=0; i<r; i++) {
             for (int j=0; j<w; j++) {
                 long long v = cm_sketch->GetValue(i, j);
                 if (v > 0) {
-                    //LOG_MSG("r %d w %d v %d\n", i, j, v);
                     cm_item->AppendCounter(i*w+j, v);
                 }
             }
@@ -93,7 +92,9 @@ private:
         tok = strtok(NULL, " ");
         long long value =  strtoll (tok, NULL, 10);
             
+        //LOG_MSG("Key %llu value %lld\n", key, value);
         unsigned long long sum = cm_sketch->UpdateSketch(key, value);
+        //LOG_MSG(" sum: %llu %llu\n", key, sum);
         if (sum>thresh && cand.find(key)==cand.end()) {
             //fprintf(output, "%llu %llu\n", key, sum);
             cand.insert(key);

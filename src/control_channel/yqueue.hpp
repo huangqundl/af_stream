@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-#include "err.hpp"
+#include "../err.hpp"
 #include "atomic_ptr.hpp"
 
 namespace afs_zmq

@@ -4,9 +4,9 @@
 #include <vector>
 
 #include "in_callback_base.hpp"
-#include "queues/zerocopy_ringbuffer.hpp"
-#include "wrap_item.hpp"
-#include "util.hpp"
+#include "../queues/zerocopy_ringbuffer.hpp"
+#include "../wrap_item.hpp"
+#include "../util.hpp"
 
 namespace afs {
 

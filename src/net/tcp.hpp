@@ -20,7 +20,7 @@
 #ifndef __ZMQ_TCP_HPP_INCLUDED__
 #define __ZMQ_TCP_HPP_INCLUDED__
 
-#include "fd.hpp"
+#include "../zmq_fd.hpp"
 
 namespace afs_zmq
 {

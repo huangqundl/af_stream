@@ -3,9 +3,9 @@
 
 #include <vector>
 
-#include "util.hpp"
+#include "../util.hpp"
 #include "out_callback_base.hpp"
-#include "queues/mpsc_channel.hpp"
+#include "../queues/mpsc_channel.hpp"
 
 namespace afs {
 

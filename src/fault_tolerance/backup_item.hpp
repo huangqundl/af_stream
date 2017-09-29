@@ -2,7 +2,7 @@
 #define __AFS_BACKUP_ITEM_HPP_INCLUDED__
 
 #include <string.h>
-#include "params.hpp"
+#include "../params.hpp"
 
 namespace afs {
 

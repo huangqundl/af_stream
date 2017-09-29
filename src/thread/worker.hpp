@@ -25,16 +25,16 @@
 #include "up_thread_net.hpp"
 #include "compute_thread.hpp"
 #include "down_thread.hpp"
-#include "queues/zerocopy_ringbuffer.hpp"
-#include "util.hpp"
-#include "wrap_item.hpp"
+#include "../queues/zerocopy_ringbuffer.hpp"
+#include "../util.hpp"
+#include "../wrap_item.hpp"
 
-#include "fault_tolerance/operator_tracker.hpp"
-#include "fault_tolerance/backup_client.hpp"
+#include "../fault_tolerance/operator_tracker.hpp"
+#include "../fault_tolerance/backup_client.hpp"
 //#include "fault_tolerance/data_manager.hpp"
 
 //using namespace std;
-#include "controller/zk_worker_client.hpp"
+#include "../controller/zk_worker_client.hpp"
 
 //zhandle_t* ZkWorkerClient::zh = NULL;
 //std::string ZkWorkerClient::server_name = "";
@@ -80,8 +80,6 @@ private:
     UpThread<InT, ROutT>* up_thread_;
 
     DownThread<OutT, RInT>* down_thread_;
-
-    void WaitForChildTerminate();
 
     /*
     void EnableInput(int i);
@@ -165,10 +163,6 @@ void Worker<InT, OutT, RInT, ROutT>::AddComputeThread(ComputeThread<InT, OutT, R
             "Add ComputeThread: index error %d\n", index);
     */
     compute_threads_.push_back(new_thread);
-}
-
-template <class InT, class OutT, class RInT, class ROutT>
-void Worker<InT, OutT, RInT, ROutT>::WaitForChildTerminate() {
 }
 
 template <class InT, class OutT, class RInT, class ROutT>
@@ -269,16 +263,16 @@ void Worker<InT, OutT, RInT, ROutT>::Start(int recovery) {
     LOG_SYS(HLINE "[Worker] Create threads...\n");
 
     up_thread_->Create();
-    up_thread_->WaitReady();
+    up_thread_->WaitThread(afs_zmq::command_t::ready);
 
     for (int i=0; i<num_compute_thread_; i++) {
         compute_threads_[i]->Create();
-        compute_threads_[i]->WaitReady();
+        compute_threads_[i]->WaitThread(afs_zmq::command_t::ready);
     }
 
     if (down_thread_) {
         down_thread_->Create();
-        down_thread_->WaitReady();
+        down_thread_->WaitThread(afs_zmq::command_t::ready);
     }
 
     if (recovery > 0) {
@@ -295,12 +289,12 @@ void Worker<InT, OutT, RInT, ROutT>::Start(int recovery) {
     }
 
     LOG_SYS(HLINE "[Worker] Start running...\n");
-    up_thread_->NotifyStart();
+    up_thread_->NotifyThread(afs_zmq::command_t::type_t::ready);
     for (int i=0; i<num_compute_thread_; i++) {
-        compute_threads_[i]->NotifyStart();
+        compute_threads_[i]->NotifyThread(afs_zmq::command_t::type_t::ready);
     }
     if (down_thread_) {
-        down_thread_->NotifyStart();
+        down_thread_->NotifyThread(afs_zmq::command_t::type_t::ready);
     }
 
     size_t stop = 0, max_stop = num_compute_thread_ + 1;
@@ -363,8 +357,9 @@ void Worker<InT, OutT, RInT, ROutT>::Start(int recovery) {
             break;
         }
     }
+
     if (down_thread_) {
-        down_thread_->WaitFinish1();
+        down_thread_->WaitThread(afs_zmq::command_t::finish);
     }
 
     /*
@@ -378,15 +373,15 @@ void Worker<InT, OutT, RInT, ROutT>::Start(int recovery) {
     */
 
     LOG_SYS(HLINE "[Worker] Clean and output...\n");
-    up_thread_->NotifyClean();
-    up_thread_->WaitFinish2();
+    up_thread_->NotifyThread(afs_zmq::command_t::type_t::clean);
+    up_thread_->WaitThread(afs_zmq::command_t::finish);
     for (int i=0; i<num_compute_thread_; i++) {
-        compute_threads_[i]->NotifyClean();
-        compute_threads_[i]->WaitFinish2();
+        compute_threads_[i]->NotifyThread(afs_zmq::command_t::type_t::clean);
+        compute_threads_[i]->WaitThread(afs_zmq::command_t::finish);
     }
     if (down_thread_) {
-        down_thread_->NotifyClean();
-        down_thread_->WaitFinish2();
+        down_thread_->NotifyThread(afs_zmq::command_t::type_t::clean);
+        down_thread_->WaitThread(afs_zmq::command_t::finish);
     }
 
     LOG_SYS(HLINE "[Worker] Finish...\n");

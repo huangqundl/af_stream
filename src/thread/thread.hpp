@@ -1,16 +1,34 @@
-// License
+/*
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-#ifndef _THREAD_HPP
-#define _THREAD_HPP
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   *************************************************************************
+   NOTE to contributors. This file comprises the principal public contract
+   for AF-Stream API users. Any change to this file
+   supplied in a stable release SHOULD not break existing applications.
+   In practice this means that the value of constants must not change, and
+   that old values may not be reused for new constants.
+   *************************************************************************
+*/
+
+#ifndef __AFS_THREAD_HPP_INCLUDED__
+#define __AFS_THREAD_HPP_INCLUDED__
 
 #include <thread>
+
 #include "thread_id.hpp"
-#include "control_channel/mailbox.hpp"
-#include "fault_tolerance/backup_item.hpp"
+#include "../control_channel/mailbox.hpp"
 
 namespace afs {
-
-    enum FeedbackType {t_no_feedback=0, t_feedback};
 
     // base class for object which is executed as an individual thread
     
@@ -22,94 +40,85 @@ namespace afs {
         "ComputeThread Thread"
     };
 
-    const char kCpuAffinityKey[3][40] = {
-        "up_thread_affinity",
-        "down_thread_affinity",
-        "compute_thread_affinity"
-    };
-
     class ThreadBase {
 
     public:
+
+        //  Constructor
+        ThreadBase(ThreadType type);
+
+        //  create/destroy threads
         void Create();
         void Destroy();
 
-        // communicate with main thread, called by main thread
-        int WaitThread(afs_zmq::command_t* cmd, bool is_block);
+        //  thread rountine in C++ style
+        void thread_fun();
+
+    private:
+
+        //  implemented by derived classes, called in thread_fun() 
+        virtual void ThreadInitHandler() = 0;
+        virtual void ThreadFinishHandler() = 0;
+        virtual void ThreadMainHandler() = 0;
+
+    public:
+
+        //  communicate with main thread, called by main (worker) thread
+        int64_t WaitThread(afs_zmq::command_t* cmd, bool is_block);
+        void WaitThread(afs_zmq::command_t::type_t type); // block mode
         void NotifyThread(afs_zmq::command_t::type_t type);
 
-        // the following functions are deprecated
-        void WaitReady();
-        void NotifyStart();
-        void NotifyClean();
-        void WaitFinish1();
-        void WaitFinish2();
+    protected:
 
-        ThreadBase(ThreadType type);
+        // communicate with main thread, called by thread itself
+        void NotifyWorker(afs_zmq::command_t &cmd);
+        void NotifyWorker(afs_zmq::command_t::type_t type);
+        void WaitWorker(afs_zmq::command_t::type_t type, bool is_block);
 
-        //  These are internal members. However, they would not be accessible from the main C routine of the thread if they are private.
-        int get_tid() { return tid_; }
-        int get_wid() { return wid_; }
+    public:
+
+        //  Internal getters/setters.
+        //  They are public so taht C-style thread routine can call them.
+        int64_t get_tid() { return tid_; }
+        int64_t get_wid() { return wid_; }
         void set_tid(int id) { tid_ = id; }
         void set_wid(int wid) { wid_ = wid; }
-        void thread_fun();
+        char* get_thread_str() {
+            return thread_str_;
+        }
 
         void AssignCPU(int cpu) {
             cpu_ = cpu;
         }
 
-        //bool IsRun() { return is_run_; }
-
-    protected:
-        char* get_thread_str() {
-            return thread_str_;
-        }
-
-        //void SendBackup(BackupItem &item);
-        void SendWorker(afs_zmq::command_t &cmd);
-        void WaitWorker(afs_zmq::command_t::type_t type, bool is_block);
-
     private:
+
         ThreadType type_;
-        bool is_run_;
 
-        // zero-based [worker id] and [thread id], assigned by worker
-        int wid_;
-        int tid_;
-        int cpu_;
+        //  zero-based [worker id] and [thread id], assigned by worker
+        //  -1 indicates unassigned
+        int64_t wid_;
+        int64_t tid_;
 
-        // system-view [process id] and [thread (light-weight process) id]
-        int spid_;
-        int sppid_;
+        //  CPU core
+        //  -1 indicates unassigned
+        int64_t cpu_;
+
+        //  system-view [process id] and [thread (light-weight process) id]
+        int64_t spid_;
+        int64_t sppid_;
     
-        // thread information
+        //  thread information
         char thread_str_[50];
 
-        //void SendToWorker();
-
-        // communicate with main thread, called by thread itself
-        void NotifyWorker(afs_zmq::command_t::type_t type);
-        // the following functions are deprecated
-        void NotifyReady();
-        void WaitStart();
-        void WaitClean();
-        void NotifyFinish1();
-        void NotifyFinish2();
-
-        //pthread_t descriptor;
+        //  pthread_t instance;
         std::thread* thread_instance_;
 
-        // communication channel with main thread
+        //  communication channel with main thread
         afs_zmq::mailbox_t thread_to_main_;
         afs_zmq::mailbox_t main_to_thread_;
-
-
-        // implemented by derived classes, called in corresponing functions
-        virtual void ThreadInitHandler() = 0;
-        virtual void ThreadFinishHandler() = 0;
-        virtual void ThreadMainHandler() = 0;
     };
 
 } // namespace afs
 
-#endif // _I_RUNNABLE_HPP
+#endif

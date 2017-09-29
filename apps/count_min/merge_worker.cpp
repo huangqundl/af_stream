@@ -1,19 +1,7 @@
 #include <stdlib.h>
 #include <string>
 
-#include "config.hpp"
-
-#include "thread/worker.hpp"
-
-#include "thread/up_thread_trace.hpp"
-#include "thread/up_thread_trace_afs.hpp"
-#include "thread/router_rr.hpp"
-
 #include "merge_thread.hpp"
-#include "thread/down_thread_net.hpp"
-
-//#include "down_thread_net.hpp"
-//#include "out_callback_simple.hpp"
 
 int main(int argc, char* argv[]) {
     // worker name is used to find out the corresponding config section in the config file

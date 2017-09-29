@@ -23,7 +23,7 @@
 #include <vector>
 #include <sys/epoll.h>
 
-#include "control_channel/fd.hpp"
+#include "../zmq_fd.hpp"
 //#include "thread.hpp"
 #include "poller_base.hpp"
 

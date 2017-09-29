@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <string>
 
-#include "config.hpp" 
-#include "util.hpp"
+#include "../config.hpp" 
+#include "../util.hpp"
 
 namespace afs {
 

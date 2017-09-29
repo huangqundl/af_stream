@@ -1,13 +1,13 @@
 #ifndef __AFS_ADAPTER_RECOVERY_HPP_INCLUDED__
 #define __AFS_ADAPTER_RECOVERY_HPP_INCLUDED__
 
-#include "thread/adapter_base.hpp"
+#include "../thread/adapter_base.hpp"
 
 #include <stdio.h>
 #include <string>
 
-#include "config.hpp" 
-#include "util.hpp"
+#include "../config.hpp" 
+#include "../util.hpp"
 
 #define BLK_SIZE 4096
 

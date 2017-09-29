@@ -1,20 +1,8 @@
 #include <stdlib.h>
 #include <string>
 
-#include "config.hpp"
-
-//#include "../include/afs.h"
-
-#include "thread/worker.hpp"
-#include "thread/up_thread_trace.hpp"
-#include "thread/up_thread_trace_afs.hpp"
-#include "thread/router_rr.hpp"
-#include "thread/down_thread_net.hpp"
-
+//#include <afstream.h>
 #include "cm_thread.hpp"
-
-//#include "down_thread_net.hpp"
-//#include "out_callback_simple.hpp"
 
 int main(int argc, char* argv[]) {
     // worker name is used to find out the corresponding config section in the config file
@@ -46,8 +34,8 @@ int main(int argc, char* argv[]) {
     //afs::AdapterRAM* adapter = new afs::AdapterRAM();
     afs::RouterRR* router = new afs::RouterRR(num_compute_thread);
     //afs::RRParser* parser = new afs::RRParser(num_compute_thread);
-    afs::UpThreadTraceAFS<afs::RawItem>* i_thread =
-        new afs::UpThreadTraceAFS<afs::RawItem>(router);
+    afs::UpThreadTrace<afs::RawItem>* i_thread =
+        new afs::UpThreadTrace<afs::RawItem>(router);
     worker->AddUpThread(i_thread);
 
     int num_downstream = config->getint("num_downstreams", 0);

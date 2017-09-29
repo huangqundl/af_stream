@@ -38,7 +38,7 @@
 #define EPROTO 0
 #endif
 
-namespace zmq
+namespace afs_zmq
 {
     const char *errno_to_string (int errno_);
     void zmq_abort (const char *errmsg_);
@@ -52,7 +52,7 @@ namespace zmq
         if (afs_unlikely (!(x))) {\
             fprintf (stderr, "Assertion failed: %s (%s:%d)\n", #x, \
                 __FILE__, __LINE__);\
-            zmq::zmq_abort (#x);\
+            afs_zmq::zmq_abort (#x);\
         }\
     } while (false) 
 
@@ -62,7 +62,7 @@ namespace zmq
         if (afs_unlikely (!(x))) {\
             const char *errstr = strerror (errno);\
             fprintf (stderr, "%s (%s:%d)\n", errstr, __FILE__, __LINE__);\
-            zmq::zmq_abort (errstr);\
+            afs_zmq::zmq_abort (errstr);\
         }\
     } while (false)
 
@@ -72,7 +72,7 @@ namespace zmq
         if (afs_unlikely (x)) {\
             const char *errstr = strerror (x);\
             fprintf (stderr, "%s (%s:%d)\n", errstr, __FILE__, __LINE__);\
-            zmq::zmq_abort (errstr);\
+            afs_zmq::zmq_abort (errstr);\
         }\
     } while (false)
 
@@ -82,7 +82,7 @@ namespace zmq
         if (afs_unlikely (x)) {\
             const char *errstr = gai_strerror (x);\
             fprintf (stderr, "%s (%s:%d)\n", errstr, __FILE__, __LINE__);\
-            zmq::zmq_abort (errstr);\
+            afs_zmq::zmq_abort (errstr);\
         }\
     } while (false)
 
@@ -92,10 +92,8 @@ namespace zmq
         if (afs_unlikely (!x)) {\
             fprintf (stderr, "FATAL ERROR: OUT OF MEMORY (%s:%d)\n",\
                 __FILE__, __LINE__);\
-            zmq::zmq_abort ("FATAL ERROR: OUT OF MEMORY");\
+            afs_zmq::zmq_abort ("FATAL ERROR: OUT OF MEMORY");\
         }\
     } while (false)
 
 #endif
-
-

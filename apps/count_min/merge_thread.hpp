@@ -4,13 +4,11 @@
 #include <sstream>
 
 #include <set>
-#include "thread/compute_thread.hpp"
-#include "raw_item.hpp"
+
+#include <afstream.h>
+
 #include "cm_item.hpp"
 #include "cm_sketch.hpp"
-//#include "operator/hashmap_l1norm.hpp"
-//#include "operator/count_min.hpp"
-
 
 // Note: current implementation does not support sync at the end of window.
 // Please guarantee that there is only one window in the input
@@ -35,7 +33,7 @@ private:
         char* filename_str = config->getstring("outputFile", NULL);
         afs_assert(filename_str, "outputFile is not set\n");
         std::string filename = filename_str;
-        filename += "_" + std::to_string(thr_id());
+        filename += "_" + std::to_string(afs::thr_id());
         output = fopen(filename.c_str(), "w");
 
         r = config->getint("row", 0);

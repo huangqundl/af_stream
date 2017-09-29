@@ -8,12 +8,12 @@
 
 #include <string>
 
-#include "util.hpp"
+#include "../util.hpp"
 #include "up_thread.hpp"
 
-#include "net/epoll.hpp"
-#include "net/tcp_listener.hpp"
-#include "net/options.hpp"
+#include "../net/epoll.hpp"
+#include "../net/tcp_listener.hpp"
+#include "../net/options.hpp"
 
 #include "in_callback_base.hpp"
 #include "in_callback_simple.hpp"

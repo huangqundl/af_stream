@@ -9,7 +9,7 @@
 #include <vector>
 #include <string>
 
-#include "util.hpp"
+#include "../util.hpp"
 #include "down_thread.hpp"
 
 #include "in_callback_base.hpp"
@@ -17,11 +17,10 @@
 #include "in_callback_simple.hpp"
 #include "out_callback_simple.hpp"
 
-#include "net/epoll.hpp"
-#include "net/options.hpp"
-
-#include "net/address.hpp"
-#include "net/tcp_connecter.hpp"
+#include "../net/epoll.hpp"
+#include "../net/options.hpp"
+#include "../net/address.hpp"
+#include "../net/tcp_connecter.hpp"
 
 namespace afs {
 

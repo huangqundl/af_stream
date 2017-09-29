@@ -1,14 +1,35 @@
-// License
+/*
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   *************************************************************************
+   NOTE to contributors. This file comprises the principal public contract
+   for AF-Stream API users. Any change to this file
+   supplied in a stable release SHOULD not break existing applications.
+   In practice this means that the value of constants must not change, and
+   that old values may not be reused for new constants.
+   *************************************************************************
+*/
+
+#include "thread.hpp"
 
 #include <syscall.h>
 #include <signal.h>
 
-#include "thread.hpp"
 #include "util.hpp"
-#include "fault_tolerance/backup_item.hpp"
 
 extern "C"
 {
+    //  Thread rountine in C style
     static void *thread_routine (void *arg_)
     {
         //  Following code will guarantee more predictable latencies as it'll
@@ -18,17 +39,21 @@ extern "C"
         errno_assert (rc == 0);
         rc = pthread_sigmask (SIG_BLOCK, &signal_set, NULL);
         posix_assert (rc);
-        
-        // CPU Pin here
 
         afs::ThreadBase *self = (afs::ThreadBase*) arg_;   
         afs_assert(self->get_wid()!=-1, "worker id is not set\n");
         afs_assert(self->get_tid()!=-1, "thread id is not set\n");
-        set_thr_id(self->get_tid());
+        afs::set_thr_id(self->get_tid());
+
+        //  Invoke C++ style thread routine
         self->thread_fun();
+
         return NULL;
     }
 }
+
+afs::ThreadBase::ThreadBase(afs::ThreadType type) : 
+    type_(type), wid_(-1), tid_(-1), cpu_(-1) {}
 
 void afs::ThreadBase::Create () {
     thread_instance_ = new std::thread(thread_routine, this);
@@ -38,12 +63,12 @@ void afs::ThreadBase::Destroy () {
     thread_instance_->join();
 }
 
-int afs::ThreadBase::WaitThread (afs_zmq::command_t* cmd, bool is_block) {
+int64_t afs::ThreadBase::WaitThread (afs_zmq::command_t* cmd, bool is_block) {
 
-    int rc = -1;
+    int64_t rc = -1;
     if (is_block) {
         rc = thread_to_main_.recv(cmd, -1);
-        afs_assert(rc==0, "%s calls WaitThread() error %d\n",
+        afs_assert(rc==0, "%s calls WaitThread() error %ld\n",
                 thread_str_, rc);
     }
     else {
@@ -60,6 +85,19 @@ int afs::ThreadBase::WaitThread (afs_zmq::command_t* cmd, bool is_block) {
     return cmd->type;
 }
 
+void afs::ThreadBase::WaitThread (afs_zmq::command_t::type_t type) {
+
+    afs_zmq::command_t cmd;
+
+    int rc = thread_to_main_.recv(&cmd, -1);
+    afs_assert(rc==0, "%s calls WaitThread() error %d\n",
+            thread_str_, rc);
+
+    afs_assert(cmd.type == type,
+            "%s receive wrong message type \n",
+            thread_str_);
+}
+
 void afs::ThreadBase::NotifyThread (afs_zmq::command_t::type_t type) {
     afs_zmq::command_t cmd;
     cmd.type = type;
@@ -72,160 +110,47 @@ void afs::ThreadBase::WaitWorker (afs_zmq::command_t::type_t type, bool is_block
     int rc = -1;
     if (is_block) {
         rc = main_to_thread_.recv(&cmd, -1);
-        afs_assert(cmd.type == type, "%s WaitThread wrong type\n", thread_str_);
+        afs_assert(cmd.type == type, "%s WaitWorker wrong type\n", thread_str_);
     }
     else {
         rc = main_to_thread_.recv(&cmd, 0);
     }
-    afs_assert(rc==0, "%s calls WaitThread() error %d\n",
+    afs_assert(rc==0, "%s calls WaitWorker() error %d\n",
             thread_str_, rc);
 }
 
-void afs::ThreadBase::NotifyWorker (afs_zmq::command_t::type_t type) {
+void afs::ThreadBase::NotifyWorker(afs_zmq::command_t &cmd) {
+    thread_to_main_.send(cmd);
+}
+
+void afs::ThreadBase::NotifyWorker(afs_zmq::command_t::type_t type) {
     afs_zmq::command_t cmd;
     cmd.type = type;
     thread_to_main_.send(cmd);
-}
-
-void afs::ThreadBase::NotifyReady () {
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::ready;
-    thread_to_main_.send(cmd);
-}
-
-
-void afs::ThreadBase::WaitReady () {
-    afs_zmq::command_t cmd;
-
-    int rc = thread_to_main_.recv(&cmd, -1);
-    afs_assert(rc==0, "%s calls WaitReady() error %d\n",
-            thread_str_, rc);
-
-    afs_assert(cmd.type == afs_zmq::command_t::ready,
-            "%s receive non-ready \n",
-            thread_str_);
-}
-
-void afs::ThreadBase::NotifyStart () {
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::ready;
-    main_to_thread_.send(cmd);
-}
-
-void afs::ThreadBase::WaitStart () {
-    afs_zmq::command_t cmd;
-
-    int rc = main_to_thread_.recv(&cmd, -1);
-    afs_assert(rc==0, "%s calls WaitReady() error %d\n",
-            thread_str_, rc);
-
-    afs_assert(cmd.type == afs_zmq::command_t::ready,
-            "%s receive non-ready\n",
-            thread_str_);
-}
-
-void afs::ThreadBase::NotifyClean () {
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::clean;
-    main_to_thread_.send(cmd);
-}
-
-void afs::ThreadBase::WaitClean () {
-    afs_zmq::command_t cmd;
-
-    int rc = main_to_thread_.recv(&cmd, -1);
-    afs_assert(rc==0, "%s calls WaitClean() error %d\n",
-            thread_str_, rc);
-
-    afs_assert(cmd.type == afs_zmq::command_t::clean,
-            "%s receive non-clean \n",
-            thread_str_);
-}
-
-void afs::ThreadBase::NotifyFinish1 () {
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::finish;
-    thread_to_main_.send(cmd);
-}
-
-void afs::ThreadBase::WaitFinish1 () {
-    afs_zmq::command_t cmd;
-
-    int rc = thread_to_main_.recv(&cmd, -1);
-    afs_assert(rc==0, "%s calls WaitFinish() error %d\n",
-            thread_str_, rc);
-
-    afs_assert(cmd.type == afs_zmq::command_t::finish,
-            "%s receive non-finish\n",
-            thread_str_);
-}
-
-/*
-void afs::ThreadBase::SendBackup (BackupItem &item) {
-    // op starts from 1, zero is reserved for data backup
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::backup;
-    uint32_t wid = get_wid();
-    item.meta.worker_id = wid;
-    thread_to_main_.send(cmd);
-}
-*/
-
-void afs::ThreadBase::SendWorker(afs_zmq::command_t &cmd) {
-    thread_to_main_.send(cmd);
-}
-
-void afs::ThreadBase::NotifyFinish2 () {
-    afs_zmq::command_t cmd;
-    cmd.type = afs_zmq::command_t::finish;
-    thread_to_main_.send(cmd);
-}
-
-void afs::ThreadBase::WaitFinish2 () {
-    afs_zmq::command_t cmd;
-
-    int rc = thread_to_main_.recv(&cmd, -1);
-    afs_assert(rc==0, "%s calls WaitFinish() error %d\n",
-            thread_str_, rc);
-
-    afs_assert(cmd.type == afs_zmq::command_t::finish,
-            "%s receive non-finish\n",
-            thread_str_);
 }
 
 void afs::ThreadBase::thread_fun() {
     // init
     spid_ = syscall(SYS_getpid);
     sppid_ = syscall(SYS_gettid);
-    sprintf(thread_str_, "%s (%d,%d: %d,%d)", kThreadName[type_], wid_, tid_, spid_, sppid_);
+    sprintf(thread_str_, "%s (%ld,%ld: %ld,%ld)", kThreadName[type_], wid_, tid_, spid_, sppid_);
     LOG_MSG("\n%s created\n", thread_str_);
     if (cpu_ >= 0) {
         pin_to_cpu(cpu_);
     }
 
     ThreadInitHandler();
-    NotifyReady();
+    NotifyWorker(afs_zmq::command_t::ready);
 
-    WaitStart();
-    is_run_ = true;
+    WaitWorker(afs_zmq::command_t::ready, true);
     ThreadMainHandler();
-    is_run_ = false;
 
-    NotifyFinish1();
-    WaitClean();
+    NotifyWorker(afs_zmq::command_t::finish);
+    WaitWorker(afs_zmq::command_t::clean, true);
 
     LOG_MSG("\n%s cleaning\n", thread_str_);
     ThreadFinishHandler();
     LOG_MSG("%s finished\n", thread_str_);
 
-    NotifyFinish2();
+    NotifyWorker(afs_zmq::command_t::finish);
 }
-
-/*
-zmq::mailbox_t* afs::ThreadBase::get_mailbox() {
-    return &mailbox_;
-}
-*/
-
-afs::ThreadBase::ThreadBase(afs::ThreadType type) : 
-    type_(type), is_run_(false), wid_(-1), tid_(-1), cpu_(-1) {}

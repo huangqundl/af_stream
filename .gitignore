@@ -7,4 +7,5 @@ dns_name.txt
 results
 result
 *.bak
-build.tmp
+bin/
+build.tmp/

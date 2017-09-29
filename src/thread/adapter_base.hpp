@@ -1,7 +1,7 @@
 #ifndef __AFS_I_ADAPTER_HPP_INCLUDED__
 #define __AFS_I_ADAPTER_HPP_INCLUDED__
 
-#include "util.hpp"
+#include "../util.hpp"
 
 namespace afs {
 

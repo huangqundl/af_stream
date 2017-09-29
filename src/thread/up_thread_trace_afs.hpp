@@ -1,5 +1,5 @@
-#ifndef __AFS_INTHREAD_I_BASE_HPP_INCLUDED__
-#define __AFS_INTHREAD_s_BASE_HPP_INCLUDED__
+#ifndef __AFS_INTHREAD_TRACE_AFS_HPP_INCLUDED__
+#define __AFS_INTHREAD_TRACE_AFS_HPP_INCLUDED__
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "util.hpp"
+#include "../util.hpp"
 #include "up_thread.hpp"
 
 #include "adapter_base.hpp"
@@ -18,10 +18,8 @@
 
 #include "router_base.hpp"
 
-#include "fault_tolerance/adapter_recovery.hpp"
+#include "../fault_tolerance/adapter_recovery.hpp"
 //#include "fault_tolerance/data_manager.hpp"
-
-using namespace std;
 
 namespace afs {
 

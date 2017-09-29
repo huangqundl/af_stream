@@ -23,7 +23,7 @@
 #include <stddef.h>
 
 #include "signaler.hpp"
-#include "fd.hpp"
+#include "../zmq_fd.hpp"
 #include "config.hpp"
 #include "command.hpp"
 #include "ypipe.hpp"

@@ -1,5 +1,5 @@
-#ifndef __ROLL_CONFIG_INCLUDED_HPP__
-#define __ROLL_CONFIG_INCLUDED_HPP__
+#ifndef __AFS_CONFIG_INCLUDED_HPP__
+#define __AFS_CONFIG_INCLUDED_HPP__
 
 #include <stdint.h>
 
@@ -58,4 +58,4 @@ public:
     }
 };
 
-#endif // SAND_CONFIG_HPP_
+#endif

@@ -21,7 +21,7 @@
 #define __ZMQ_SIGNALER_HPP_INCLUDED__
 
 #include <unistd.h>
-#include "fd.hpp"
+#include "../zmq_fd.hpp"
 
 namespace afs_zmq
 {

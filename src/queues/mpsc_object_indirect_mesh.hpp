@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "mpsc_queue_mesh_zerocopy.hpp"
-#include "util.hpp"
+#include "../util.hpp"
 
 template<class T>
 class MPSCObject {

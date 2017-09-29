@@ -21,7 +21,7 @@
 #define __ZMQ_COMMAND_HPP_INCLUDED__
 
 #include <stdint.h>
-#include "fault_tolerance/backup_item.hpp"
+#include "../fault_tolerance/backup_item.hpp"
 
 namespace afs_zmq
 {

@@ -6,7 +6,7 @@
 #include <string>
 
 #include "ft_interface.hpp"
-#include "fault_tolerance/operator_tracker.hpp"
+#include "../fault_tolerance/operator_tracker.hpp"
 //#include "compound_operator.hpp"
 
 namespace afs {

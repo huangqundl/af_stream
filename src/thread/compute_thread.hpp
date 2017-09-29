@@ -6,18 +6,18 @@
 
 #include <string>
 
-#include "config.hpp"
+#include "../config.hpp"
 #include "thread.hpp"
 #include "up_thread.hpp"
 #include "down_thread.hpp"
 
-#include "wrap_item.hpp"
+#include "../wrap_item.hpp"
 #include "router_base.hpp"
-#include "queues/mpsc_channel.hpp"
-#include "queues/zerocopy_ringbuffer.hpp"
+#include "../queues/mpsc_channel.hpp"
+#include "../queues/zerocopy_ringbuffer.hpp"
 
-#include "fault_tolerance/operator_tracker.hpp"
-#include "operator/ft_interface.hpp"
+#include "../fault_tolerance/operator_tracker.hpp"
+#include "../operator/ft_interface.hpp"
 
 namespace afs {
 
@@ -348,8 +348,7 @@ void ComputeThread<InT, OutT, RInT, ROutT>::ThreadMainHandler() {
                     backup_item.info.thread_id = thr_id();
                     backup_item.info.op_index = i;
                     backup_item.info.seq = tuple->get_seq();
-                    SendWorker(cmd);
-                    //SendBackup(backup_item);
+                    NotifyWorker(cmd);
                     WaitWorker(afs_zmq::command_t::backup, true);
                     backup_item.data.meta.len = 0;
                 }

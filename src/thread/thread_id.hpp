@@ -3,7 +3,11 @@
 
 #include <stdint.h>
 
-uint32_t thr_id();
-void set_thr_id(uint32_t id);
+namespace afs {
+
+int64_t thr_id();
+void set_thr_id(int64_t id);
+
+}
 
 #endif

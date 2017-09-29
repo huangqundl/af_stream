@@ -6,8 +6,8 @@
 #include <vector>
 #include <unordered_map>
 
-#include "util.hpp"
-#include "operator/ft_interface.hpp"
+#include "../util.hpp"
+#include "../operator/ft_interface.hpp"
 #include "recovery_item.hpp"
 
 namespace afs {

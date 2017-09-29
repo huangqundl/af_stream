@@ -5,7 +5,7 @@
 
 #include <stddef.h>
 #include <string.h>
-#include "util.hpp"
+#include "../util.hpp"
 #include "ft_operator.hpp"
 
 namespace afs {

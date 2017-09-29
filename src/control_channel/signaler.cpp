@@ -29,7 +29,6 @@
 #include "likely.hpp"
 #include "config.hpp"
 #include "err.hpp"
-#include "fd.hpp"
 #include "ip.hpp"
 
 #include <sys/eventfd.h>

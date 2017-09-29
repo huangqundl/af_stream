@@ -2,7 +2,6 @@
 #define __MPSC_WRITER_HPP_INCLUDED__
 
 #include "mpsc_object_indirect_mesh.hpp"
-#include "util.hpp"
 
 namespace afs {
 

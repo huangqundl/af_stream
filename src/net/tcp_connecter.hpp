@@ -21,15 +21,15 @@
 #define __TCP_CONNECTER_HPP_INCLUDED__
 
 #include <stdint.h>
-#include "fd.hpp"
+#include "../zmq_fd.hpp"
 //#include "own.hpp"
 #include "io_object.hpp"
 #include "../include/zmq.h"
 
 // qhuang: add headers declared in removed files
 #include "options.hpp"
-#include "thread/in_callback_base.hpp"
-#include "thread/out_callback_base.hpp"
+#include "../thread/in_callback_base.hpp"
+#include "../thread/out_callback_base.hpp"
 
 namespace afs_zmq
 {

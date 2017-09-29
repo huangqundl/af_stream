@@ -3,7 +3,7 @@
 #ifndef __AFS_FT_INTERFACE_HPP_INCLUDED_
 #define __AFS_FT_INTERFACE_HPP_INCLUDED_
 
-#include "fault_tolerance/backup_item.hpp"
+#include "../fault_tolerance/backup_item.hpp"
 
 namespace afs {
 

@@ -21,7 +21,7 @@
 #define __ZMQ_IP_HPP_INCLUDED__
 
 #include <string>
-#include "fd.hpp"
+#include "../zmq_fd.hpp"
 
 namespace afs_zmq
 {

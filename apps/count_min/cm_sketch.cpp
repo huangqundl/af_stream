@@ -93,13 +93,6 @@ void CountMin::SetValue(int i, int j, long long v) {
 }
 
 void CountMin::Clear() {
-    /*
-    for (size_t i=0; i<row; i++) {
-        for (size_t j=0; j<width; j++) {
-            LOG_MSG("i %d j %d v %ld\n", i, j, arrays[i]->GetValue(j));
-        }
-    }
-    */
     for (size_t i=0; i<row; i++) {
         arrays[i]->Clear();
     }

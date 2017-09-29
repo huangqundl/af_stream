@@ -30,7 +30,7 @@ struct __attribute__ ((__packed__)) CMItem {
         unsigned char* start = raw + n*(sizeof(uint32_t)+sizeof(long long));
         uint32_t index = *(uint32_t*)start;
         long long value = *(long long*)(start+sizeof(uint32_t));
-        return make_pair(index, value);
+        return std::make_pair(index, value);
     }
 
     unsigned long long int GetKey(uint32_t n) {
